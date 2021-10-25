@@ -1,0 +1,33 @@
+Burgerstack
+ATM
+Traffic Light
+Day and Night
+grocery store
+smart house
+
+library
+
+billboard
+
+automatic door at grocery store
+
+
+cart
+click on an item on the shelf to add it to cart
+click on cart item to remove it from cart
+
+sim city
+
+plot houses
+add houses to array of data
+change color
+each house has an id
+add new house
+
+maintain lawn
+
+
+
+Import svg as react component:
+https://dev.to/abachi/how-to-change-svg-s-color-in-react-42g2
+
