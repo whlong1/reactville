@@ -1,4 +1,4 @@
-import { ReactComponent as HouseIcon } from './house-2374925.svg'
+import { ReactComponent as HouseIcon } from './house-icon.svg'
 
 const House = (props) => {
 
@@ -7,7 +7,7 @@ const House = (props) => {
     return (
         <div>
             {props.house.address}
-            <HouseIcon fill="red"/>
+            <HouseIcon fill="red" height={100}/>
         </div>
     )
 }
