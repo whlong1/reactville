@@ -2,12 +2,15 @@
 
 const Aisle = (props) => {
 
-  console.log('Aisle', props.list)
-
+  console.log('Aisle', props.productList)
 
   return (
     <div>
-      Aisle
+      {props.productList.map((product, idx) => (
+        <div key={idx}>
+          <p>{product.name}</p>
+        </div>
+      ))}
 
     </div>
   )

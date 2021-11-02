@@ -26,26 +26,21 @@ const SuperMarket = () => {
 
   function groupBy() {
     const sorted = products.reduce(function (aisle, product) {
-      console.log('hello')
       if (!aisle[product['category']]) {
         aisle[product['category']] = []
       }
       aisle[product['category']].push(product)
       return aisle
     }, [])
-    return sorted
+    return Object.values(sorted)
   }
 
 
-
-
   return (
-    <div>
-      {groupBy().map((list, idx)=>(
-        <Aisle key={idx} list={list}/>
+    <div style={{ display: 'flex' }}>
+      {groupBy().map((productList, idx) => (
+        <Aisle key={idx} productList={productList} />
       ))}
-
-
     </div>
   )
 }
