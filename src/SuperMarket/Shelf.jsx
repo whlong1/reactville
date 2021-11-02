@@ -4,8 +4,8 @@ const Shelf = (props) => {
 
   return (
     <div>
-      {props.products.map((product)=>(
-        <p>{product.name}</p>
+      {props.products.map((product, idx)=>(
+        <p key={idx}>{product.name}</p>
       ))}
     </div>
   )
