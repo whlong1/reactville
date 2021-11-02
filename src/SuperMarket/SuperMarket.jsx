@@ -1,5 +1,8 @@
-import Aisle from "./Aisle"
-import { useState } from "react"
+import Aisle from './Aisle'
+import Shelf from './Shelf'
+import CategoryMenu from './CategoryMenu'
+
+import { useState } from 'react'
 
 const products = [
   {
@@ -23,6 +26,7 @@ const products = [
 ]
 
 const SuperMarket = () => {
+  const [productCategory, setProductCategory] = useState('Cereal')
 
   const dayOfWeek = () => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -69,13 +73,13 @@ const SuperMarket = () => {
   }
 
 
-  const getCategories = () => {
-    return [...new Set(products.map((product) => product.category))]
-  }
+
+
 
 
   return (
     <div style={{ display: 'flex' }}>
+      <p>Here: {productCategory}</p>
 
       {groupBy().map((productList, idx) => (
         <Aisle
@@ -86,12 +90,8 @@ const SuperMarket = () => {
       ))}
 
 
-      <select>
-        {getCategories().map((category, idx) => (
-          <option key={idx}>{category}</option>
-        ))}
-      </select>
-
+      <CategoryMenu products={products} setProductCategory={setProductCategory} />
+      <Shelf />
 
 
     </div>
