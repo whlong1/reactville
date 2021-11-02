@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 
 // Components
-import Neigborhood from './Neighborhood/Neighborhood'
+// import Neigborhood from './Neighborhood/Neighborhood'
 import Nav from './Nav/Nav'
 import SuperMarket from './SuperMarket/SuperMarket'
 

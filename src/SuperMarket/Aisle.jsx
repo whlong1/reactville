@@ -1,18 +1,13 @@
-
+import Product from './Product'
 
 const Aisle = (props) => {
 
-  console.log('Aisle', props.productList)
+
 
   return (
-    <div>
-      {props.productList.map((product, idx) => (
-        <div key={idx}>
-          <p>{product.name}</p>
-        </div>
-      ))}
-
-    </div>
+    props.productList.map((product, idx) => (
+      <Product key={idx} product={product} detectSale={props.detectSale} />
+    ))
   )
 }
 
