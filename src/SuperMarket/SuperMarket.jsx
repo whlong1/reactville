@@ -57,9 +57,6 @@ const SuperMarket = () => {
     }
   }
 
-  //conditionally render sale message
-  //adjust price
-
 
   const groupBy = () => {
     const sorted = products.reduce(function (aisle, product) {
@@ -69,11 +66,8 @@ const SuperMarket = () => {
       aisle[product['category']].push(product)
       return aisle
     }, {})
-    return Object.values(sorted)
+    return sorted
   }
-
-
-
 
 
 
@@ -81,17 +75,8 @@ const SuperMarket = () => {
     <div style={{ display: 'flex' }}>
       <p>Here: {productCategory}</p>
 
-      {groupBy().map((productList, idx) => (
-        <Aisle
-          key={idx}
-          productList={productList}
-          detectSale={detectSale}
-        />
-      ))}
-
-
       <CategoryMenu products={products} setProductCategory={setProductCategory} />
-      <Shelf />
+      <Shelf products={groupBy()[productCategory]} />
 
 
     </div>
