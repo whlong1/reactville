@@ -3,3 +3,5 @@ export const salesGenerator = () => {
   const idx = Math.floor(Math.random() * categories.length)
   return categories[idx]
 }
+
+//generate another idx to select item from category?

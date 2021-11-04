@@ -4,7 +4,9 @@ const Shelf = (props) => {
 
   return (
     <div>
-      {props.products.map((product, idx)=>(
+      {props.products[0].category === props.sale ? <h1>SALE</h1> : null}
+      
+      {props.products.map((product, idx) => (
         <p key={idx}>{product.name}</p>
       ))}
     </div>
