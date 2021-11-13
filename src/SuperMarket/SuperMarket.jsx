@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react'
 const SuperMarket = () => {
   const [productCategory, setProductCategory] = useState('Cereal')
 
-  // const [sale, setSale] = useState()
+  const [sale, setSale] = useState(2)
   // const [cart, setCart] = useState([])
 
 
@@ -29,7 +29,6 @@ const SuperMarket = () => {
   // }
 
 
-
   // useEffect(() => {
   //   const newSale = salesGenerator(groupBy())
   //   console.log(newSale)
@@ -48,7 +47,7 @@ const SuperMarket = () => {
       <Cart cart={cart} setCart={setCart} /> */}
       <h3>{productCategory}</h3>
       <CategoryMenu products={products} setProductCategory={setProductCategory} />
-      <DisplayProducts />
+      <DisplayProducts products={products} productCategory={productCategory} />
     </div>
   )
 }
