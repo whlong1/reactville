@@ -1,9 +1,10 @@
+import Product from './Product'
+
+
 const DisplayProducts = (props) => {
 
   const selectedProducts = props.products.map((product, idx) => {
-    if (product.category === props.productCategory) {
-      return <p key={idx}>{product.name}</p>
-    }
+    return product.category === props.productCategory && <Product key={idx} product={product} saleItem={props.saleItem} />
   })
 
   return (
