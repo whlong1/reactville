@@ -5,25 +5,11 @@ import Cart from './Cart'
 
 import { productData } from './modules/data'
 import { salesGenerator } from './modules/functions'
-import { useState, useReducer } from 'react'
+import { useState } from 'react'
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD_TO_CART':
-      return [...state, action.payload]
-    case 'REMOVE_FROM_CART':
-      return
-    case 'CLEAR_CART':
-      return []
-    default:
-      return state
-  }
-}
+
 
 const SuperMarket = () => {
-  const [cartState, dispatch] = useReducer(reducer, [])
-
-
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState(productData)
   const [saleItem, setSaleItem] = useState(() => salesGenerator(products))
@@ -33,7 +19,17 @@ const SuperMarket = () => {
 
   const addToCart = ({ ...item }) => {
     item.price = item.id === saleItem.id ? (item.price / 2).toFixed(2) : item.price
-    setCart([item, ...cart])
+    const existingItem = [...cart].find(product => product.id === item.id)
+    console.log(existingItem)
+    if (existingItem){
+      existingItem.quantity++
+      
+      const state = [...cart].splice(cart.indexOf(existingItem), 1, existingItem)
+      setCart(state)
+    } else {
+      item.quantity = 1
+      setCart([item, ...cart])
+    }    
   }
 
   return (
