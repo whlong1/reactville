@@ -6,25 +6,23 @@ import { products } from './modules/data'
 import { useState, useEffect } from 'react'
 
 const SuperMarket = () => {
-  const [saleItem, setSaleItem] = useState()
   const [cart, setCart] = useState([])
   const [productCategory, setProductCategory] = useState('Cereal')
-
+  
   const salesGenerator = (products) => {
     const idx = Math.floor(Math.random() * products.length)
     return products[idx]
   }
 
+  // Lazy initial state
+  const [saleItem, setSaleItem] = useState(salesGenerator(products))
+
   const addItem = (item) => {
-    console.log(item)
-    // item.price = item.id === saleItem.id && 2
+    item.price = item.id === saleItem.id && 2
     setCart([item, ...cart])
   }
 
-  useEffect(() => {
-    const newSale = salesGenerator(products)
-    setSaleItem(newSale)
-  }, [])
+
 
   return (
     <div>
