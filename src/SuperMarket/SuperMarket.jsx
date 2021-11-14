@@ -18,26 +18,36 @@ const SuperMarket = () => {
 
 
   const addToCart = ({ ...item }) => {
-    item.price = item.id === saleItem.id ? (item.price / 2).toFixed(2) : item.price
-    const existingItem = [...cart].find(product => product.id === item.id)
-    console.log(existingItem)
-    if (existingItem){
-      existingItem.quantity++
-      
-      const state = [...cart].splice(cart.indexOf(existingItem), 1, existingItem)
-      setCart(state)
+    // item.price = item.id === saleItem.id ? (item.price / 2).toFixed(2) : item.price
+    const existing = [...cart].find(product => product.id === item.id)
+    if (existing) {
+      existing.quantity++
+      const newArr = cart.map((prod) => prod.id === item.id ? existing : prod)
+      setCart(newArr)
     } else {
       item.quantity = 1
       setCart([item, ...cart])
-    }    
+    }
   }
+
+
+  const removeFromCart = ({ ...item }) => {
+    if (item.quantity > 1) {
+      item.quantity--
+      const newArr = cart.map((prod) => prod.id === item.id ? item : prod)
+      setCart(newArr)
+    } else {
+      setCart(cart.filter((prod) => prod.id !== item.id))
+    }
+  }
+
 
   return (
     <div>
       <p>Sale On {saleItem?.name}</p>
       <h3>{productCategory}</h3>
 
-      <Cart cart={cart} />
+      <Cart cart={cart} removeFromCart={removeFromCart} />
 
       <CategoryMenu
         products={products}

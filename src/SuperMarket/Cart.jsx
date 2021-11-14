@@ -20,7 +20,7 @@ const Cart = (props) => {
   return (
     <div>
       {props.cart?.map((item, idx) => (
-        <CartItem key={idx} item={item}/>
+        <CartItem key={idx} item={item} removeFromCart={props.removeFromCart}/>
       ))}
     </div>
   )
