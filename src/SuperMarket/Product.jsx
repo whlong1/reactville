@@ -1,7 +1,6 @@
 
 
 const Product = (props) => {
-  //if product === saleItem, set updated value, build on click
 
   const adjustedPrice = () => {
     if (props.saleItem?.id === props.product.id) {
@@ -10,11 +9,10 @@ const Product = (props) => {
   }
 
   return (
-    <>
-      {props.product.name}
-      {props.product.price}
-      {adjustedPrice()}
-    </>
+    <div onClick={() => props.addItem(props.product)}>
+      <p>{props.product.name}</p>
+      <p>{props.product.price}</p>
+    </div>
   )
 }
 
