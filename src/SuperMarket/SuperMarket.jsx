@@ -1,35 +1,28 @@
 import DisplayProducts from './DisplayProducts'
 import CategoryMenu from './CategoryMenu'
+import NewProduct from './NewProduct'
 import Cart from './Cart'
 
 import { productData } from './modules/data'
-import { useState, useEffect } from 'react'
+import { salesGenerator } from './modules/functions'
+import { useState } from 'react'
 
 const SuperMarket = () => {
-  const [products, setProducts] = useState(productData)
   const [cart, setCart] = useState([])
+  const [products, setProducts] = useState(productData)
+  const [saleItem, setSaleItem] = useState(salesGenerator(products))
   const [productCategory, setProductCategory] = useState('Cereal')
-  
-  const salesGenerator = (products) => {
-    const idx = Math.floor(Math.random() * products.length)
-    return products[idx]
-  }
+
+
+  console.log(products)
 
   // Lazy initial state
   //https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates
-  const [saleItem, setSaleItem] = useState(salesGenerator(products))
 
   const addItem = (item) => {
     item.price = item.id === saleItem.id && 2
     setCart([item, ...cart])
   }
-
-  // useEffect(()=>{
-  //   console.log('running')
-  //   setProducts(productData)
-  // },[])
-
-
 
   return (
     <div>
@@ -49,6 +42,8 @@ const SuperMarket = () => {
         products={products}
         productCategory={productCategory}
       />
+
+      <NewProduct products={products} />
     </div>
   )
 }
