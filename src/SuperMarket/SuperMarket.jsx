@@ -19,11 +19,10 @@ const SuperMarket = () => {
 
   const addToCart = ({ ...item }) => {
     // item.price = item.id === saleItem.id ? (item.price / 2).toFixed(2) : item.price
-    const existing = [...cart].find(product => product.id === item.id)
-    if (existing) {
-      existing.quantity++
-      const newArr = cart.map((prod) => prod.id === item.id ? existing : prod)
-      setCart(newArr)
+    const existingItem = cart.find(product => product.id === item.id)
+    if (existingItem) {
+      existingItem.quantity++
+      setCart(cart.map((prod) => prod.id === item.id ? existingItem : prod))
     } else {
       item.quantity = 1
       setCart([item, ...cart])
