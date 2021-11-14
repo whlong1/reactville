@@ -5,9 +5,25 @@ import Cart from './Cart'
 
 import { productData } from './modules/data'
 import { salesGenerator } from './modules/functions'
-import { useState } from 'react'
+import { useState, useReducer } from 'react'
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_TO_CART':
+      return [...state, action.payload]
+    case 'REMOVE_FROM_CART':
+      return
+    case 'CLEAR_CART':
+      return []
+    default:
+      return state
+  }
+}
 
 const SuperMarket = () => {
+  const [cartState, dispatch] = useReducer(reducer, [])
+
+
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState(productData)
   const [saleItem, setSaleItem] = useState(() => salesGenerator(products))
