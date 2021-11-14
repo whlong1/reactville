@@ -10,17 +10,13 @@ import { useState } from 'react'
 const SuperMarket = () => {
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState(productData)
-  const [saleItem, setSaleItem] = useState(salesGenerator(products))
+  const [saleItem, setSaleItem] = useState(() => salesGenerator(products))
   const [productCategory, setProductCategory] = useState('Cereal')
 
 
-  console.log(products)
 
-  // Lazy initial state
-  //https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates
-
-  const addItem = (item) => {
-    item.price = item.id === saleItem.id && 2
+  const addToCart = ({ ...item }) => {
+    item.price = item.id === saleItem.id ? (item.price / 2).toFixed(2) : item.price
     setCart([item, ...cart])
   }
 
@@ -37,7 +33,7 @@ const SuperMarket = () => {
       />
 
       <DisplayProducts
-        addItem={addItem}
+        addToCart={addToCart}
         saleItem={saleItem}
         products={products}
         productCategory={productCategory}

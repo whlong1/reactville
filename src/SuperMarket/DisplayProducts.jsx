@@ -8,7 +8,7 @@ const DisplayProducts = (props) => {
       <Product
         key={idx}
         product={product}
-        addItem={props.addItem}
+        addToCart={props.addToCart}
         saleItem={props.saleItem}
       />
   })
