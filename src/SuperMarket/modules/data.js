@@ -29,8 +29,7 @@ import Steak from '../assets/Steak.png'
 import Tomato from '../assets/Tomato.png'
 import Wine from '../assets/Wine.png'
 
-
-export const productData = [
+export const products = [
   {
     id: 0,
     name: 'Apple',

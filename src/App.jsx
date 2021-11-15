@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <main>
-      <Nav cash={cash} setCash={setCash} />
+      {/* <Nav cash={cash} setCash={setCash} /> */}
       <SuperMarket />
     </main>
   )

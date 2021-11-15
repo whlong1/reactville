@@ -1,21 +1,17 @@
 import './styles/style.css'
-
 import { useState } from 'react'
 
 // Components
 import Cart from './Cart'
-import NewProduct from './NewProduct'
 import CategoryMenu from './CategoryMenu'
 import DisplayProducts from './DisplayProducts'
 
 // Data
-import { productData } from './modules/data'
-
+import { products } from './modules/data'
 
 const SuperMarket = () => {
   const [cart, setCart] = useState([])
   const [toggleCart, setToggleCart] = useState(true)
-  const [products, setProducts] = useState(productData)
   const [productCategory, setProductCategory] = useState('Produce')
 
   const addToCart = (item) => {
@@ -36,7 +32,8 @@ const SuperMarket = () => {
 
   return (
     <div className="super-market">
-      <nav className="market-nav">
+      <nav>
+        <h1>Super Market</h1>
         <CategoryMenu products={products} setProductCategory={setProductCategory} />
         <button onClick={() => setToggleCart(!toggleCart)}>Cart</button>
       </nav>
@@ -50,8 +47,6 @@ const SuperMarket = () => {
         addToCart={addToCart}
         productCategory={productCategory}
       />
-
-      {/* <NewProduct products={products} /> */}
     </div>
   )
 }
