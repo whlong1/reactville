@@ -19,10 +19,7 @@ const SuperMarket = () => {
   const addToCart = (item) => {
     const idx = cart.findIndex(product => product.id === item.id)
     if (!idx) {
-      const newArr = [...cart]
-      item.quantity++
-      newArr[idx] = item
-      setCart(newArr)
+      setCart(cart.map((prod) => prod.id === item.id ? { ...prod, quantity: prod.quantity + 1 } : prod))
     } else {
       item.quantity = 1
       setCart([item, ...cart])
@@ -32,8 +29,7 @@ const SuperMarket = () => {
 
   const removeFromCart = (item) => {
     if (item.quantity > 1) {
-      item.quantity--
-      setCart(cart.map((prod) => prod.id === item.id ? item : prod))
+      setCart(cart.map((prod) => prod.id === item.id ? { ...item, quantity: item.quantity - 1 } : prod))
     } else {
       setCart(cart.filter((prod) => prod.id !== item.id))
     }
