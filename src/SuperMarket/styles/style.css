@@ -1,0 +1,21 @@
+.market-nav {
+  display: flex;
+}
+
+.cart-container {
+  border: 1px solid red;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-ui {
+  border: 1px solid green;
+  display: flex;
+}
+
+.product-card {
+  border: 1px solid blue;
+}

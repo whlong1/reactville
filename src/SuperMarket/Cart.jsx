@@ -1,6 +1,5 @@
 import CartItem from './CartItem'
 
-
 const Cart = (props) => {
 
   const total = props.cart.reduce((sum, item) => {
@@ -8,12 +7,19 @@ const Cart = (props) => {
   }, 0)
 
   return (
-    <div>
-      {props.cart?.map((item, idx) => (
-        <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
-      ))}
-      <p>Total: $ {total.toFixed(2)}</p>
-      <button onClick={() => props.setCart([])}>Clear Cart</button>
+    <div className="cart-container">
+
+      <section className="cart-content">
+        {props.cart?.map((item, idx) => (
+          <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
+        ))}
+      </section>
+
+      <section className="cart-ui">
+        <p>Total: $ {total.toFixed(2)}</p>
+        <button onClick={() => props.setCart([])}>Clear Cart</button>
+      </section>
+
     </div>
   )
 }

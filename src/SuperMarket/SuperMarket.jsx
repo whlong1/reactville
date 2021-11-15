@@ -1,3 +1,5 @@
+import './styles/style.css'
+
 import { useState } from 'react'
 
 // Components
@@ -12,6 +14,7 @@ import { productData } from './modules/data'
 
 const SuperMarket = () => {
   const [cart, setCart] = useState([])
+  const [toggleCart, setToggleCart] = useState(false)
   const [products, setProducts] = useState(productData)
   const [productCategory, setProductCategory] = useState('Cereal')
 
@@ -35,14 +38,14 @@ const SuperMarket = () => {
 
   return (
     <div>
-      <h3>{productCategory}</h3>
+      <nav className="market-nav">
+        <CategoryMenu products={products} setProductCategory={setProductCategory} />
+        <button onClick={() => setToggleCart(!toggleCart)}>Cart</button>
+      </nav>
 
-      <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
-
-      <CategoryMenu
-        products={products}
-        setProductCategory={setProductCategory}
-      />
+      {toggleCart &&
+        <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
+      }
 
       <DisplayProducts
         products={products}
@@ -50,7 +53,7 @@ const SuperMarket = () => {
         productCategory={productCategory}
       />
 
-      <NewProduct products={products} />
+      {/* <NewProduct products={products} /> */}
     </div>
   )
 }
