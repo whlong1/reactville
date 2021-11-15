@@ -9,7 +9,6 @@ const DisplayProducts = (props) => {
         key={idx}
         product={product}
         addToCart={props.addToCart}
-        saleItem={props.saleItem}
       />
   })
 
