@@ -13,8 +13,11 @@ const DisplayProducts = (props) => {
   })
 
   return (
-    <div className="product-list">
-      {selectedProducts}
+    <div className="display-products-section">
+      <h3>{props.productCategory}</h3>
+      <div className="product-list">
+        {selectedProducts}
+      </div>
     </div>
   )
 }

@@ -35,7 +35,7 @@ const SuperMarket = () => {
   }
 
   return (
-    <div>
+    <div className="super-market">
       <nav className="market-nav">
         <CategoryMenu products={products} setProductCategory={setProductCategory} />
         <button onClick={() => setToggleCart(!toggleCart)}>Cart</button>
@@ -45,8 +45,6 @@ const SuperMarket = () => {
         <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
       }
 
-
-      <h3>{productCategory}</h3>
       <DisplayProducts
         products={products}
         addToCart={addToCart}

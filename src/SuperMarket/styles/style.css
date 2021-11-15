@@ -1,3 +1,7 @@
+.super-market {
+  height: 100vh;
+}
+
 .market-nav {
   display: flex;
 }
@@ -15,13 +19,17 @@
   display: flex;
 }
 
+.display-products-section {
+  padding: 0px 15px 0px 15px;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
 }
 
 .product-card {
-  margin: 5px;
+  margin: 5px 10px 5px 0px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -29,7 +37,7 @@
 }
 
 .product-card img {
-  width: 150px;
+  width: 160px;
   border-radius: 8px 8px 0px 0px;
 }
 
