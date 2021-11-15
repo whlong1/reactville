@@ -39,9 +39,11 @@
 }
 
 .product-card span{
-  padding: 5px;
   display: flex;
+  align-items: center;
+  padding: 5px 8px 5px 8px;
   justify-content: space-between;
+  border-top: 1px solid rgb(230, 230, 230);
 }
 
 .product-card p {
@@ -54,6 +56,19 @@
   border: none;
   color: white;
   font-size: 12px;
+  font-weight: 500;
   background: #45C062;
   border-radius: 0px 0px 8px 8px;
 }
+
+#product-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#product-price {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: .5;
+}
+
