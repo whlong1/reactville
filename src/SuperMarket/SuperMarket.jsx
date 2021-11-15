@@ -16,11 +16,13 @@ const SuperMarket = () => {
   const [productCategory, setProductCategory] = useState('Cereal')
 
 
-  const addToCart = ({ ...item }) => {
-    const existingItem = [...cart].find(product => product.id === item.id)
-    if (existingItem) {
-      existingItem.quantity++
-      setCart(cart.map((prod) => prod.id === item.id ? existingItem : prod))
+  const addToCart = (item) => {
+    const idx = cart.findIndex(product => product.id === item.id)
+    if (!idx) {
+      const newArr = [...cart]
+      item.quantity++
+      newArr[idx] = item
+      setCart(newArr)
     } else {
       item.quantity = 1
       setCart([item, ...cart])
@@ -28,7 +30,7 @@ const SuperMarket = () => {
   }
 
 
-  const removeFromCart = ({ ...item }) => {
+  const removeFromCart = (item) => {
     if (item.quantity > 1) {
       item.quantity--
       setCart(cart.map((prod) => prod.id === item.id ? item : prod))
