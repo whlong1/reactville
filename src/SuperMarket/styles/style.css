@@ -3,7 +3,7 @@
 }
 
 .cart-container {
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid rgb(215, 215, 215);
 }
 
 .cart-content {
@@ -25,11 +25,11 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid rgb(215, 215, 215);
 }
 
 .product-card img {
-  width: 160px;
+  width: 150px;
   border-radius: 8px 8px 0px 0px;
 }
 
@@ -50,9 +50,10 @@
 
 .product-card button{
   margin: 0;
-  padding: 7px;
+  padding: 5px;
   border: none;
   color: white;
+  font-size: 12px;
   background: #45C062;
   border-radius: 0px 0px 8px 8px;
 }
