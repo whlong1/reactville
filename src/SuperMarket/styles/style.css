@@ -16,6 +16,27 @@
   display: flex;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .product-card {
   border: 1px solid blue;
+  display: flex;
+  width: 240px;
+}
+
+.product-card img {
+  width: 120px;
+}
+
+.product-card section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.product-card p {
+  margin: 0;
 }

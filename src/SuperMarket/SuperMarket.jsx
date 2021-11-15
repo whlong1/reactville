@@ -16,7 +16,7 @@ const SuperMarket = () => {
   const [cart, setCart] = useState([])
   const [toggleCart, setToggleCart] = useState(true)
   const [products, setProducts] = useState(productData)
-  const [productCategory, setProductCategory] = useState('Cereal')
+  const [productCategory, setProductCategory] = useState('Produce')
 
   const addToCart = (item) => {
     if (cart.find(prod => prod.id === item.id)) {
@@ -45,6 +45,8 @@ const SuperMarket = () => {
         <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
       }
 
+
+      <h3>{productCategory}</h3>
       <DisplayProducts
         products={products}
         addToCart={addToCart}

@@ -1,5 +1,5 @@
 import Apple from '../assets/Apple.png'
-import Avocado from '../assets/Cereal.png'
+import Avocado from '../assets/Avocado.png'
 import Bacon from '../assets/Bacon.png'
 import Banana from '../assets/Banana.png'
 import Beer from '../assets/Beer.png'
@@ -77,7 +77,7 @@ export const productData = [
     id: 6,
     name: 'Canned Peas',
     price: .99,
-    category: 'Canned Goods',
+    category: 'Pantry Items',
     image: CannedPeas
   },
   {

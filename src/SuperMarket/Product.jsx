@@ -5,9 +5,12 @@ const Product = (props) => {
 
   return (
     <div className="product-card">
-      <p>{props.product.name}</p>
-      <p>{props.product.price}</p>
-      <button onClick={() => props.addToCart(props.product)}>Add To Cart</button>
+      <img src={props.product.image} />
+      <section>
+        <p>{props.product.name}</p>
+        <p>{props.product.price}</p>
+        <button onClick={() => props.addToCart(props.product)}>Add To Cart</button>
+      </section>
     </div>
   )
 }
