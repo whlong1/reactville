@@ -14,17 +14,15 @@ import { productData } from './modules/data'
 
 const SuperMarket = () => {
   const [cart, setCart] = useState([])
-  const [toggleCart, setToggleCart] = useState(false)
+  const [toggleCart, setToggleCart] = useState(true)
   const [products, setProducts] = useState(productData)
   const [productCategory, setProductCategory] = useState('Cereal')
 
   const addToCart = (item) => {
-    const idx = cart.findIndex(product => product.id === item.id)
-    if (!idx) {
+    if (cart.find(prod => prod.id === item.id)) {
       setCart(cart.map((prod) => prod.id === item.id ? { ...prod, quantity: prod.quantity + 1 } : prod))
     } else {
-      item.quantity = 1
-      setCart([item, ...cart])
+      setCart([{ ...item, quantity: 1 }, ...cart])
     }
   }
 
