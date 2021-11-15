@@ -7,9 +7,11 @@ const Product = (props) => {
     <div className="product-card">
       <img src={props.product.image} />
       <section>
-        <p>{props.product.name}</p>
-        <p>{props.product.price}</p>
-        <button onClick={() => props.addToCart(props.product)}>Add To Cart</button>
+        <span>
+          <p>{props.product.name}</p>
+          <p>{props.product.price}</p>
+        </span>
+        <button onClick={() => props.addToCart(props.product)}>ADD TO CART</button>
       </section>
     </div>
   )
