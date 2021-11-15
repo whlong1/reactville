@@ -4,7 +4,6 @@
 
 .super-market nav {
   display: flex;
-  border: 1px solid red;
 }
 
 .cart-container {
@@ -23,6 +22,8 @@
 .display-products-section {
   padding: 0px 15px 0px 15px;
 }
+
+/* .display-products-section h3 {} */
 
 .product-list {
   display: flex;
