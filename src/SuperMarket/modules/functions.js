@@ -4,8 +4,6 @@ const salesGenerator = (products) => {
 }
 
 
-
-
 export {
     salesGenerator
 }

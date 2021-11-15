@@ -1,11 +1,13 @@
-import DisplayProducts from './DisplayProducts'
-import CategoryMenu from './CategoryMenu'
-import NewProduct from './NewProduct'
-import Cart from './Cart'
-
-import { productData } from './modules/data'
 import { useState } from 'react'
 
+// Components
+import Cart from './Cart'
+import NewProduct from './NewProduct'
+import CategoryMenu from './CategoryMenu'
+import DisplayProducts from './DisplayProducts'
+
+// Data
+import { productData } from './modules/data'
 
 
 const SuperMarket = () => {
@@ -14,9 +16,8 @@ const SuperMarket = () => {
   const [productCategory, setProductCategory] = useState('Cereal')
 
 
-
   const addToCart = ({ ...item }) => {
-    const existingItem = cart.find(product => product.id === item.id)
+    const existingItem = [...cart].find(product => product.id === item.id)
     if (existingItem) {
       existingItem.quantity++
       setCart(cart.map((prod) => prod.id === item.id ? existingItem : prod))
