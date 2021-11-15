@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 // Components
 import Cart from './Cart'
-import CategoryMenu from './CategoryMenu'
+import MarketNav from './MarketNav'
 import DisplayProducts from './DisplayProducts'
 
 // Data
@@ -32,19 +32,19 @@ const SuperMarket = () => {
 
   return (
     <div className="super-market">
-      <section>
-        <nav>
-          <h1>Super Market</h1>
-          <CategoryMenu products={products} setProductCategory={setProductCategory} />
-          <button onClick={() => setToggleCart(!toggleCart)}>Cart</button>
-        </nav>
 
+      <section>
+        <MarketNav
+          products={products}
+          toggleCart={toggleCart}
+          setToggleCart={setToggleCart}
+          setProductCategory={setProductCategory}
+        />
         <DisplayProducts
           products={products}
           addToCart={addToCart}
           productCategory={productCategory}
         />
-
       </section>
 
       {toggleCart &&
