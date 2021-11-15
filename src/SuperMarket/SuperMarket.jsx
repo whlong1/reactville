@@ -15,7 +15,6 @@ const SuperMarket = () => {
   const [products, setProducts] = useState(productData)
   const [productCategory, setProductCategory] = useState('Cereal')
 
-
   const addToCart = (item) => {
     const idx = cart.findIndex(product => product.id === item.id)
     if (!idx) {
@@ -26,7 +25,6 @@ const SuperMarket = () => {
     }
   }
 
-
   const removeFromCart = (item) => {
     if (item.quantity > 1) {
       setCart(cart.map((prod) => prod.id === item.id ? { ...item, quantity: item.quantity - 1 } : prod))
@@ -35,12 +33,11 @@ const SuperMarket = () => {
     }
   }
 
-
   return (
     <div>
       <h3>{productCategory}</h3>
 
-      <Cart cart={cart} removeFromCart={removeFromCart} />
+      <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
 
       <CategoryMenu
         products={products}

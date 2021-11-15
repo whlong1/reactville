@@ -13,6 +13,7 @@ const Cart = (props) => {
         <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
       ))}
       <p>Total: $ {total.toFixed(2)}</p>
+      <button onClick={() => props.setCart([])}>Clear Cart</button>
     </div>
   )
 }
