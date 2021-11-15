@@ -7,19 +7,13 @@ const Cart = (props) => {
   }, 0)
 
   return (
-    <div className="cart-container">
-
-      <section className="cart-content">
-        {props.cart?.map((item, idx) => (
-          <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
-        ))}
-      </section>
-
-      <section className="cart-ui">
-        <p>Total: $ {total.toFixed(2)}</p>
-        <button onClick={() => props.setCart([])}>Clear Cart</button>
-      </section>
-
+    <div className="cart">
+      <h1>Cart</h1>
+      {props.cart?.map((item, idx) => (
+        <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
+      ))}
+      <p>Total: $ {total.toFixed(2)}</p>
+      <button onClick={() => props.setCart([])}>Clear Cart</button>
     </div>
   )
 }

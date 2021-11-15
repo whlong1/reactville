@@ -32,21 +32,24 @@ const SuperMarket = () => {
 
   return (
     <div className="super-market">
+      
       <nav>
         <h1>Super Market</h1>
         <CategoryMenu products={products} setProductCategory={setProductCategory} />
         <button onClick={() => setToggleCart(!toggleCart)}>Cart</button>
       </nav>
 
-      {toggleCart &&
-        <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
-      }
+      <section>
+        <DisplayProducts
+          products={products}
+          addToCart={addToCart}
+          productCategory={productCategory}
+        />
+        {toggleCart &&
+          <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
+        }
+      </section>
 
-      <DisplayProducts
-        products={products}
-        addToCart={addToCart}
-        productCategory={productCategory}
-      />
     </div>
   )
 }
