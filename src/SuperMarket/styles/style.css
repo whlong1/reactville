@@ -1,8 +1,5 @@
 .super-market {
-  height: 100vh;
-}
-
-.super-market section {
+  border: 1px solid red;
   display: flex;
 }
 
@@ -10,20 +7,22 @@
   display: flex;
 }
 
-.cart {
-  border: 1px solid rgb(215, 215, 215);
-  display: flex;
-  flex-direction: column;
-}
-
-.display-products-section {
-  padding: 0px 15px 0px 15px;
-}
-
 .product-list {
   display: flex;
   flex-wrap: wrap;
+  grid-area: products;
 }
+
+/* .super-market section {} */
+
+.cart {
+  width: 65%;
+  border-left: 1px solid #dbdbdb;
+}
+
+/* .display-products-section {
+  padding: 0px 15px 0px 15px;
+} */
 
 .product-card {
   display: flex;
