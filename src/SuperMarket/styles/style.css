@@ -3,26 +3,22 @@
   display: flex;
 }
 
-.super-market nav {
+.super-market section {
+  width: 70%;
   display: flex;
+  flex-direction: column;
+}
+
+.cart {
+  width: 30%;
+  border-left: 1px solid #dbdbdb;
 }
 
 .product-list {
   display: flex;
-  flex-wrap: wrap;
-  grid-area: products;
-}
-
-/* .super-market section {} */
-
-.cart {
-  width: 65%;
-  border-left: 1px solid #dbdbdb;
-}
-
-/* .display-products-section {
+  flex-wrap: wrap;  
   padding: 0px 15px 0px 15px;
-} */
+}
 
 .product-card {
   display: flex;
@@ -39,6 +35,7 @@
 }
 
 .product-card section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 5px 5px;

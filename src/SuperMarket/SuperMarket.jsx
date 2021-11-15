@@ -47,9 +47,7 @@ const SuperMarket = () => {
         />
       </section>
 
-      {toggleCart &&
-        <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
-      }
+      {toggleCart && <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />}
 
     </div>
   )
