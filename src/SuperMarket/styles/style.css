@@ -163,7 +163,6 @@
   font-weight: 400;
 }
 
-
 .cart > button {
   padding: 8px;
   color: white;
@@ -173,4 +172,9 @@
   margin-bottom: 10px;
   background: #45C062;
   border: 1px solid #50ce6d;
+}
+
+.cart > button + button {
+  background: #c04545;
+  border: 1px solid #ce5050;
 }
