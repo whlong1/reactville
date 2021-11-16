@@ -1,6 +1,7 @@
 .super-market {
-  border: 1px solid red;
   display: flex;
+  height: 100vh;
+  background: #f5f8fc;
 }
 
 .super-market section {
@@ -16,6 +17,7 @@
 .cart {
   width: 25%;
   display: flex;
+  background: #fbfcfd;
   flex-direction: column;
   padding: 0px 25px 0px 25px;
   border-left: 1px solid #dbdbdb;
@@ -39,7 +41,10 @@
 .product-card img {
   width: 160px;
   background: #f6f8fa;
+  border-top: 1px solid white;
   border-radius: 5px 5px 0px 0px;
+  background: rgb(248,250,251);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,251,1) 100%);
 }
 
 .product-card section {
@@ -89,6 +94,7 @@
 .cart-card span{
   width: 75%;
   display: flex;
+  background: white;
   flex-direction: column;
   padding: 10px 0px 10px 12px;
   justify-content: space-between;
@@ -115,8 +121,8 @@
 }
 
 #product-name {
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
 }
 
 #product-price {
