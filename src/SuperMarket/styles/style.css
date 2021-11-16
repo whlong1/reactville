@@ -9,6 +9,10 @@
   flex-direction: column;
 }
 
+.super-market nav {
+  display: flex;
+}
+
 .cart {
   width: 30%;
   border-left: 1px solid #dbdbdb;
@@ -63,6 +67,35 @@
   background: #45C062;
   border: 1px solid #50ce6d;
   border-radius: 0px 0px 5px 5px;
+}
+
+
+.cart-card {
+  border: 1px solid red;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid rgb(230, 230, 230);
+  margin: 0;
+}
+
+.cart-card *{
+  margin: 0;
+}
+
+.cart-card span{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-card img {
+  width: 100px;
+  background: #f6f8fa;
+}
+
+.cart-card button {
+  flex: content;
+  justify-self: flex-end;
 }
 
 #product-name {

@@ -2,10 +2,14 @@ const CartItem = (props) => {
 
 
 	return (
-		<div className="product-card">
-			{props.item.name} {props.item.price}
-			<p>Quantity: {props.item.quantity}</p>
-			<button onClick={() => props.removeFromCart(props.item)}>Remove From Cart</button>
+		<div className="cart-card">
+			<img src={props.item.image} />
+			<span>
+				<p id="product-name">{props.item.name}</p>
+				<p id="product-price">${props.item.price}</p>
+				<p id="product-quantity">Quantity: {props.item.quantity}</p>
+			</span>
+			<button onClick={() => props.removeFromCart(props.item)}>X</button>
 		</div>
 	)
 }
