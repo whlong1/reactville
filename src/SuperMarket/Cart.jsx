@@ -12,7 +12,10 @@ const Cart = (props) => {
       {props.cart?.map((item, idx) => (
         <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
       ))}
-      <p>Total: ${total.toFixed(2)}</p>
+      <div className="cart-total">
+        <p>Total:</p>
+        <p>${total.toFixed(2)}</p>
+      </div>
       <button>Checkout</button>
       <button onClick={() => props.setCart([])}>Clear Cart</button>
     </div>
