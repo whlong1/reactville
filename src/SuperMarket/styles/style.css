@@ -18,6 +18,24 @@
   border-bottom: 1px solid #dbdbdb;
 }
 
+.super-market nav > select {
+  border-radius: 100px;
+  -webkit-appearance: none; 
+  padding: 6px 28px 6px 12px;
+  border: 1px solid #dbdbdb;
+  background: url('../assets/arrow2.png') 92% no-repeat;
+}
+
+.super-market nav > button {
+  width: 26px;
+  height: 26px;
+  opacity: .65;
+  border: none;
+  margin-left: 15px;
+  border-radius: 100px;
+  background: url('../assets/cart-ico.png') no-repeat center center / 92%;
+}
+
 #market-title {
   margin-right: auto;
 }
@@ -145,3 +163,14 @@
   font-weight: 400;
 }
 
+
+.cart > button {
+  padding: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #45C062;
+  border: 1px solid #50ce6d;
+}
