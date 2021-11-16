@@ -3,7 +3,7 @@ import CategoryMenu from './CategoryMenu'
 const MarketNav = (props) => {
   return (
     <nav>
-      <h1>Super Market</h1>
+      <h1 id="market-title">Super Market</h1>
       <CategoryMenu products={props.products} setProductCategory={props.setProductCategory} />
       <button onClick={() => props.setToggleCart(!props.toggleCart)}>Cart</button>
     </nav>

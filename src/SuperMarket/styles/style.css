@@ -5,13 +5,21 @@
 }
 
 .super-market section {
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .super-market nav {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 15px 0px 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#market-title {
+  margin-right: auto;
 }
 
 .cart {
@@ -26,7 +34,7 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;  
-  padding: 0px 15px 0px 15px;
+  padding: 10px 0px 0px 15px;
 }
 
 .product-card {
