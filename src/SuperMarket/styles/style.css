@@ -4,7 +4,7 @@
 }
 
 .super-market section {
-  width: 70%;
+  width: 75%;
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +14,10 @@
 }
 
 .cart {
-  width: 30%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px 0px 25px;
   border-left: 1px solid #dbdbdb;
 }
 
@@ -69,13 +72,11 @@
   border-radius: 0px 0px 5px 5px;
 }
 
-
 .cart-card {
-  border: 1px solid red;
+  margin: 0;
   display: flex;
   border-radius: 5px;
   border: 1px solid rgb(230, 230, 230);
-  margin: 0;
 }
 
 .cart-card *{
@@ -86,6 +87,8 @@
   width: 75%;
   display: flex;
   flex-direction: column;
+  padding: 10px 0px 10px 12px;
+  justify-content: space-between;
 }
 
 .cart-card img {
@@ -94,7 +97,10 @@
 }
 
 .cart-card button {
+  border: none;
   flex: content;
+  color: white;
+  background: #dd716a;
   justify-self: flex-end;
 }
 
@@ -104,6 +110,12 @@
 }
 
 #product-price {
+  opacity: .5;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+#product-quantity {
   opacity: .5;
   font-size: 12px;
   font-weight: 400;

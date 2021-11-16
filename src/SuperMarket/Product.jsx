@@ -1,7 +1,4 @@
-
-
 const Product = (props) => {
-
 
   return (
     <div className="product-card">
