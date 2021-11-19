@@ -1,3 +1,4 @@
+import React from 'react'
 import './styles/super-market.css'
 import { useState } from 'react'
 
