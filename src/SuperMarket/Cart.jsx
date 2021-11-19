@@ -6,6 +6,8 @@ const Cart = (props) => {
     return item.quantity > 1 ? sum + (item.price * item.quantity) : sum + item.price
   }, 0)
 
+  const formattedTotal = (Math.round(total * 100) / 100).toFixed(2)
+
   return (
     <div className="cart">
       <h3>Cart</h3>
@@ -14,9 +16,9 @@ const Cart = (props) => {
       ))}
       <div className="cart-total">
         <p>Total:</p>
-        <p>${total.toFixed(2)}</p>
+        <p>${formattedTotal}</p>
       </div>
-      <button onClick={() => props.handlePurchase(total)}>CHECKOUT</button>
+      <button onClick={() => props.handlePurchase(formattedTotal)}>CHECKOUT</button>
       <button onClick={() => props.setCart([])}>CLEAR CART</button>
     </div>
   )
