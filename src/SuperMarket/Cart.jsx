@@ -8,6 +8,11 @@ const Cart = (props) => {
 
   const formattedTotal = (Math.round(total * 100) / 100).toFixed(2)
 
+  const handleCheckout = () => {
+    const checkoutStatus = props.handlePurchase(formattedTotal)
+    if (checkoutStatus) props.setCart([])
+  }
+
   return (
     <div className="cart">
       <h3>Cart</h3>
@@ -18,7 +23,7 @@ const Cart = (props) => {
         <p>Total:</p>
         <p>${formattedTotal}</p>
       </div>
-      <button onClick={() => props.handlePurchase(formattedTotal)}>CHECKOUT</button>
+      <button onClick={() => handleCheckout()}>CHECKOUT</button>
       <button onClick={() => props.setCart([])}>CLEAR CART</button>
     </div>
   )

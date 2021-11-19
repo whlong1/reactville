@@ -10,10 +10,9 @@ import SuperMarket from './SuperMarket/SuperMarket'
 const App = () => {
   const [cash, setCash] = useState(100)
 
-
   const handlePurchase = (amt) => {
     if (cash - amt < 0) return false
-    setCash(cash - amt)
+    setCash((cash - amt).toFixed(2))
   }
 
   const dayOfWeek = () => {
