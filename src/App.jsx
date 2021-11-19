@@ -13,6 +13,7 @@ const App = () => {
   const handlePurchase = (amt) => {
     if (cash - amt < 0) return false
     setCash((cash - amt).toFixed(2))
+    return true
   }
 
   const dayOfWeek = () => {
