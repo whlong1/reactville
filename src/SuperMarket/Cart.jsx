@@ -16,7 +16,7 @@ const Cart = (props) => {
         <p>Total:</p>
         <p>${total.toFixed(2)}</p>
       </div>
-      <button>CHECKOUT</button>
+      <button onClick={() => props.handlePurchase(total)}>CHECKOUT</button>
       <button onClick={() => props.setCart([])}>CLEAR CART</button>
     </div>
   )

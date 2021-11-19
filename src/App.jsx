@@ -8,8 +8,13 @@ import Nav from './Nav/Nav'
 import SuperMarket from './SuperMarket/SuperMarket'
 
 const App = () => {
-  const [cash, setCash] = useState(0)
+  const [cash, setCash] = useState(100)
 
+
+  const handlePurchase = (amt) => {
+    if (cash - amt < 0) return false
+    setCash(cash - amt)
+  }
 
   const dayOfWeek = () => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -22,8 +27,9 @@ const App = () => {
 
   return (
     <main>
+      {cash}
       {/* <Nav cash={cash} setCash={setCash} /> */}
-      <SuperMarket />
+      <SuperMarket handlePurchase={handlePurchase} />
     </main>
   )
 }

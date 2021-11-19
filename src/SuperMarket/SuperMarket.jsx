@@ -9,7 +9,7 @@ import DisplayProducts from './DisplayProducts'
 // Data
 import { products } from './modules/data'
 
-const SuperMarket = () => {
+const SuperMarket = (props) => {
   const [cart, setCart] = useState([])
   const [toggleCart, setToggleCart] = useState(true)
   const [productCategory, setProductCategory] = useState('Produce')
@@ -47,7 +47,14 @@ const SuperMarket = () => {
         />
       </section>
 
-      {toggleCart && <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />}
+      {toggleCart &&
+        <Cart
+          cart={cart}
+          setCart={setCart}
+          removeFromCart={removeFromCart}
+          handlePurchase={props.handlePurchase}
+        />
+      }
 
     </div>
   )
