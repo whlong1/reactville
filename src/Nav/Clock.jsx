@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const Clock = (props) => {
+const Clock = () => {
   const [date, setDate] = useState(new Date())
 
   useEffect(() => {
@@ -8,7 +8,7 @@ const Clock = (props) => {
   }, [])
 
   return (
-    <p>{date.toLocaleTimeString(navigator.language, { hour: 'numeric', minute: 'numeric' })} </p>
+    <p>{date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })} </p>
   )
 }
 

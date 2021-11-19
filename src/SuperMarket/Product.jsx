@@ -2,7 +2,7 @@ const Product = (props) => {
 
   return (
     <div className="product-card">
-      <img src={props.product.image} />
+      <img src={props.product.image} alt="product icon" />
       <section>
         <span>
           <p id="product-name">{props.product.name}</p>

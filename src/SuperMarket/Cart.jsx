@@ -23,7 +23,7 @@ const Cart = (props) => {
   return (
     <div className="cart">
       <h3>Cart</h3>
-      {message}
+      <p>{message}</p>
 
       {props.cart?.map((item, idx) => (
         <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
