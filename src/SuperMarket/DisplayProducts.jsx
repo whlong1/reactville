@@ -12,6 +12,14 @@ const DisplayProducts = (props) => {
       />
   })
 
+  const allProducts = props.products.map((product, idx) => {
+    return <Product
+      key={idx}
+      product={product}
+      addToCart={props.addToCart}
+    />
+  })
+
   return (
     <div className="product-list">
       {selectedProducts}
