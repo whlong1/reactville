@@ -10,15 +10,14 @@ const Cart = (props) => {
     return item.quantity > 1 ? sum + (item.price * item.quantity) : sum + item.price
   }, 0))
 
-
   const handleCheckout = () => {
     const checkoutStatus = props.handlePurchase(total)
-    if (checkoutStatus) {
-      props.setCart([])
-      setMessage('')
-    } else {
-      setMessage('Payment declined!')
-    }
+    checkoutStatus ? clearCart() : setMessage('Payment declined!')
+  }
+
+  const clearCart = () => {
+    props.setCart([])
+    setMessage('')
   }
 
   return (
@@ -35,8 +34,8 @@ const Cart = (props) => {
         <p>${total}</p>
       </div>
 
-      <button onClick={() => handleCheckout()}>CHECKOUT</button>
-      <button onClick={() => props.setCart([])}>CLEAR CART</button>
+      <button onClick={handleCheckout}>CHECKOUT</button>
+      <button onClick={clearCart}>CLEAR CART</button>
     </div>
   )
 }
