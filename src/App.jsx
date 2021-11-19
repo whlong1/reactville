@@ -3,7 +3,6 @@ import { useState } from 'react'
 import './App.css'
 
 // Components
-// import Neigborhood from './Neighborhood/Neighborhood'
 import Nav from './Nav/Nav'
 import SuperMarket from './SuperMarket/SuperMarket'
 
@@ -16,14 +15,7 @@ const App = () => {
     return true
   }
 
-  const dayOfWeek = () => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-    const idx = new Date().getDay()
-    return days[idx]
-  }
-
-  console.log(dayOfWeek())
-
+  console.log('render')
 
   return (
     <main>

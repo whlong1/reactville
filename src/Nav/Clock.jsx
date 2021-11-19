@@ -1,14 +1,15 @@
-
+import { useState, useEffect } from 'react'
 
 const Clock = (props) => {
+  const [date, setDate] = useState(new Date())
 
+  useEffect(() => {
+    setInterval(() => setDate(new Date()), 60000)
+  }, [])
 
-
-    return (
-        <div>
-          Clock
-        </div>
-    )
+  return (
+    <p>{date.toLocaleTimeString(navigator.language, { hour: 'numeric', minute: 'numeric' })} </p>
+  )
 }
 
 export default Clock
