@@ -27,8 +27,7 @@ const App = () => {
 
   return (
     <main>
-      {cash}
-      {/* <Nav cash={cash} setCash={setCash} /> */}
+      <Nav cash={cash} setCash={setCash} />
       <SuperMarket handlePurchase={handlePurchase} />
     </main>
   )

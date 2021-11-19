@@ -1,4 +1,4 @@
-import './styles/style.css'
+import './styles/super-market.css'
 import { useState } from 'react'
 
 // Components
@@ -12,7 +12,7 @@ import { products } from './modules/data'
 const SuperMarket = (props) => {
   const [cart, setCart] = useState([])
   const [toggleCart, setToggleCart] = useState(true)
-  const [productCategory, setProductCategory] = useState('All')
+  const [productCategory, setProductCategory] = useState('Produce')
 
   const addToCart = (item) => {
     if (cart.find(prod => prod.id === item.id)) {

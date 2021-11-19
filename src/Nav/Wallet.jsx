@@ -2,11 +2,9 @@ const Wallet = (props) => {
 
 
 
-    return (
-        <div>
-          ${props.cash}
-        </div>
-    )
+  return (
+    <p> ${props.cash}</p>
+  )
 }
 
 export default Wallet
