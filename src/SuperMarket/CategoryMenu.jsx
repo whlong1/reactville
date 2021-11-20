@@ -1,4 +1,5 @@
 import React from 'react'
+
 const CategoryMenu = (props) => {
   const categories = [...new Set(props.products.map((product) => product.category))]
 

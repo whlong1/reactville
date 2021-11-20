@@ -1,7 +1,6 @@
 import React from 'react'
+
 const CartItem = (props) => {
-
-
 	return (
 		<div className="cart-card">
 			<img src={props.item.image} alt="product icon" />
