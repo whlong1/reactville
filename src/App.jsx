@@ -7,6 +7,7 @@ import './App.css'
 // Components
 import Nav from './Nav/Nav'
 import SuperMarket from './SuperMarket/SuperMarket'
+import Home from './Home'
 
 const App = () => {
   const [cash, setCash] = useState(100)
@@ -24,6 +25,9 @@ const App = () => {
     <main>
       <Nav cash={cash} setCash={setCash} />
       <Routes>
+        <Route path="/"
+          element={<Home />}
+        />
         <Route path="/market"
           element={<SuperMarket handlePurchase={handlePurchase} />}
         />
