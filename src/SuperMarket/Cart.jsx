@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CartItem from './CartItem'
-import { useState } from 'react'
+
 
 const Cart = (props) => {
   const [message, setMessage] = useState('')

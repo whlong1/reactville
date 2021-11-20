@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import './styles/super-market.css'
-import { useState } from 'react'
+
 
 // Components
 import Cart from './Cart'

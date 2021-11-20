@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import './App.css'
 
@@ -19,10 +19,17 @@ const App = () => {
 
   console.log('render')
 
+
   return (
     <main>
       <Nav cash={cash} setCash={setCash} />
-      <SuperMarket handlePurchase={handlePurchase} />
+      <Routes>
+        <Route path="/market"
+          element={<SuperMarket handlePurchase={handlePurchase} />}
+        />
+
+      </Routes>
+
     </main>
   )
 }
