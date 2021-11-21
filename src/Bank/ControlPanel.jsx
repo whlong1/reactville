@@ -1,17 +1,15 @@
 import React, { useState } from "react"
+import Button from "./Button"
 
 const ControlPanel = (props) => {
 	const [amount, setAmount] = useState(0)
 
 	return (
-		<form name={props.name} onSubmit={(e) => {
-			e.preventDefault()
-			props.handleBalance(props.name, parseInt(amount))
-			setAmount(0)
-		}}>
+		<>
 			<input type="number" min="1" value={amount} onChange={(e) => setAmount(e.target.value)} />
-			<button type="submit">{props.name}</button>
-		</form>
+			<Button name="Deposit" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
+			<Button name="Withdraw" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance}  />
+		</>
 	)
 }
 

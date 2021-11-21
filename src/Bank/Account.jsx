@@ -23,8 +23,7 @@ const Account = (props) => {
 			<h4>{props.name}</h4>
 			<p>Balance: {balance}</p>
 			<p>{message}</p>
-			<ControlPanel name="Deposit" handleBalance={handleBalance} />
-			<ControlPanel name="Withdraw" handleBalance={handleBalance} />
+			<ControlPanel handleBalance={handleBalance} />
 		</div>
 	)
 }
