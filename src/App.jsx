@@ -5,9 +5,10 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 
 // Components
-import Nav from './Nav/Nav'
-import SuperMarket from './SuperMarket/SuperMarket'
 import Home from './Home'
+import Nav from './Nav/Nav'
+import BurgerShop from './BurgerShop/BurgerShop'
+import SuperMarket from './SuperMarket/SuperMarket'
 
 const App = () => {
   const [cash, setCash] = useState(100)
@@ -20,7 +21,6 @@ const App = () => {
 
   console.log('render')
 
-
   return (
     <main>
       <Nav cash={cash} setCash={setCash} />
@@ -30,6 +30,9 @@ const App = () => {
         />
         <Route path="/market"
           element={<SuperMarket handlePurchase={handlePurchase} />}
+        />
+        <Route path="/burgers"
+          element={<BurgerShop handlePurchase={handlePurchase} />}
         />
 
       </Routes>

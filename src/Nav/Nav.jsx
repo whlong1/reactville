@@ -12,6 +12,7 @@ const Nav = (props) => {
       <h1>Reactville</h1>
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/market'>Market</NavLink>
+      <NavLink to='/burgers'>Burger Shop</NavLink>
       <Clock />
       <Wallet cash={props.cash} />
     </nav>
