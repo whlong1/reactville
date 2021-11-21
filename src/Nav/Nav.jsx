@@ -11,6 +11,7 @@ const Nav = (props) => {
     <nav>
       <h1>Reactville</h1>
       <NavLink to='/'>Home</NavLink>
+      <NavLink to='/bank'>Bank</NavLink>
       <NavLink to='/market'>Market</NavLink>
       <NavLink to='/burgers'>Burger Shop</NavLink>
       <Clock />

@@ -12,7 +12,7 @@ const Cart = (props) => {
   }, 0))
 
   const handleCheckout = () => {
-    const checkoutStatus = props.handlePurchase(total)
+    const checkoutStatus = props.handleExchange(total)
     checkoutStatus ? clearCart() : setMessage('Payment declined!')
   }
 

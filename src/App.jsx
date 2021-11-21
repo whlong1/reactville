@@ -7,13 +7,14 @@ import './App.css'
 // Components
 import Home from './Home'
 import Nav from './Nav/Nav'
+import Bank from './Bank/Bank'
 import BurgerShop from './BurgerShop/BurgerShop'
 import SuperMarket from './SuperMarket/SuperMarket'
 
 const App = () => {
   const [cash, setCash] = useState(100)
 
-  const handlePurchase = (amt) => {
+  const handleExchange = (amt) => {
     if (cash - amt < 0) return false
     setCash((cash - amt).toFixed(2))
     return true
@@ -29,10 +30,13 @@ const App = () => {
           element={<Home />}
         />
         <Route path="/market"
-          element={<SuperMarket handlePurchase={handlePurchase} />}
+          element={<SuperMarket handleExchange={handleExchange} />}
         />
         <Route path="/burgers"
-          element={<BurgerShop handlePurchase={handlePurchase} />}
+          element={<BurgerShop handleExchange={handleExchange} />}
+        />
+        <Route path="/bank"
+          element={<Bank handleExchange={handleExchange} />}
         />
 
       </Routes>
