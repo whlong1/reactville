@@ -1,31 +1,50 @@
 .bank section {
+  padding: 5px;
   display: flex;
 }
 
 .account {
+  width: 50%;
+  padding: 5px;
   border: 1px solid grey;
+  margin: 10px 10px 0px 10px;
 }
-
 
 .number-pad {
   display: flex;
   flex-wrap: wrap;
-  width: 180px;
-}
-
-.number-pad button {
-  width: 60px;
-  height: 30px;
-  border: none;
-  display: flex;
-  color: white;
-  align-items: center;
-  background: #192129;
   justify-content: center;
 }
 
+.number-pad button {
+  width: 33.3%;
+  height: 4vw;
+  display: flex;
+  color: white;
+  font-size: 1em;
+  min-height: 50px;
+  border-radius: 5px;
+  align-items: center;
+  background: #192129;
+  justify-content: center;
+  padding: 5px 0px 5px 0px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
 #input-display {
-  width: 100%;
   height: 30px;
+  border-radius: 5px;
   background: grey;
+  border: 1px solid white;
+}
+
+.control-panel section {
+  margin: 0;
+  padding: 0;
+}
+
+.control-panel section > button {
+  width: 100%;
+  border: none;
+
 }

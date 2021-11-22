@@ -10,9 +10,9 @@ const Account = (props) => {
 
 	const handleBalance = (name, amount) => {
 		try {
-			const value = name === 'Withdraw' ? amount *= -1 : amount
+			const value = name === 'WITHDRAW' ? amount *= -1 : amount
 			if (!validDollarAmount.test(Math.abs(value))) throw new Error('Please enter a valid number')
-			if (name === 'Withdraw' && balance + amount < 0) throw new Error('Insufficient Funds')
+			if (name === 'WITHDRAW' && balance + amount < 0) throw new Error('Insufficient Funds')
 			if (!props.handleExchange(value)) throw new Error('Not enough cash!')
 			setBalance(balance + value)
 			setMessage('')
@@ -24,7 +24,7 @@ const Account = (props) => {
 	return (
 		<div className="account">
 			<h4>{props.name}</h4>
-			<p>Balance: ${balance} {message}</p>
+			<section><p>Balance: ${balance}</p><p>Status: {message}</p></section>
 			<ControlPanel handleBalance={handleBalance} />
 		</div>
 	)

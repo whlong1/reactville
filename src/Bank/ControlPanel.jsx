@@ -7,12 +7,14 @@ const ControlPanel = (props) => {
 	const [amount, setAmount] = useState('')
 
 	return (
-		<div>
+		<div className="control-panel">
 			<div id="input-display">{amount}</div>
 			<InputPad amount={amount} setAmount={setAmount} />
-			<Button name="Deposit" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
-			<button onClick={() => setAmount('')}>Clear</button>
-			<Button name="Withdraw" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
+			<section>
+				<Button name="DEPOSIT" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
+				<button onClick={() => setAmount('')}>CLEAR</button>
+				<Button name="WITHDRAW" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
+			</section>
 		</div>
 	)
 }
