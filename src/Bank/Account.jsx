@@ -3,7 +3,7 @@ import ControlPanel from "./ControlPanel"
 
 
 const Account = (props) => {
-	const [balance, setBalance] = useState(0)
+	const [balance, setBalance] = useState(0) //does not maintain 2 decimals if last dec is a zero
 	const [message, setMessage] = useState('')
 	const validDollarAmount = /^\d+(?:\.\d{0,2})?$/
   //https://regexlib.com/REDetails.aspx?regexp_id=543

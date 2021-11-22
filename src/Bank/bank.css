@@ -34,7 +34,7 @@
 #input-display {
   height: 30px;
   border-radius: 5px;
-  background: grey;
+  background: rgb(220, 220, 220);
   border: 1px solid white;
 }
 
