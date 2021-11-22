@@ -8,9 +8,10 @@ const ControlPanel = (props) => {
 
 	return (
 		<div>
-			{amount}
+			<div id="input-display">{amount}</div>
 			<InputPad amount={amount} setAmount={setAmount} />
 			<Button name="Deposit" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
+			<button onClick={() => setAmount('')}>Clear</button>
 			<Button name="Withdraw" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
 		</div>
 	)
