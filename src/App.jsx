@@ -10,6 +10,7 @@ import Nav from './Nav/Nav'
 import Bank from './Bank/Bank'
 import BurgerShop from './BurgerShop/BurgerShop'
 import SuperMarket from './SuperMarket/SuperMarket'
+import PostOffice from './PostOffice/PostOffice'
 
 const App = () => {
   const [cash, setCash] = useState(100)
@@ -38,6 +39,9 @@ const App = () => {
         />
         <Route path="/bank"
           element={<Bank handleExchange={handleExchange} />}
+        />
+        <Route path="/postoffice"
+          element={<PostOffice handleExchange={handleExchange} />}
         />
 
       </Routes>

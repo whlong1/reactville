@@ -23,7 +23,7 @@ const Account = (props) => {
 
 	return (
 		<div className="account">
-			<h4>{props.name}</h4>
+			<h3>{props.name}</h3>
 			<section><p>Balance: ${balance}</p><p>Status: {message}</p></section>
 			<ControlPanel handleBalance={handleBalance} />
 		</div>

@@ -14,6 +14,7 @@ const Nav = (props) => {
       <NavLink to='/bank'>Bank</NavLink>
       <NavLink to='/market'>Market</NavLink>
       <NavLink to='/burgers'>Burger Shop</NavLink>
+      <NavLink to='/postoffice'>Post Office</NavLink>
       <Clock />
       <Wallet cash={props.cash} />
     </nav>
