@@ -1,3 +1,22 @@
 .bank section {
   display: flex;
 }
+
+.account {
+  border: 1px solid grey;
+}
+
+
+.number-pad {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+}
+
+.number-pad button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

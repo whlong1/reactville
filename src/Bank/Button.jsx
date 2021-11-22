@@ -5,8 +5,8 @@ const Button = (props) => {
   return (
     <button type="submit" onClick={(e) => {
       e.preventDefault()
-      props.handleBalance(props.name, parseInt(props.amount))
-      props.setAmount(0)
+      if (props.amount) props.handleBalance(props.name, parseInt(props.amount))
+      props.setAmount('')
     }}>{props.name}</button>
   )
 }

@@ -4,7 +4,7 @@ import ControlPanel from "./ControlPanel"
 
 const Account = (props) => {
 	const [balance, setBalance] = useState(0)
-	const [message, setMessage] = useState('Welcome') //greeting based on time
+	const [message, setMessage] = useState('')
 
 	const handleBalance = (name, amount) => {
 		try {
@@ -19,10 +19,9 @@ const Account = (props) => {
 	}
 
 	return (
-		<div>
+		<div className="account">
 			<h4>{props.name}</h4>
-			<p>Balance: {balance}</p>
-			<p>{message}</p>
+			<p>Balance: ${balance} {message}</p>
 			<ControlPanel handleBalance={handleBalance} />
 		</div>
 	)
