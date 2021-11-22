@@ -5,9 +5,6 @@ import Account from "./Account"
 
 const Bank = (props) => {
 
-	//fix decimal issue when withdrawing/depositing money
-	//limit input to valid numbers
-
 	return (
 		<div className="bank">
 			<nav>

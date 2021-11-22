@@ -10,9 +10,9 @@ const Account = (props) => {
 
 	const handleBalance = (name, amount) => {
 		try {
-			if (!validDollarAmount.test(amount)) throw new Error('Please enter a valid number')
 			const value = name === 'Withdraw' ? amount *= -1 : amount
-			if (name === 'Withdraw' && balance + value < 0) throw new Error('Insufficient Funds')
+			if (!validDollarAmount.test(Math.abs(value))) throw new Error('Please enter a valid number')
+			if (name === 'Withdraw' && balance + amount < 0) throw new Error('Insufficient Funds')
 			if (!props.handleExchange(value)) throw new Error('Not enough cash!')
 			setBalance(balance + value)
 			setMessage('')
