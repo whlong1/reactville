@@ -1,11 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 
 const Button = (props) => {
 
   return (
     <button type="submit" onClick={(e) => {
       e.preventDefault()
-      if (props.amount) props.handleBalance(props.name, parseInt(props.amount))
+      console.log(props.amount)
+      if (props.amount) props.handleBalance(props.name, parseFloat(props.amount))
       props.setAmount('')
     }}>{props.name}</button>
   )

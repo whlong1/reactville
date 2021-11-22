@@ -1,7 +1,6 @@
 import React, { useState }  from 'react'
 import './styles/super-market.css'
 
-
 // Components
 import Cart from './Cart'
 import MarketNav from './MarketNav'

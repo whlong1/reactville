@@ -15,6 +15,7 @@ const App = () => {
   const [cash, setCash] = useState(100)
 
   const handleExchange = (amt) => {
+    console.log(amt)
     if (cash - amt < 0) return false
     setCash((cash - amt).toFixed(2))
     return true
