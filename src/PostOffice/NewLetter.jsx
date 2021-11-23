@@ -34,8 +34,6 @@ const NewLetter= (props) => {
     return <h1>Your letter has been sent!</h1>
   }
 
-  console.log(letter)
-
   return (
     <form onSubmit={handleSubmit}>
       {isSending && <p>Sending...</p>}

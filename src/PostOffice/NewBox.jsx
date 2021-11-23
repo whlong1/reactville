@@ -6,6 +6,7 @@ const NewBox = (props) => {
     boxNo: boxNumber,
     owner: '',
   })
+  console.log(box, setBox)
 
   return (
     <form>

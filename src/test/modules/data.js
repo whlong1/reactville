@@ -249,4 +249,4 @@ export const initialTravelPlan = {
     title: 'Green Hill',
     childIds: []
   }
-};
+}
