@@ -4,7 +4,7 @@ import './mail.css'
 
 //Components
 import Box from "./Box"
-import Boxes from "./Boxes"
+import BoxList from "./BoxList"
 // import NewBox from "./NewBox"
 import NewLetter from "./NewLetter"
 
@@ -20,6 +20,7 @@ const PostOffice = (props) => {
 	console.log(boxes, typeof setBoxes)
 	console.log(typeof letters, typeof setLetters)
 
+	console.log('Post Office Render')
 	return (
 		<div className="post-office">
 			<nav>
@@ -28,10 +29,10 @@ const PostOffice = (props) => {
 
 			<Routes>
 				<Route path="/"
-					element={<Boxes boxes={boxes} />}
+					element={<BoxList boxes={boxes} />}
 				/>
 				<Route path="/:boxNo"
-					element={<Box />}
+					element={<Box boxes={boxes} letters={letters} />}
 				/>
 			</Routes>
 		</div>

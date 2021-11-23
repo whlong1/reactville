@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const Boxes = (props) => {
+const BoxList = (props) => {
   const boxList = Object.keys(props.boxes)
 
   return (
@@ -14,4 +14,4 @@ const Boxes = (props) => {
   )
 }
 
-export default Boxes
+export default BoxList
