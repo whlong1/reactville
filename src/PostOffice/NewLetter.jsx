@@ -1,47 +1,47 @@
 import React, { useState } from "react"
 
-const LetterForm = (props) => {
+const NewLetter= (props) => {
   const [letter, setLetter] = useState({
     boxNo: '',
     subject: '',
     content: '',
     read: false,
   })
+  const [status, setStatus] = useState('typing');
+  const isSending = status === 'sending'
+  const isSent = status === 'sent'
+
 
   const handleChange = (e) => {
     setLetter({ ...letter, [e.target.name]: e.target.value })
   }
 
-  const [status, setStatus] = useState('typing');
-  const [text, setText] = useState('')
-
-  const isSending = status === 'sending'
-  const isSent = status === 'sent'
-
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setStatus('sending')
-    await sendMessage(text)
-    setStatus('sent')
+    setStatus('SENDING')
+    await sendMessage(letter)
+    setStatus('SENT')
   }
 
-  const sendMessage = (text) => {
+  const sendMessage = (letter) => {
     return new Promise(resolve => {
       setTimeout(resolve, 2000)
-      console.log('Working')
+      console.log('Function here')
     })
   }
 
   if (isSent) {
-    return <h1>Thanks for feedback!</h1>
+    return <h1>Your letter has been sent!</h1>
   }
+
+  console.log(letter)
 
   return (
     <form onSubmit={handleSubmit}>
       {isSending && <p>Sending...</p>}
       <label>PO BOX
-        <select required disabled={isSending} name="boxNo" onChange={handleChange}>
-          <option value={letter.boxNo}></option>
+        <select disabled={isSending} name="boxNo" onChange={handleChange}>
+          <option value={letter.boxNo}>1</option>
         </select>
       </label>
       <input
@@ -65,4 +65,4 @@ const LetterForm = (props) => {
   )
 }
 
-export default LetterForm
+export default NewLetter

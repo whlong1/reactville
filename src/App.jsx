@@ -11,6 +11,7 @@ import Bank from './Bank/Bank'
 import BurgerShop from './BurgerShop/BurgerShop'
 import SuperMarket from './SuperMarket/SuperMarket'
 import PostOffice from './PostOffice/PostOffice'
+import TravelPlan from './test/TravelPlan'
 
 const App = () => {
   const [cash, setCash] = useState(100)
@@ -42,6 +43,10 @@ const App = () => {
         />
         <Route path="/postoffice"
           element={<PostOffice handleExchange={handleExchange} />}
+        />
+
+        <Route path="/travel"
+          element={<TravelPlan/>}
         />
 
       </Routes>
