@@ -12,11 +12,10 @@ import { initialPOBoxes } from "./modules/data"
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
 	const [letters, setLetters] = useState({})
+	const nextBoxNumber = Object.keys(boxes).length
 
 	console.log(boxes, typeof setBoxes)
 	console.log(typeof letters, typeof setLetters)
-
-	console.log('Current PO Box Number:', Object.keys(boxes).length)
 
 	return (
 		<div className="post-office">

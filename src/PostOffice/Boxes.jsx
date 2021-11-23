@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Boxes = (props) => {
   const boxList = Object.keys(props.boxes)
@@ -6,7 +7,7 @@ const Boxes = (props) => {
   return (
     <div className="boxes">
       {boxList.map((boxNo)=>(
-        <div key={boxNo}>PO BOX {boxNo}</div>
+        <Link to={`/postoffice/${boxNo}`} key={boxNo}>PO BOX {boxNo}</Link>
       ))}
     </div>
   )
