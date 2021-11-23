@@ -1,13 +1,16 @@
 import React, { useState } from "react"
+import { Route, Routes } from "react-router"
 import './mail.css'
 
 //Components
+import Box from "./Box"
 import Boxes from "./Boxes"
 // import NewBox from "./NewBox"
 import NewLetter from "./NewLetter"
 
 //Data
 import { initialPOBoxes } from "./modules/data"
+
 
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
@@ -22,7 +25,15 @@ const PostOffice = (props) => {
 			<nav>
 				<h1>Post Office</h1>
 			</nav>
-			<Boxes boxes={boxes} />
+
+			<Routes>
+				<Route path="/"
+					element={<Boxes boxes={boxes} />}
+				/>
+				<Route path="/:boxNo"
+					element={<Box />}
+				/>
+			</Routes>
 		</div>
 	)
 }

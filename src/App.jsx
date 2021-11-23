@@ -8,7 +8,6 @@ import './App.css'
 import Home from './Home'
 import Nav from './Nav/Nav'
 import Bank from './Bank/Bank'
-import Box from './PostOffice/Box'
 import BurgerShop from './BurgerShop/BurgerShop'
 import SuperMarket from './SuperMarket/SuperMarket'
 import PostOffice from './PostOffice/PostOffice'
@@ -41,12 +40,10 @@ const App = () => {
         <Route path="/bank"
           element={<Bank handleExchange={handleExchange} />}
         />
-        <Route path="/postoffice"
+        <Route path="/postoffice/*"
           element={<PostOffice handleExchange={handleExchange} />}
         />
-        <Route path="/postoffice/:boxNo"
-          element={<Box/>}
-        />
+
       </Routes>
 
     </main>
