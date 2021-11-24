@@ -23,13 +23,8 @@ const PostOffice = (props) => {
 
 	const sendLetter = (boxNum, formData) => {
 		setLetters({ ...letters, [nextLetterId]: formData })
-		console.log(boxes[boxNum].letters)
-		console.log(boxes[boxNum])
-		setBoxes({
-			...boxes,
-			// boxes[boxNum].letters
-			// [boxNum].letters: [nextLetterId]
-		})
+		const newLetters = [...boxes[boxNum].letters, nextLetterId]
+		setBoxes({ ...boxes, [boxNum]: {...boxes[boxNum], letters: newLetters} })
 	}
 
 	console.log(boxes)
