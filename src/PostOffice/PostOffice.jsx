@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Route, Routes } from "react-router"
+import { Route, Routes, NavLink } from "react-router-dom"
 import './mail.css'
 
 //Components
@@ -25,6 +25,9 @@ const PostOffice = (props) => {
 		<div className="post-office">
 			<nav>
 				<h1>Post Office</h1>
+				<NavLink to="/postoffice">Home</NavLink>
+				<NavLink to="/postoffice/letters/new">New Letter</NavLink>
+				<NavLink to="/postoffice/boxes/new">New PO Box</NavLink>
 			</nav>
 
 			<Routes>
@@ -33,6 +36,9 @@ const PostOffice = (props) => {
 				/>
 				<Route path="/:boxNo"
 					element={<Box boxes={boxes} letters={letters} />}
+				/>
+				<Route path="/letters/new"
+					element={<NewLetter letters={letters} />}
 				/>
 			</Routes>
 		</div>

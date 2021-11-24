@@ -36,6 +36,7 @@ const NewLetter= (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>New Letter</h1>
       {isSending && <p>Sending...</p>}
       <label>PO BOX
         <select disabled={isSending} name="boxNo" onChange={handleChange}>
