@@ -15,7 +15,6 @@ import { initialPOBoxes } from "./modules/data"
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
 	const [letters, setLetters] = useState({})
-
 	const nextBoxNumber = Object.keys(boxes).length
 	const nextLetterId = Object.keys(letters).length
 
@@ -28,6 +27,7 @@ const PostOffice = (props) => {
 	}
 
 	console.log(boxes)
+	console.log(letters)
 
 	return (
 		<div className="post-office">

@@ -1,19 +1,23 @@
 import React, { useState } from "react"
 
+import SelectRecipient from "./SelectRecipient"
+
 const NewLetter = (props) => {
+  const boxNumbers = Object.keys(props.boxes)
+
+
+  const [boxNum, setBoxNum] = useState(0)
+  const selectedBox = props.boxes[boxNum]
+  
   const initialState = {
     date: new Date().toLocaleDateString(),
     subject: '',
-    recipient: '',
+    recipient: selectedBox.boxHolders[0],
     content: '',
     read: false,
   }
-
-  const boxNumbers = Object.keys(props.boxes)
-
-  const [boxNum, setBoxNum] = useState(0)
+  
   const [letter, setLetter] = useState(initialState)
-
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -25,7 +29,6 @@ const NewLetter = (props) => {
     setLetter({ ...letter, [e.target.name]: e.target.value })
   }
 
-
   return (
     <form onSubmit={handleSubmit}>
       <h3>New Letter</h3>
@@ -33,18 +36,20 @@ const NewLetter = (props) => {
       <label>Select a PO BOX
         <select required name="boxNo" onChange={(e) => setBoxNum(e.target.value)}>
           {boxNumbers.map((num) => (
-            <option key={num} value={num}>{num}</option>
+            <option key={num} value={num}>PO BOX {num}</option>
           ))}
         </select>
       </label>
 
-      <label>Select A Recipient
-        <select required name="boxNo" onChange={handleChange}>
+      <SelectRecipient selectedBox={selectedBox} handleChange={handleChange}/>
+
+      {/* <label>Select A Recipient
+        <select name="boxNo" onChange={handleChange}>
           {props.boxes[boxNum]?.boxHolders.map((name, idx) => (
             <option key={idx} value={name}>{name}</option>
           ))}
         </select>
-      </label>
+      </label> */}
 
 
       <input
