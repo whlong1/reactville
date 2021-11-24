@@ -1,43 +1,52 @@
 import React, { useState } from "react"
 
 const NewLetter = (props) => {
-  const nextLetterId = Object.keys(props.letters).length
-  const [letter, setLetter] = useState({
+  const initialState = {
+    date: new Date().toLocaleDateString(),
     subject: '',
+    recipient: '',
     content: '',
     read: false,
-  })
+  }
 
-  // 0: {
-  //   date: '1/4/2021',
-  //   recipient: 'Dan Abramov',
-  //   subject: 'Losing Patience',
-  //   content: 'I'm not going to be ignored, Dan.',
-  //   read: false
-  // }
+  const boxNumbers = Object.keys(props.boxes)
+
+  const [boxNum, setBoxNum] = useState(0)
+  const [letter, setLetter] = useState(initialState)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // setStatus('SENDING')
-    // await sendMessage(letter)
-    // setStatus('SENT')
+    props.sendLetter(boxNum, letter)
+    setLetter(initialState)
   }
 
   const handleChange = (e) => {
     setLetter({ ...letter, [e.target.name]: e.target.value })
   }
 
-  //how does a user select po box?
-
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1>New Letter</h1>
-      <label>PO BOX
-        <select name="boxNo" onChange={handleChange}>
-          <option value={letter.boxNo}>1</option>
+      <h3>New Letter</h3>
+
+      <label>Select a PO BOX
+        <select required name="boxNo" onChange={(e) => setBoxNum(e.target.value)}>
+          {boxNumbers.map((num) => (
+            <option key={num} value={num}>{num}</option>
+          ))}
         </select>
       </label>
+
+      <label>Select A Recipient
+        <select required name="boxNo" onChange={handleChange}>
+          {props.boxes[boxNum]?.boxHolders.map((name, idx) => (
+            <option key={idx} value={name}>{name}</option>
+          ))}
+        </select>
+      </label>
+
+
       <input
         required
         name="subject"
@@ -52,6 +61,7 @@ const NewLetter = (props) => {
         value={letter.content}
         onChange={handleChange}
       />
+
       <button type="submit">Send</button>
     </form>
   )

@@ -17,8 +17,22 @@ const PostOffice = (props) => {
 	const [letters, setLetters] = useState({})
 
 	const nextBoxNumber = Object.keys(boxes).length
+	const nextLetterId = Object.keys(letters).length
 
 	console.log('Post Office Render')
+
+	const sendLetter = (boxNum, formData) => {
+		setLetters({ ...letters, [nextLetterId]: formData })
+		console.log(boxes[boxNum].letters)
+		console.log(boxes[boxNum])
+		setBoxes({
+			...boxes,
+			// boxes[boxNum].letters
+			// [boxNum].letters: [nextLetterId]
+		})
+	}
+
+	console.log(boxes)
 
 	return (
 		<div className="post-office">
@@ -37,7 +51,7 @@ const PostOffice = (props) => {
 					element={<Box boxes={boxes} letters={letters} />}
 				/>
 				<Route path="/letters/new"
-					element={<NewLetter letters={letters} />}
+					element={<NewLetter boxes={boxes} letters={letters} sendLetter={sendLetter} />}
 				/>
 				<Route path="/boxes/new"
 					element={<NewBox boxes={boxes} />}
