@@ -1,51 +1,45 @@
 import React, { useState } from "react"
 
-const NewLetter= (props) => {
+const NewLetter = (props) => {
+  const nextLetterId = Object.keys(props.letters).length
   const [letter, setLetter] = useState({
-    boxNo: '',
     subject: '',
     content: '',
     read: false,
   })
-  const [status, setStatus] = useState('typing');
-  const isSending = status === 'sending'
-  const isSent = status === 'sent'
 
+  // 0: {
+  //   date: '1/4/2021',
+  //   recipient: 'Dan Abramov',
+  //   subject: 'Losing Patience',
+  //   content: 'I'm not going to be ignored, Dan.',
+  //   read: false
+  // }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    // setStatus('SENDING')
+    // await sendMessage(letter)
+    // setStatus('SENT')
+  }
 
   const handleChange = (e) => {
     setLetter({ ...letter, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus('SENDING')
-    await sendMessage(letter)
-    setStatus('SENT')
-  }
+  //how does a user select po box?
 
-  const sendMessage = (letter) => {
-    return new Promise(resolve => {
-      setTimeout(resolve, 2000)
-      console.log('Function here')
-    })
-  }
-
-  if (isSent) {
-    return <h1>Your letter has been sent!</h1>
-  }
 
   return (
     <form onSubmit={handleSubmit}>
       <h1>New Letter</h1>
-      {isSending && <p>Sending...</p>}
       <label>PO BOX
-        <select disabled={isSending} name="boxNo" onChange={handleChange}>
+        <select name="boxNo" onChange={handleChange}>
           <option value={letter.boxNo}>1</option>
         </select>
       </label>
       <input
         required
-        disabled={isSending}
         name="subject"
         placeholder="Subject"
         value={letter.subject}
@@ -53,13 +47,12 @@ const NewLetter= (props) => {
       />
       <textarea
         required
-        disabled={isSending}
         name="content"
         placeholder="Content"
         value={letter.content}
         onChange={handleChange}
       />
-      <button disabled={isSending} type="submit">Send</button>
+      <button type="submit">Send</button>
     </form>
   )
 }
