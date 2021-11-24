@@ -4,6 +4,7 @@ const SelectRecipient = (props) => {
   return (
     <label>Select A Recipient
       <select required name="recipient" onChange={props.handleChange}>
+        <option value="">Select a Recipient</option>
         {props.selectedBox?.boxHolders.map((name, idx) => (
           <option key={idx} value={name}>{name}</option>
         ))}
