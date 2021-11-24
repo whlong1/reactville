@@ -6,7 +6,7 @@ import './mail.css'
 import Box from "./Box"
 import BoxList from "./BoxList"
 import NewBox from "./NewBox"
-import NewLetter from "./NewLetter"
+import NewLetter from "./NewLetter/NewLetter"
 
 //Data
 import { initialPOBoxes } from "./modules/data"
