@@ -2,7 +2,7 @@ import React from "react"
 import { useParams, useNavigate } from "react-router"
 import LetterList from "./LetterList"
 
-const Box = (props) => {
+const BoxDetails = (props) => {
   const navigate = useNavigate()
   const { boxNo } = useParams()
   const poBox = props.boxes[boxNo]
@@ -32,4 +32,4 @@ const Box = (props) => {
   )
 }
 
-export default Box
+export default BoxDetails

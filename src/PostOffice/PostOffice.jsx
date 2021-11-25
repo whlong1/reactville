@@ -3,7 +3,7 @@ import { Route, Routes, NavLink } from "react-router-dom"
 import './mail.css'
 
 //Components
-import Box from "./Box"
+import BoxDetails from "./BoxDetails"
 import BoxList from "./BoxList"
 import NewBox from "./NewBox/NewBox"
 import NewLetter from "./NewLetter/NewLetter"
@@ -42,7 +42,7 @@ const PostOffice = (props) => {
 		<div className="post-office">
 			<nav>
 				<h1>Post Office</h1>
-				<NavLink to="/postoffice">Home</NavLink>
+				<NavLink to="/postoffice">Lobby</NavLink>
 				<NavLink to="/postoffice/letters/new">New Letter</NavLink>
 				<NavLink to="/postoffice/boxes/new">New PO Box</NavLink>
 			</nav>
@@ -52,7 +52,7 @@ const PostOffice = (props) => {
 					element={<BoxList boxes={boxes} />}
 				/>
 				<Route path="/:boxNo"
-					element={<Box boxes={boxes} letters={letters} markAsRead={markAsRead} />}
+					element={<BoxDetails boxes={boxes} letters={letters} markAsRead={markAsRead} />}
 				/>
 				<Route path="/letters/new"
 					element={<NewLetter boxes={boxes} letters={letters} sendLetter={sendLetter} />}

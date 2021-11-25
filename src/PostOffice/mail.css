@@ -1,4 +1,65 @@
+.post-office {
+  border:1px solid green
+}
+
 .post-office form {
   display: flex;
   flex-direction: column;
+}
+
+.po-boxes {
+  display: flex;
+  height: 100%;
+}
+
+.po-boxes section {
+  padding: 10px;
+}
+
+.po-boxes section h4 {
+  margin: 0;
+}
+
+.image {
+  width: 50%;
+  border: 1px solid red;
+}
+
+.po-boxes a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: red;
+  border: 1px solid green;
+}
+
+.po-box {
+  border: 1px solid red;
+}
+
+/* cart */
+/* #fbfcfd; */
+
+/* darker */
+/* background: #f5f8fc; */
+
+.new-letter section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 10px 15px;
+}
+
+.new-letter section h4 {
+  margin: 0;
+}
+
+.new-letter header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px 10px 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.new-letter header h3 {
+  margin-right: auto;
 }

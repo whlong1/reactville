@@ -40,25 +40,31 @@ const NewLetter = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>New Letter</h3>
-      <SelectBox setBoxNum={setBoxNum} boxNumbers={boxNumbers} />
-      <SelectRecipient selectedBox={selectedBox} handleChange={handleChange} />
-      <input
-        required
-        name="subject"
-        placeholder="Subject"
-        value={letter.subject}
-        onChange={handleChange}
-      />
-      <textarea
-        required
-        name="content"
-        placeholder="Content"
-        value={letter.content}
-        onChange={handleChange}
-      />
-      <button type="submit">Send</button>
+    <form className="new-letter" onSubmit={handleSubmit}>
+      <header>
+        <h3>New Letter</h3>
+        <SelectBox setBoxNum={setBoxNum} boxNumbers={boxNumbers} />
+        <SelectRecipient selectedBox={selectedBox} handleChange={handleChange} />
+      </header>
+      <section>
+        <h4>Enter Subject</h4>
+        <input
+          required
+          name="subject"
+          placeholder="Subject"
+          value={letter.subject}
+          onChange={handleChange}
+        />
+        <h4>Letter Content</h4>
+        <textarea
+          required
+          name="content"
+          placeholder="Content"
+          value={letter.content}
+          onChange={handleChange}
+        />
+        <button type="submit">Send</button>
+      </section>
     </form>
   )
 }
