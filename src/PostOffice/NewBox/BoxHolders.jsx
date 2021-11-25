@@ -1,14 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
 
 const BoxHolders = (props) => {
-  console.log(props)
-
   return (
     <div>
       <h4>Box Holders:</h4>
-      
       {props.boxHolders.map((name, idx) => (
-        <p key={idx}>{name}</p>
+        <div key={idx}>
+          <p>{name}</p>
+          <button onClick={()=>props.removeBoxHolder(name)}>Remove</button>
+        </div>
       ))}
     </div>
   )

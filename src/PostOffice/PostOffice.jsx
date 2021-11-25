@@ -17,17 +17,13 @@ const PostOffice = (props) => {
 	const nextBoxNumber = Object.keys(boxes).length
 	const nextLetterId = Object.keys(letters).length
 
-	console.log('Post Office Render')
-
 	const sendLetter = (boxNum, formData) => {
-		// Touch on nextLetterId, value does not change until next render
 		setLetters({ ...letters, [nextLetterId]: formData })
 		const updatedLetters = [...boxes[boxNum].letters, nextLetterId]
 		setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
 	}
 
-	const createBox = (nameArr) => {
-		//bring in handle charge here and for send letter
+	const createBox = (nameArr, cost) => {
 		setBoxes({ ...boxes, [nextBoxNumber]: { boxHolders: nameArr, letters: [] } })
 	}
 
