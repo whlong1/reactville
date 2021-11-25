@@ -6,7 +6,13 @@ const Box = (props) => {
   const navigate = useNavigate()
   const { boxNo } = useParams()
   const poBox = props.boxes[boxNo]
-  console.log('This boxes letters', poBox.letters)
+
+  if (!poBox) return (
+    <div>
+      <h4>Hmm, this box doesn't seem to exist.</h4>
+      <button onClick={() => navigate('/postoffice')}>Return To Lobby</button>
+    </div>
+  )
 
   return (
     <div>
