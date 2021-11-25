@@ -61,5 +61,6 @@
 }
 
 .new-letter header h3 {
+  margin: 0;
   margin-right: auto;
 }

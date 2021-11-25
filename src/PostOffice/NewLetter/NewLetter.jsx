@@ -8,7 +8,7 @@ import { initialState } from "./initialState"
 
 const NewLetter = (props) => {
   const navigate = useNavigate()
-  const [boxNum, setBoxNum] = useState(0)
+  const [boxNum, setBoxNum] = useState(-1)
   const [letter, setLetter] = useState(initialState)
   const [status, setStatus] = useState(false)
   const boxNumbers = Object.keys(props.boxes)
