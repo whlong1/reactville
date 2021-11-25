@@ -19,9 +19,12 @@ const PostOffice = (props) => {
 	const nextLetterId = Object.keys(letters).length
 
 	const sendLetter = (boxNum, formData) => {
-		setLetters({ ...letters, [nextLetterId]: formData })
-		const updatedLetters = [...boxes[boxNum].letters, nextLetterId]
-		setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
+		if (props.handleExchange(.99)) {
+			setLetters({ ...letters, [nextLetterId]: formData })
+			const updatedLetters = [...boxes[boxNum].letters, nextLetterId]
+			setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
+			return true
+		}
 	}
 
 	const createBox = (nameArr, cost) => {

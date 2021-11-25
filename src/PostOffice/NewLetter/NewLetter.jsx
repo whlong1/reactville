@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 import SelectBox from './SelectBox'
 import SelectRecipient from "./SelectRecipient"
@@ -6,28 +7,35 @@ import SelectRecipient from "./SelectRecipient"
 import { initialState } from "./initialState"
 
 const NewLetter = (props) => {
+  const navigate = useNavigate()
   const [boxNum, setBoxNum] = useState(0)
   const [letter, setLetter] = useState(initialState)
-  const [isSent, setIsSent] = useState(false)
+  const [status, setStatus] = useState(false)
   const boxNumbers = Object.keys(props.boxes)
   const selectedBox = props.boxes[boxNum]
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.sendLetter(boxNum, letter)
-    setIsSent(true)
-    setLetter(initialState)
+    if (props.sendLetter(boxNum, letter)) {
+      setStatus('Your letter has been sent.')
+      setLetter(initialState)
+    } else {
+      setStatus('Insufficient Funds.')
+      setLetter(initialState)
+    }
   }
 
   const handleChange = (e) => {
     setLetter({ ...letter, [e.target.name]: e.target.value })
   }
 
-  if (isSent) {
+  if (status) {
     return (
-      <label>Your letter has been sent.
-        <button onClick={() => setIsSent(false)}>New Letter</button>
-      </label>
+      <div>
+        <h4>{status}</h4>
+        <button onClick={() => setStatus('')}>New Letter</button>
+        <button onClick={() => navigate('/postoffice')}>Return To Lobby</button>
+      </div>
     )
   }
 
