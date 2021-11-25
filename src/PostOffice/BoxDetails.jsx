@@ -15,16 +15,13 @@ const BoxDetails = (props) => {
   )
 
   return (
-    <div>
-
-      <h3>PO Box {boxNo}</h3>
-      <button onClick={() => navigate(-1)}>Back</button>
-      
-      <section>
-        {poBox.boxHolders.map((holder, idx) => (
-          <p key={idx}>{holder}</p>
-        ))}
-      </section>
+    <div className="box-details">
+      <header>
+        <h3>PO Box {boxNo}</h3>
+        <select>
+          {poBox.boxHolders.map((name, idx) => (<option key={idx}>{name}</option>))}
+        </select>
+      </header>
 
       <LetterList letterIds={poBox.letters} letters={props.letters} markAsRead={props.markAsRead} />
 
