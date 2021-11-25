@@ -16,8 +16,10 @@ const Box = (props) => {
 
   return (
     <div>
+
       <h3>PO Box {boxNo}</h3>
       <button onClick={() => navigate(-1)}>Back</button>
+      
       <section>
         {poBox.boxHolders.map((holder, idx) => (
           <p key={idx}>{holder}</p>

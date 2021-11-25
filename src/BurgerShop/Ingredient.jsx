@@ -1,9 +1,6 @@
 import React from "react"
 
-
 const Ingredient = (props) => {
-
-
 	return (
 		<div style={{ background: props.ingredient.color }}>
 			{props.ingredient.name}

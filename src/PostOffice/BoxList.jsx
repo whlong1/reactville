@@ -7,7 +7,7 @@ const BoxList = (props) => {
   return (
     <div className="boxes">
       <h4>PO Boxes</h4>
-      {boxList.map((boxNo)=>(
+      {boxList.map((boxNo) => (
         <Link to={`/postoffice/${boxNo}`} key={boxNo}>PO BOX {boxNo}</Link>
       ))}
     </div>

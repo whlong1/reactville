@@ -9,7 +9,7 @@ const NewBox = (props) => {
   const [holder, setHolder] = useState('')
   const [status, setStatus] = useState('')
   const [boxHolders, setBoxHolders] = useState([])
-  const costOfBox = boxHolders.length * 30
+  const costOfBox = boxHolders.length * 10
 
   const handleSubmit = () => {
     if (props.createBox(boxHolders, costOfBox)) {
@@ -48,7 +48,7 @@ const NewBox = (props) => {
       <BoxHolders boxHolders={boxHolders} removeBoxHolder={removeBoxHolder} />
       <input placeholder="Box holder name" type="text" name="holder" value={holder} onChange={(e) => setHolder(e.target.value)} />
       <button disabled={!holder.length} onClick={addBoxHolder}>Add Box Holder</button>
-      <button disabled={!boxHolders.length} onClick={handleSubmit}>CREATE POBOX</button>
+      <button disabled={!boxHolders.length} onClick={handleSubmit}>CREATE PO BOX</button>
     </div>
   )
 }

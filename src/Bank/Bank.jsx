@@ -4,7 +4,6 @@ import './bank.css'
 import Account from "./Account"
 
 const Bank = (props) => {
-
 	return (
 		<div className="bank">
 			<nav>

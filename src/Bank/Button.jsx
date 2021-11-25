@@ -1,7 +1,6 @@
 import React from "react"
 
 const Button = (props) => {
-
   return (
     <button type="submit" onClick={(e) => {
       e.preventDefault()

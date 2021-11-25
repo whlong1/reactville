@@ -4,7 +4,6 @@ import './burger.css'
 import IngredientList from './IngredientList'
 import BurgerStack from './BurgerStack'
 
-
 const BurgerShop = () => {
   const [stack, setStack] = useState([])
 
@@ -30,7 +29,6 @@ const BurgerShop = () => {
   const removeFromBurger = (idx) => {
     setStack(stack.filter((ing, i) => i !== idx))
   }
-
 
   return (
     <div className="burger-shop">
