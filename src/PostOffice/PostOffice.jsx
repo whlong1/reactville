@@ -9,11 +9,11 @@ import NewBox from "./NewBox/NewBox"
 import NewLetter from "./NewLetter/NewLetter"
 
 //Data
-import { initialPOBoxes } from "./modules/data"
+import { initialPOBoxes, initialLetters } from "./modules/data"
 
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
-	const [letters, setLetters] = useState({})
+	const [letters, setLetters] = useState(initialLetters)
 
 	const nextBoxNumber = Object.keys(boxes).length
 	const nextLetterId = Object.keys(letters).length
@@ -37,6 +37,8 @@ const PostOffice = (props) => {
 	const markAsRead = (id, status) => {
 		setLetters({ ...letters, [id]: { ...letters[id], read: status } })
 	}
+
+	console.log(letters)
 
 	return (
 		<div className="post-office">
