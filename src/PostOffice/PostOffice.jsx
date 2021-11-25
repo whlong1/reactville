@@ -26,10 +26,9 @@ const PostOffice = (props) => {
 		setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
 	}
 
-	const createBox = (boxHolders) => {
+	const createBox = (nameArr) => {
 		//bring in handle charge here and for send letter
-		console.log(nextBoxNumber)
-		console.log('holders', boxHolders)
+		setBoxes({ ...boxes, [nextBoxNumber]: { boxHolders: nameArr, letters: [] } })
 	}
 
 	console.log('Boxes', boxes)

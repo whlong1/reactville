@@ -37,6 +37,7 @@ const NewBox = (props) => {
 
   console.log(holder)
   console.log('Box Holders', boxHolders)
+  if (success) { return <h3>Success!</h3> }
 
   if (errMsg) {
     return (
@@ -45,8 +46,6 @@ const NewBox = (props) => {
       </label>
     )
   }
-
-  if (success) { return <h3>Success!</h3> }
 
   return (
     <div>
