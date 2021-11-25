@@ -7,13 +7,17 @@ const NewBox = (props) => {
   const navigate = useNavigate()
   const [holder, setHolder] = useState('')
   const [success, setSuccess] = useState(false)
+  const [msg, setMsg] = useState('')
   const [boxHolders, setBoxHolders] = useState([])
   const cost = boxHolders.length * 10
 
   const handleSubmit = () => {
-    props.createBox(boxHolders, cost)
-    setSuccess(true)
-    handleRedirect()
+    if (props.createBox(boxHolders, cost)) {
+      setSuccess(true)
+      handleRedirect()
+    } else {
+      setMsg('Payment declined!')
+    }
   }
 
   const handleRedirect = () => {
@@ -31,11 +35,11 @@ const NewBox = (props) => {
     setBoxHolders(boxHolders.filter((holder) => holder !== name))
   }
 
-  //for every box holder, charge a user more
   if (success) { return <h3>Success!</h3> }
 
   return (
     <div>
+      {msg}
       <h4>Cost: {cost} </h4>
       <BoxHolders boxHolders={boxHolders} removeBoxHolder={removeBoxHolder} />
       <input placeholder="Box holder name" type="text" name="holder" value={holder} onChange={(e) => setHolder(e.target.value)} />
