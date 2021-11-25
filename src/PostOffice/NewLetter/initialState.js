@@ -5,3 +5,5 @@ export const initialState = {
   content: '',
   read: false,
 }
+
+//sender name?
