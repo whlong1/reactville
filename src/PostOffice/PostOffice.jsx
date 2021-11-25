@@ -14,7 +14,7 @@ import { initialPOBoxes } from "./modules/data"
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
 	const [letters, setLetters] = useState({})
-	
+
 	const nextBoxNumber = Object.keys(boxes).length
 	const nextLetterId = Object.keys(letters).length
 
@@ -31,6 +31,10 @@ const PostOffice = (props) => {
 		}
 	}
 
+	const markAsRead = (id, status) => {
+		setLetters({ ...letters, [id]: { ...letters[id], read: status } })
+	}
+
 	return (
 		<div className="post-office">
 			<nav>
@@ -45,7 +49,7 @@ const PostOffice = (props) => {
 					element={<BoxList boxes={boxes} />}
 				/>
 				<Route path="/:boxNo"
-					element={<Box boxes={boxes} letters={letters} />}
+					element={<Box boxes={boxes} letters={letters} markAsRead={markAsRead} />}
 				/>
 				<Route path="/letters/new"
 					element={<NewLetter boxes={boxes} letters={letters} sendLetter={sendLetter} />}

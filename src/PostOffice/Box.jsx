@@ -1,6 +1,6 @@
 import React from "react"
 import { useParams, useNavigate } from "react-router"
-import Letters from "./Letters"
+import LetterList from "./LetterList"
 
 const Box = (props) => {
   const navigate = useNavigate()
@@ -18,7 +18,7 @@ const Box = (props) => {
         ))}
       </section>
 
-      <Letters letterIds={poBox.letters} letters={props.letters} />
+      <LetterList letterIds={poBox.letters} letters={props.letters} markAsRead={props.markAsRead} />
 
     </div>
   )
