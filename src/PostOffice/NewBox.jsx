@@ -1,17 +1,34 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const NewBox = (props) => {
-  let boxNumber = 0
-  const [box, setBox] = useState({
-    boxNo: boxNumber,
-    owner: '',
-  })
-  console.log(box, setBox)
+  const [holder, setHolder] = useState('')
+  const [boxHolders, setBoxHolders] = useState([])
+
+
+  const handleSubmit = () => {
+    //if holder.length
+    // e.preventDefault()
+    // props.sendLetter(boxNum, letter)
+    console.log('works')
+    // props.createBox()
+  }
+
+  const addBoxHolder = () => {
+    console.log('hello')
+    setBoxHolders([...boxHolders, holder])
+    setHolder('')
+  }
+
+  console.log(holder)
+  console.log('Box Holders', boxHolders)
 
   return (
-    <form>
-
-    </form>
+    <div>
+      <input type="text" name="holder" value={holder} onChange={(e)=>setHolder(e.target.value)} />
+      <button onClick={addBoxHolder}>Add Box Holder</button>
+      <button onClick={handleSubmit}>CREATE POBOX</button>
+    </div>
   )
 }
 

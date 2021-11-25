@@ -11,7 +11,6 @@ import NewLetter from "./NewLetter/NewLetter"
 //Data
 import { initialPOBoxes } from "./modules/data"
 
-
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
 	const [letters, setLetters] = useState({})
@@ -21,13 +20,18 @@ const PostOffice = (props) => {
 	console.log('Post Office Render')
 
 	const sendLetter = (boxNum, formData) => {
+		// Touch on nextLetterId, value does not change until next render
 		setLetters({ ...letters, [nextLetterId]: formData })
-		const newLetters = [...boxes[boxNum].letters, nextLetterId]
-		setBoxes({ ...boxes, [boxNum]: {...boxes[boxNum], letters: newLetters} })
+		const updatedLetters = [...boxes[boxNum].letters, nextLetterId]
+		setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
 	}
 
-	console.log(boxes)
-	console.log(letters)
+	const createBox = () => {
+		console.log(nextBoxNumber)
+	}
+
+	console.log('Boxes', boxes)
+	console.log('Letters', letters)
 
 	return (
 		<div className="post-office">
@@ -49,7 +53,7 @@ const PostOffice = (props) => {
 					element={<NewLetter boxes={boxes} letters={letters} sendLetter={sendLetter} />}
 				/>
 				<Route path="/boxes/new"
-					element={<NewBox boxes={boxes} />}
+					element={<NewBox boxes={boxes} createBox={createBox} />}
 				/>
 			</Routes>
 		</div>
