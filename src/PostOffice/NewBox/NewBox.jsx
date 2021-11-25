@@ -2,14 +2,16 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import BoxHolders from "./BoxHolders"
-import Status from './Status'
 
 const NewBox = (props) => {
   const navigate = useNavigate()
-  const [holder, setHolder] = useState('')
   const [status, setStatus] = useState('')
   const [boxHolders, setBoxHolders] = useState([])
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+
   const costOfBox = boxHolders.length * 10
+  const fullName = firstName + ' ' + lastName
 
   const handleSubmit = () => {
     if (props.createBox(boxHolders, costOfBox)) {
@@ -20,35 +22,45 @@ const NewBox = (props) => {
     }
   }
 
-  const handleRedirect = () => {
-    setTimeout(() => {
-      navigate('/postoffice', { replace: true })
-    }, 2000)
-  }
+  const handleRedirect = () => setTimeout(() => navigate('/postoffice', { replace: true }), 2000)
 
   const addBoxHolder = () => {
-    if (!boxHolders.includes(holder)) {
-      setBoxHolders([...boxHolders, holder])
-      setHolder('')
+    if (!boxHolders.includes(fullName)) {
+      setBoxHolders([...boxHolders, fullName])
+      setFirstName('')
+      setLastName('')
     } else {
       setStatus('Duplicate Name')
-      setHolder('')
+      setFirstName('')
+      setLastName('')
     }
   }
 
-  const removeBoxHolder = (name) => {
-    setBoxHolders(boxHolders.filter((holder) => holder !== name))
-  }
+  const removeBoxHolder = (name) => setBoxHolders(boxHolders.filter((holder) => holder !== name))
 
-  if (status) { return <Status status={status} setStatus={setStatus} /> }
+  if (status) return (
+    <div>
+      <h3>{status}</h3>
+      {status !== 'Success' && <button onClick={() => setStatus('')}>Return</button>}
+    </div>
+  )
 
   return (
-    <div>
-      {costOfBox ? <h4>Cost: ${costOfBox} </h4> : <h4>Please Add Box Holders</h4>}
-      <BoxHolders boxHolders={boxHolders} removeBoxHolder={removeBoxHolder} />
-      <input placeholder="Box holder name" type="text" name="holder" value={holder} onChange={(e) => setHolder(e.target.value)} />
-      <button disabled={!holder.length} onClick={addBoxHolder}>Add Box Holder</button>
-      <button disabled={!boxHolders.length} onClick={handleSubmit}>CREATE PO BOX</button>
+    <div className="new-box">
+
+      <header>
+        <h3>New PO Box</h3>
+        <p>Total Cost: ${costOfBox}</p>
+        <button disabled={!boxHolders.length} onClick={handleSubmit}>SIGN UP</button>
+      </header>
+
+      <section>
+        <BoxHolders boxHolders={boxHolders} removeBoxHolder={removeBoxHolder} />
+        <input placeholder="First Name" type="text" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+        <input placeholder="Last Name" type="text" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+        <button disabled={!firstName || !lastName} onClick={addBoxHolder}>ADD NAME</button>
+      </section>
+
     </div>
   )
 }

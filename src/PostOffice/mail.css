@@ -55,6 +55,7 @@
 
 .new-letter header {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   padding: 10px 15px 10px 15px;
   border-bottom: 1px solid #dbdbdb;
@@ -63,4 +64,33 @@
 .new-letter header h3 {
   margin: 0;
   margin-right: auto;
+}
+
+
+.new-box header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 15px 10px 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.new-box header h3 {
+  margin: 0;
+  margin-right: auto;
+}
+
+.new-box section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 10px 15px;
+}
+
+.box-holders h4, p {
+  margin: 0;
+}
+
+.box-holders div {
+  display: flex;
+  align-items: center;
 }
