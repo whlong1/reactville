@@ -5,7 +5,7 @@ import './mail.css'
 //Components
 import Box from "./Box"
 import BoxList from "./BoxList"
-import NewBox from "./NewBox"
+import NewBox from "./NewBox/NewBox"
 import NewLetter from "./NewLetter/NewLetter"
 
 //Data
@@ -26,8 +26,10 @@ const PostOffice = (props) => {
 		setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
 	}
 
-	const createBox = () => {
+	const createBox = (boxHolders) => {
+		//bring in handle charge here and for send letter
 		console.log(nextBoxNumber)
+		console.log('holders', boxHolders)
 	}
 
 	console.log('Boxes', boxes)
