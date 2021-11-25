@@ -8,16 +8,11 @@ const Letter = (props) => {
     <div className="letter">
 
       <header>
-        <p>From</p>
-        <p>{thisLetter.recipient}</p>
         <p>{thisLetter.date}</p>
-      </header>
-
-      <section>
+        <p>{thisLetter.recipient}</p>
         <p>Subject: {thisLetter.subject}</p>
-        <p>{thisLetter.read ? 'Read' : 'Not Read'}</p>
         <button onClick={() => props.markAsRead(props.id, !thisLetter.read)}>{buttonText}</button>
-      </section>
+      </header>
       
       <p>{thisLetter.content}</p>
 
