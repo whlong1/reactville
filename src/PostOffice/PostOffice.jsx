@@ -14,7 +14,7 @@ import { initialPOBoxes } from "./modules/data"
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
 	const [letters, setLetters] = useState({})
-
+	
 	const nextBoxNumber = Object.keys(boxes).length
 	const nextLetterId = Object.keys(letters).length
 
@@ -23,7 +23,6 @@ const PostOffice = (props) => {
 		const updatedLetters = [...boxes[boxNum].letters, nextLetterId]
 		setBoxes({ ...boxes, [boxNum]: { ...boxes[boxNum], letters: updatedLetters } })
 	}
-
 
 	const createBox = (nameArr, cost) => {
 		if (props.handleExchange(cost)) {

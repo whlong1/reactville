@@ -2,21 +2,21 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import BoxHolders from "./BoxHolders"
+import Status from './Status'
 
 const NewBox = (props) => {
   const navigate = useNavigate()
   const [holder, setHolder] = useState('')
-  const [success, setSuccess] = useState(false)
-  const [msg, setMsg] = useState('')
+  const [status, setStatus] = useState('')
   const [boxHolders, setBoxHolders] = useState([])
-  const cost = boxHolders.length * 10
+  const costOfBox = boxHolders.length * 30
 
   const handleSubmit = () => {
-    if (props.createBox(boxHolders, cost)) {
-      setSuccess(true)
+    if (props.createBox(boxHolders, costOfBox)) {
+      setStatus('Success')
       handleRedirect()
     } else {
-      setMsg('Payment declined!')
+      setStatus('Payment Failed')
     }
   }
 
@@ -27,20 +27,24 @@ const NewBox = (props) => {
   }
 
   const addBoxHolder = () => {
-    setBoxHolders([...boxHolders, holder])
-    setHolder('')
+    if (!boxHolders.includes(holder)) {
+      setBoxHolders([...boxHolders, holder])
+      setHolder('')
+    } else {
+      setStatus('Duplicate Name')
+      setHolder('')
+    }
   }
 
   const removeBoxHolder = (name) => {
     setBoxHolders(boxHolders.filter((holder) => holder !== name))
   }
 
-  if (success) { return <h3>Success!</h3> }
+  if (status) { return <Status status={status} setStatus={setStatus} /> }
 
   return (
     <div>
-      {msg}
-      <h4>Cost: {cost} </h4>
+      {costOfBox ? <h4>Cost: ${costOfBox} </h4> : <h4>Please Add Box Holders</h4>}
       <BoxHolders boxHolders={boxHolders} removeBoxHolder={removeBoxHolder} />
       <input placeholder="Box holder name" type="text" name="holder" value={holder} onChange={(e) => setHolder(e.target.value)} />
       <button disabled={!holder.length} onClick={addBoxHolder}>Add Box Holder</button>
