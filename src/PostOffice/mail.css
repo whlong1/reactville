@@ -23,7 +23,13 @@
 
 .image {
   width: 50%;
-  border: 1px solid red;
+  background-size: cover;
+  background-color: #eae4de;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-image: url('./assets/4-01.png');
+  
+
 }
 
 .po-boxes a {
