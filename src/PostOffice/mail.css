@@ -101,23 +101,37 @@
   margin-right: auto;
 }
 
-.letter {
+table {
+  width: 100%;
   font-size: 14px;
-  border: 1px solid grey;
   border-collapse: collapse;
-  /* width: 100%; */
 }
 
-.letter th {
+table th {
   text-align: left;
-  border: 1px solid grey;
+  border: 1px solid #dedede;
+  padding: 5px 15px 5px 15px;
 }
 
-.letter td {
-  border-bottom: 1px solid grey;
+table td {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #dedede;
+  padding: 5px 15px 5px 10px;
 }
 
+#letter-date {
+  font-size: 12px;
+}
 
+#letter-checkbox {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#letter-content {
+  padding: 10px 15px 10px 10px;
+}
 
 
 

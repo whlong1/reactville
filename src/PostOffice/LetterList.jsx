@@ -3,13 +3,13 @@ import Letter from './Letter'
 
 const LetterList = (props) => {
   return (
-    <table className="letter">
+    <table>
       <thead>
         <tr>
-          <th>Date</th>
+          <th width="8%">Date</th>
           <th>Recipient</th>
           <th>Subject</th>
-          <th>Status</th>
+          <th width="5%">Status</th>
         </tr>
       </thead>
       <tbody>
