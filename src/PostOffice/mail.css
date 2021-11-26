@@ -1,5 +1,6 @@
 .post-office {
-  border:1px solid green
+  background: #f5f8fc;
+  height: 100%;
 }
 
 .post-office form {
@@ -30,7 +31,6 @@
   font-weight: 600;
   text-decoration: none;
   background-color: red;
-  border: 1px solid green;
 }
 
 .po-box {
@@ -102,22 +102,28 @@
 }
 
 table {
-  width: 100%;
+  margin: 5px;
   font-size: 14px;
   border-collapse: collapse;
+  background: #efefef;
+}
+
+tbody tr:nth-child(odd){
+  background-color: #fbfbfb;
 }
 
 table th {
   text-align: left;
   border: 1px solid #dedede;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 10px 5px 10px;
+  background-color: #ffffff;
 }
 
 table td {
   margin: 0;
   padding: 0;
   border: 1px solid #dedede;
-  padding: 5px 15px 5px 10px;
+  padding: 5px 10px 5px 10px;
 }
 
 #letter-date {
@@ -126,17 +132,9 @@ table td {
 
 #letter-checkbox {
   text-align: center;
-  vertical-align: middle;
 }
 
 #letter-content {
-  padding: 10px 15px 10px 10px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
-
-
-
-/* cart */
-/* #fbfcfd; */
-
-/* darker */
-/* background: #f5f8fc; */

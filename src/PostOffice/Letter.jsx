@@ -2,7 +2,6 @@ import React from "react"
 
 const Letter = (props) => {
   const thisLetter = props.letters[props.id]
-  const buttonText = thisLetter.read ? 'Mark As Unread' : 'Mark As Read'
 
   return (
     <>

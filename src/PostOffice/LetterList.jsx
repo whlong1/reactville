@@ -9,7 +9,7 @@ const LetterList = (props) => {
           <th width="8%">Date</th>
           <th>Recipient</th>
           <th>Subject</th>
-          <th width="5%">Status</th>
+          <th width="2%">Read</th>
         </tr>
       </thead>
       <tbody>
