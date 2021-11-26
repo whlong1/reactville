@@ -101,9 +101,23 @@
   margin-right: auto;
 }
 
-.letter section {
-  display: flex;
+.letter {
+  font-size: 14px;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  /* width: 100%; */
 }
+
+.letter th {
+  text-align: left;
+  border: 1px solid grey;
+}
+
+.letter td {
+  border-bottom: 1px solid grey;
+}
+
+
 
 
 
