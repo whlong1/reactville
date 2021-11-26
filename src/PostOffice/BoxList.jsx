@@ -5,14 +5,13 @@ const BoxList = (props) => {
   const boxList = Object.keys(props.boxes)
 
   return (
-    <div className="po-boxes">
-      <section className="image">
-
-      </section>
-      <section>
-        <h4>PO Boxes</h4>
+    <div className="lobby">
+      <img className="image"></img>
+      <section className="po-box-list">
         {boxList.map((boxNo) => (
-          <Link to={`/postoffice/${boxNo}`} key={boxNo}>PO BOX {boxNo}</Link>
+          <Link className="po-box" to={`/postoffice/${boxNo}`} key={boxNo}>
+            PO BOX {boxNo}
+          </Link>
         ))}
       </section>
     </div>

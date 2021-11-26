@@ -8,45 +8,48 @@
   flex-direction: column;
 }
 
-.po-boxes {
+.lobby {
   display: flex;
   height: 100%;
 }
 
-.po-boxes section {
+.lobby section {
   padding: 10px;
 }
 
-.po-boxes section h4 {
-  margin: 0;
-}
-
-.image {
+.lobby > img {
   width: 50%;
   background-size: cover;
   background-color: #eae4de;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-image: url('./assets/4-01.png');
-  
-
+  background-image: url('./assets/lobby.png');
 }
 
-.po-boxes a {
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
-  background-color: red;
+.po-box-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .po-box {
-  border: 1px solid red;
+  margin: 5px;
+  width: 120px;
+  height: 60px;
+  display: flex;
+  color: white;
+  font-weight: 500;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  background-color: #375069;
+  border: 1px solid rgb(212, 212, 212);
 }
 
 .new-letter section {
   display: flex;
   flex-direction: column;
   padding: 10px 15px 10px 15px;
+  border: none;
 }
 
 .new-letter section h4 {
