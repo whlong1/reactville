@@ -37,9 +37,7 @@ const PostOffice = (props) => {
 	const markAsRead = (id, status) => {
 		setLetters({ ...letters, [id]: { ...letters[id], read: status } })
 	}
-
-	console.log(letters)
-
+	
 	return (
 		<div className="post-office">
 			<nav>

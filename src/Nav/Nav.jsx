@@ -3,7 +3,6 @@ import '../App.css'
 import { NavLink } from 'react-router-dom'
 
 import Wallet from "./Wallet"
-import Clock from './Clock'
 
 const Nav = (props) => {
 
@@ -15,7 +14,6 @@ const Nav = (props) => {
       <NavLink to='/market'>Market</NavLink>
       <NavLink to='/burgers'>Burger Shop</NavLink>
       <NavLink to='/postoffice'>Post Office</NavLink>
-      <Clock />
       <Wallet cash={props.cash} />
     </nav>
   )

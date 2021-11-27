@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-
 import './App.css'
 
 // Components
@@ -22,8 +21,6 @@ const App = () => {
     return true
   }
 
-  console.log('render')
-
   return (
     <main>
       <Nav cash={cash} setCash={setCash} />
@@ -43,9 +40,7 @@ const App = () => {
         <Route path="/postoffice/*"
           element={<PostOffice handleExchange={handleExchange} />}
         />
-
       </Routes>
-
     </main>
   )
 }
