@@ -1,5 +1,5 @@
 import React from "react"
-import './bank.css'
+import '../styles/bank.css'
 
 import Account from "./Account"
 
