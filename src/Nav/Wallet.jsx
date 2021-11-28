@@ -1,10 +1,7 @@
 import React from 'react'
 const Wallet = (props) => {
-
-
-
   return (
-    <p> ${props.cash}</p>
+    <p id="wallet">Cash: ${props.cash}</p>
   )
 }
 

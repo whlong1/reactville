@@ -50,8 +50,8 @@ const NewBox = (props) => {
 
       <header>
         <h3>New PO Box</h3>
-        <p>Total Cost: ${costOfBox}</p>
-        <button disabled={!boxHolders.length} onClick={handleSubmit}>SIGN UP</button>
+        <p>Total: ${costOfBox}</p>
+        <button disabled={!boxHolders.length} onClick={handleSubmit}>SUBMIT</button>
       </header>
 
       <section>
