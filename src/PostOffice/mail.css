@@ -13,6 +13,7 @@
 .postoffice-layout {
   display: flex;
   height: 100%;
+  width: 100%;
 }
 
 .post-office nav h1 {
@@ -30,11 +31,6 @@
   color: rgb(45, 45, 45);
   padding: 6px 18px 6px 18px;
   border: 1px solid #dbdbdb;
-}
-
-.post-office > section {
-  width: 50%;
-  padding: 10px;
 }
 
 .img-container { 
@@ -70,12 +66,15 @@
   border: 1px solid rgb(212, 212, 212);
 }
 
-.new-letter section {
+.post-office form {
+  width: 50%;
+}
+
+.post-office form section {
   display: flex;
-  width: 100%;
+  width: initial;
   flex-direction: column;
   padding: 10px 15px 10px 15px;
-  border: none;
 }
 
 .new-letter section h4 {
@@ -95,59 +94,60 @@
   margin-right: auto;
 }
 
-.new-box header {
+
+/* .new-box header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 10px 15px 10px 15px;
   border-bottom: 1px solid #dbdbdb;
-}
+} */
 
-.new-box header h3 {
+/* .new-box header h3 {
   margin: 0;
   margin-right: auto;
-}
+} */
 
-.new-box section {
+/* .new-box section {
   display: flex;
   flex-direction: column;
   padding: 10px 15px 10px 15px;
-}
+} */
 
-.box-holders h4, p {
+/* .box-holders h4, p {
   margin: 0;
-}
+} */
 
-.box-holders div {
+/* .box-holders div {
   display: flex;
   align-items: center;
-}
+} */
 
-.box-details header {
+/* .box-details header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 10px 15px 10px 15px;
   border-bottom: 1px solid #dbdbdb;
-}
+} */
 
-.box-details header h3 {
+/* .box-details header h3 {
   margin: 0;
   margin-right: auto;
-}
+} */
 
-table {
+/* table {
   margin: 5px;
   font-size: 14px;
   background: #efefef;
   border-collapse: collapse;
-}
+} */
 
-tbody tr:nth-child(odd){
+/* tbody tr:nth-child(odd){
   background-color: #fbfbfb;
-}
+} */
 
-table th {
+/* table th {
   text-align: left;
   padding: 5px 10px 5px 10px;
   border: 1px solid #dedede;
@@ -175,4 +175,4 @@ table td {
 }
 
 
-
+ */

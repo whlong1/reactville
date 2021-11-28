@@ -8,7 +8,7 @@ import BoxList from "./BoxList"
 import NewBox from "./NewBox/NewBox"
 import NewLetter from "./NewLetter/NewLetter"
 
-import poImg from './assets/post-img.png'
+import poImg from './assets/post-office-lobby.png'
 
 //Data
 import { initialPOBoxes, initialLetters } from "./modules/data"
