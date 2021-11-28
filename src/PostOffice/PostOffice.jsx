@@ -8,6 +8,8 @@ import BoxList from "./BoxList"
 import NewBox from "./NewBox/NewBox"
 import NewLetter from "./NewLetter/NewLetter"
 
+import poImg from './assets/post-img.png'
+
 //Data
 import { initialPOBoxes, initialLetters } from "./modules/data"
 
@@ -37,7 +39,7 @@ const PostOffice = (props) => {
 	const markAsRead = (id, status) => {
 		setLetters({ ...letters, [id]: { ...letters[id], read: status } })
 	}
-	
+
 	return (
 		<div className="post-office">
 			<nav>
@@ -47,20 +49,23 @@ const PostOffice = (props) => {
 				<NavLink to="/postoffice/boxes/new">New PO Box</NavLink>
 			</nav>
 
-			<Routes>
-				<Route path="/"
-					element={<BoxList boxes={boxes} />}
-				/>
-				<Route path="/:boxNo"
-					element={<BoxDetails boxes={boxes} letters={letters} markAsRead={markAsRead} />}
-				/>
-				<Route path="/letters/new"
-					element={<NewLetter boxes={boxes} letters={letters} sendLetter={sendLetter} />}
-				/>
-				<Route path="/boxes/new"
-					element={<NewBox boxes={boxes} createBox={createBox} />}
-				/>
-			</Routes>
+			<div className="postoffice-layout">
+				<section className="img-container"><img src={poImg} /></section>
+				<Routes>
+					<Route path="/"
+						element={<BoxList boxes={boxes} />}
+					/>
+					<Route path="/:boxNo"
+						element={<BoxDetails boxes={boxes} letters={letters} markAsRead={markAsRead} />}
+					/>
+					<Route path="/letters/new"
+						element={<NewLetter boxes={boxes} letters={letters} sendLetter={sendLetter} />}
+					/>
+					<Route path="/boxes/new"
+						element={<NewBox boxes={boxes} createBox={createBox} />}
+					/>
+				</Routes>
+			</div>
 		</div>
 	)
 }

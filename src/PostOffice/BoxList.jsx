@@ -7,7 +7,7 @@ const BoxList = (props) => {
 
   return (
     <div className="lobby">
-      <section className="img-container"><img src={poImg} /></section>
+      {/* <section className="img-container"><img src={poImg} /></section> */}
       <section className="po-box-list">
         {boxList.map((boxNo) => (
           <Link className="po-box" to={`/postoffice/${boxNo}`} key={boxNo}>
