@@ -19,7 +19,7 @@ const Letter = (props) => {
           />
         </td>
       </tr>
-      <td id="letter-content" colSpan="4">
+      <td id="letter-content" colSpan="5">
         {thisLetter.content}
       </td>
     </>

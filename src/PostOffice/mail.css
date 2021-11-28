@@ -113,8 +113,8 @@
 table {
   margin: 5px;
   font-size: 14px;
-  border-collapse: collapse;
   background: #efefef;
+  border-collapse: collapse;
 }
 
 tbody tr:nth-child(odd){
@@ -123,8 +123,8 @@ tbody tr:nth-child(odd){
 
 table th {
   text-align: left;
-  border: 1px solid #dedede;
   padding: 5px 10px 5px 10px;
+  border: 1px solid #dedede;
   background-color: #ffffff;
 }
 
@@ -145,5 +145,5 @@ table td {
 
 #letter-content {
   padding: 10px;
-  margin-bottom: 5px;
+  border-bottom: 1px solid #dedede;
 }
