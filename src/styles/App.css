@@ -50,7 +50,22 @@ nav h1 {
 
 
 #splash-logo {
-  font-family: blenny, sans-serif;
+  margin: 0;
+  color: white;
   font-weight: 900;
+  font-size: 100px;
   font-style: normal;
+  transform: translateY(-45%); 
+  font-family: blenny, sans-serif;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.85);
+}
+
+.landing {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-image: url('../assets/reactville-background.png');
 }
