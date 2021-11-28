@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Route, Routes, NavLink } from "react-router-dom"
-import '../styles/mail.css'
+import '../../styles/mail.css'
 
 //Components
 import BoxList from "./BoxList"
@@ -9,7 +9,7 @@ import BoxDetails from "./BoxDetails"
 import NewLetter from "./NewLetter/NewLetter"
 
 //Data + Assets
-import poImg from '../assets/post-office-lobby.png'
+import poImg from '../../assets/post-office-lobby.png'
 import { initialPOBoxes, initialLetters } from "./modules/data"
 
 const PostOffice = (props) => {

@@ -4,12 +4,11 @@ import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 
 // Components
-import Home from './Home'
-import Nav from './Nav/Nav'
-import Bank from './Bank/Bank'
-import BurgerShop from './BurgerShop/BurgerShop'
-import SuperMarket from './SuperMarket/SuperMarket'
-import PostOffice from './PostOffice/PostOffice'
+import Nav from './Components/Nav/Nav'
+import Bank from './Components/Bank/Bank'
+import BurgerShop from './Components/BurgerShop/BurgerShop'
+import SuperMarket from './Components/SuperMarket/SuperMarket'
+import PostOffice from './Components/PostOffice/PostOffice'
 
 const App = () => {
   const [cash, setCash] = useState(100)
@@ -26,7 +25,7 @@ const App = () => {
       <Nav cash={cash} setCash={setCash} />
       <Routes>
         <Route path="/"
-          element={<Home />}
+          element={<div className="landing"><h1 id="splash-logo">Reactville</h1></div>}
         />
         <Route path="/market"
           element={<SuperMarket handleExchange={handleExchange} />}
