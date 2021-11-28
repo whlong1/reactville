@@ -49,7 +49,7 @@ const PostOffice = (props) => {
 			</nav>
 
 			<div className="postoffice-layout">
-				<section className="img-container"><img src={poImg} /></section>
+				<section className="img-container"><img src={poImg} alt="post office illustration" /></section>
 				<Routes>
 					<Route path="/"
 						element={<BoxList boxes={boxes} />}
