@@ -1,5 +1,15 @@
 .burger-shop {
   display: flex;
+  flex-direction: column;
+}
+
+.burger-shop nav h1{
+  font-size: 1.17em;
+}
+
+.burger-shop section {
+  display: flex;
+  justify-content: space-between;
 }
 
 li {

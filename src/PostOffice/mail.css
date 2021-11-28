@@ -13,6 +13,11 @@
   height: 100%;
 }
 
+
+.post-office nav h1 {
+  font-size: 1.17em;
+}
+
 .lobby section {
   padding: 10px;
 }

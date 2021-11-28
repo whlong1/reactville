@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.bank nav h1 {
+  font-size: 1.17em;
+}
+
 .account {
   width: 50%;
   padding: 5px;
