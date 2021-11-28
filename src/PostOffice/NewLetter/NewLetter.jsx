@@ -40,7 +40,7 @@ const NewLetter = (props) => {
   }
 
   return (
-    <form className="new-letter" onSubmit={handleSubmit}>
+    <form className="post-office-form" onSubmit={handleSubmit}>
       <header>
         <h3>New Letter</h3>
         <SelectBox setBoxNum={setBoxNum} boxNumbers={boxNumbers} />

@@ -66,22 +66,22 @@
   border: 1px solid rgb(212, 212, 212);
 }
 
-.post-office form {
+.post-office-form {
   width: 50%;
 }
 
-.post-office form section {
+.post-office-form section {
   display: flex;
   width: initial;
   flex-direction: column;
   padding: 10px 15px 10px 15px;
 }
 
-.new-letter section h4 {
+.post-office-form h4, p {
   margin: 0;
 }
 
-.new-letter header {
+.post-office-form header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -89,65 +89,49 @@
   border-bottom: 1px solid #dbdbdb;
 }
 
-.new-letter header h3 {
+.post-office-form header h3 {
   margin: 0;
   margin-right: auto;
 }
 
+.box-holders h4, p {
+  margin: 0;
+}
 
-/* .new-box header {
+.box-holders div {
+  display: flex;
+  align-items: center;
+}
+
+.box-details {
+  width: 50%;
+}
+
+.box-details header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 10px 15px 10px 15px;
   border-bottom: 1px solid #dbdbdb;
-} */
+}
 
-/* .new-box header h3 {
+.box-details header h3 {
   margin: 0;
   margin-right: auto;
-} */
+}
 
-/* .new-box section {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 15px 10px 15px;
-} */
-
-/* .box-holders h4, p {
-  margin: 0;
-} */
-
-/* .box-holders div {
-  display: flex;
-  align-items: center;
-} */
-
-/* .box-details header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 15px 10px 15px;
-  border-bottom: 1px solid #dbdbdb;
-} */
-
-/* .box-details header h3 {
-  margin: 0;
-  margin-right: auto;
-} */
-
-/* table {
+table {
   margin: 5px;
   font-size: 14px;
   background: #efefef;
   border-collapse: collapse;
-} */
+}
 
-/* tbody tr:nth-child(odd){
+tbody tr:nth-child(odd){
   background-color: #fbfbfb;
-} */
+}
 
-/* table th {
+table th {
   text-align: left;
   padding: 5px 10px 5px 10px;
   border: 1px solid #dedede;
@@ -173,6 +157,3 @@ table td {
   padding: 10px;
   border-bottom: 1px solid #dedede;
 }
-
-
- */

@@ -15,7 +15,7 @@ const BoxDetails = (props) => {
   )
 
   return (
-    <div className="box-details">
+    <section className="box-details">
       <header>
         <h3>PO Box {boxNo}</h3>
         <select>
@@ -25,7 +25,7 @@ const BoxDetails = (props) => {
 
       <LetterList letterIds={poBox.letters} letters={props.letters} markAsRead={props.markAsRead} />
 
-    </div>
+    </section>
   )
 }
 

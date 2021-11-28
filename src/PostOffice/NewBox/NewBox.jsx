@@ -46,7 +46,7 @@ const NewBox = (props) => {
   )
 
   return (
-    <div className="new-box">
+    <section className="post-office-form">
 
       <header>
         <h3>New PO Box</h3>
@@ -61,7 +61,7 @@ const NewBox = (props) => {
         <button disabled={!firstName || !lastName} onClick={addBoxHolder}>ADD NAME</button>
       </section>
 
-    </div>
+    </section>
   )
 }
 
