@@ -160,15 +160,9 @@ table td {
   border-bottom: 1px solid #dedede;
 }
 
-
-
-
-
-
-
-
-.super-market nav > select {
+.post-office select {
   border-radius: 100px;
+  margin-left: 10px;
   -webkit-appearance: none; 
   padding: 6px 28px 6px 12px;
   border: 1px solid #dbdbdb;
