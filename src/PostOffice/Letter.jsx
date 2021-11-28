@@ -7,6 +7,7 @@ const Letter = (props) => {
     <>
       <tr>
         <td id="letter-date">{thisLetter.date}</td>
+        <td id="letter-sender">{thisLetter.sender}</td>
         <td id="letter-recipient">{thisLetter.recipient}</td>
         <td id="letter-subject">{thisLetter.subject}</td>
         <td id="letter-checkbox">

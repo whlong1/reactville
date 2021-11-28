@@ -14,6 +14,7 @@ export const initialLetters = {
     content: 'Hello Mr. Abramov, please finish the new React docs. Thanks.',
     date: "11/23/2021",
     read: false,
+    sender: 'Hunter Long',
     recipient: 'Dan Abramov',
     subject: 'React Docs',
   },
@@ -21,6 +22,7 @@ export const initialLetters = {
     content: 'Mr. Abramov, still need those docs. Thanks.',
     date: "11/24/2021",
     read: false,
+    sender: 'Hunter Long',
     recipient: 'Dan Abramov',
     subject: 'React Docs Pt. 2',
   },
@@ -28,6 +30,7 @@ export const initialLetters = {
     content: "I'm not going to be ignored, Dan.",
     date: "11/25/2021",
     read: false,
+    sender: 'Hunter Long',
     recipient: 'Dan Abramov',
     subject: 'Losing Patience',
   }

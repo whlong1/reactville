@@ -47,6 +47,14 @@ const NewLetter = (props) => {
         <SelectRecipient selectedBox={selectedBox} handleChange={handleChange} />
       </header>
       <section>
+        <h4>Sender</h4>
+        <input
+          required
+          name="sender"
+          placeholder="Sender"
+          value={letter.sender}
+          onChange={handleChange}
+        />
         <h4>Enter Subject</h4>
         <input
           required
