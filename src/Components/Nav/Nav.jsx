@@ -15,7 +15,7 @@ const Nav = (props) => {
       <NavLink to='/burgers'>BURGER SHOP</NavLink>
       <NavLink to='/postoffice'>POST OFFICE</NavLink>
       <Wallet cash={props.cash} />
-      <Clock/>
+      <Clock daytime={props.daytime} setDaytime={props.setDaytime}/>
     </nav>
   )
 }
