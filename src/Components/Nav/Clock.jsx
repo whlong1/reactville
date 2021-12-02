@@ -17,14 +17,14 @@ const Clock = ({ daytime, setDaytime }) => {
   const sunset = getMinutes('5:00 PM')
 
   useEffect(() => {
-    setInterval(() => {
-      setDate(new Date())
+    setInterval(() => setDate(new Date()), 60000)
+    return () => {
       if ((currentTime > sunrise) && (currentTime < sunset)) {
         if (!daytime) setDaytime(true)
       } else {
         if (daytime) setDaytime(false)
       }
-    }, 60000)
+    }
   }, [daytime, setDaytime, currentTime, sunrise, sunset])
 
   return (

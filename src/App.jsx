@@ -13,7 +13,7 @@ import SuperMarket from './Components/SuperMarket/SuperMarket'
 
 const App = () => {
   const [cash, setCash] = useState(100)
-  const [daytime, setDaytime] = useState(false)
+  const [daytime, setDaytime] = useState(true)
 
   const handleExchange = (amt) => {
     if (cash - amt < 0) return false
