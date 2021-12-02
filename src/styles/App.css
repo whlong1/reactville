@@ -12,11 +12,16 @@ nav {
   justify-content: right;
   padding: 0px 15px 0px 15px;
   border-bottom: 1px solid rgb(212, 212, 212);
-
 }
 
 .navigation-bar {
-  padding: 18px 15px 18px 15px;
+  /* padding: 18px 15px 18px 15px; */
+  height: 65px;
+}
+
+.navigation-bar img {
+  height: 40px;
+  transform: translateY(8%); 
 }
 
 nav h1 {
