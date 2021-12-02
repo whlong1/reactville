@@ -6,9 +6,10 @@ import './styles/App.css'
 // Components
 import Nav from './Components/Nav/Nav'
 import Bank from './Components/Bank/Bank'
+import Landing from './Components/Landing/Landing'
 import BurgerShop from './Components/BurgerShop/BurgerShop'
-import SuperMarket from './Components/SuperMarket/SuperMarket'
 import PostOffice from './Components/PostOffice/PostOffice'
+import SuperMarket from './Components/SuperMarket/SuperMarket'
 
 const App = () => {
   const [cash, setCash] = useState(100)
@@ -25,7 +26,7 @@ const App = () => {
       <Nav cash={cash} setCash={setCash} />
       <Routes>
         <Route path="/"
-          element={<div className="landing"><h1 id="splash-logo">Reactville</h1></div>}
+          element={<Landing />}
         />
         <Route path="/market"
           element={<SuperMarket handleExchange={handleExchange} />}

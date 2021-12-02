@@ -65,7 +65,6 @@ nav h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-size: cover;
-  background-image: url('../assets/reactville-background.png');
+  background-position: center center;
 }
