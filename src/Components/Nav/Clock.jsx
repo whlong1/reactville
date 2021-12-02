@@ -9,7 +9,9 @@ const Clock = () => {
   }, [])
 
   return (
-    <p>{date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })} </p>
+    <p className="display-items">
+      {date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}
+    </p>
   )
 }
 

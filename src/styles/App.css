@@ -51,7 +51,7 @@ nav h1 {
   color: black;
 }
 
-#wallet {
+.display-items {
   font-size: 12px;
   font-weight: 500;
   margin-left: 24px;
@@ -61,7 +61,7 @@ nav h1 {
   border: 1px solid #dbdbdb;
 }
 
-#wallet:hover{
+.display-items:hover{
   cursor: pointer;
 }
 
