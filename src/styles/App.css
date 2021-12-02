@@ -15,13 +15,17 @@ nav {
 }
 
 .navigation-bar {
-  /* padding: 18px 15px 18px 15px; */
   height: 65px;
 }
 
 .navigation-bar img {
   height: 40px;
   transform: translateY(8%); 
+}
+
+
+.navigation-bar a:hover {
+  border-bottom: 2px solid #60DAFB;
 }
 
 nav h1 {
@@ -54,6 +58,9 @@ nav h1 {
   border: 1px solid #dbdbdb;
 }
 
+#wallet:hover{
+  cursor: pointer;
+}
 
 #splash-logo {
   margin: 0;
@@ -61,7 +68,7 @@ nav h1 {
   font-weight: 900;
   font-size: 100px;
   font-style: normal;
-  transform: translateY(-45%); 
+  transform: translateY(-40%); 
   font-family: blenny, sans-serif;
   text-shadow: 0px 2px 5px rgba(0,0,0,0.85);
 }
@@ -70,7 +77,12 @@ nav h1 {
   height: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   background-size: cover;
   background-position: center center;
 }
+
+
+
+
