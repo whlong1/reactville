@@ -1,8 +1,8 @@
 import React from 'react'
+import Clock from './Clock'
 
 import Day from '../../assets/Day.png'
 import Night from '../../assets/Night.png'
-
 
 const Landing = (props) => {
   
@@ -24,17 +24,9 @@ const Landing = (props) => {
   return (
     <div className="landing" style={{ backgroundImage: `url(${handleBackground()})` }}>
       <h1 id="splash-logo">Reactville</h1>
+      {/* <Clock/> */}
     </div>
   )
 }
 
 export default Landing
-
-
-
-
-
-
-
-
-
