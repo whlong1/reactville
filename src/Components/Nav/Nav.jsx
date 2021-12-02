@@ -8,7 +8,7 @@ const Nav = (props) => {
 
   return (
     <nav className="navigation-bar">
-      <NavLink id="logo" to='/'><img src={Logo}/></NavLink>
+      <NavLink id="logo" to='/'><img src={Logo} alt="react-logo"/></NavLink>
       <NavLink to='/bank'>BANK</NavLink>
       <NavLink to='/market'>SUPER MARKET</NavLink>
       <NavLink to='/burgers'>BURGER SHOP</NavLink>

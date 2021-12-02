@@ -1,5 +1,5 @@
 import React from 'react'
-import Clock from './Clock'
+// import Clock from './Clock'
 
 import Day from '../../assets/Day.png'
 import Night from '../../assets/Night.png'

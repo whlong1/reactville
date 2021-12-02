@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Button from "./Button"
 import InputPad from './InputPad'
 
-
 const ControlPanel = (props) => {
 	const [amount, setAmount] = useState('')
 
