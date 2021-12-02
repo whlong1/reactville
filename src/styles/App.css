@@ -23,9 +23,12 @@ nav {
   transform: translateY(8%); 
 }
 
-
 .navigation-bar a:hover {
   border-bottom: 2px solid #60DAFB;
+}
+
+#logo:hover {
+  border-bottom: none;
 }
 
 nav h1 {
