@@ -12,7 +12,13 @@
   z-index: -1;
   content: url("../assets/Bacon.png") url("../assets/Chicken.png")
     url("../assets/Eggs.png") url("../assets/Fish.png") url("../assets/Ham.png")
-    url("../assets/Sausage.png") url("../assets/Steak.png") url("../assets/Beer.png") url("../assets/Soda.png") url("../assets/Wine.png") url("../assets/Bread.png") url("../assets/Doughnut.png") url("../assets/CannedPeas.png") url("../assets/Cereal.png") url("../assets/Chips.png") url("../assets/Pasta.png") url("../assets/Cheese.png") url("../assets/IceCream.png") url("../assets/Milk.png");
+    url("../assets/Sausage.png") url("../assets/Steak.png")
+    url("../assets/Beer.png") url("../assets/Soda.png")
+    url("../assets/Wine.png") url("../assets/Bread.png")
+    url("../assets/Doughnut.png") url("../assets/CannedPeas.png")
+    url("../assets/Cereal.png") url("../assets/Chips.png")
+    url("../assets/Pasta.png") url("../assets/Cheese.png")
+    url("../assets/IceCream.png") url("../assets/Milk.png");
 }
 
 .super-market section {
