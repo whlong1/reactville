@@ -132,7 +132,7 @@ export const products = [
     id: 14,
     name: 'Eggs',
     price: 1.99,
-    category: 'Meat',
+    category: 'Dairy',
     image: Eggs
   },
   {
