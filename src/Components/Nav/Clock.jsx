@@ -18,12 +18,10 @@ const Clock = ({ daytime, setDaytime }) => {
 
   useEffect(() => {
     setInterval(() => setDate(new Date()), 60000)
-    return () => {
-      if ((currentTime > sunrise) && (currentTime < sunset)) {
-        if (!daytime) setDaytime(true)
-      } else {
-        if (daytime) setDaytime(false)
-      }
+    if ((currentTime > sunrise) && (currentTime < sunset)) {
+      if (!daytime) setDaytime(true)
+    } else {
+      if (daytime) setDaytime(false)
     }
   }, [daytime, setDaytime, currentTime, sunrise, sunset])
 
