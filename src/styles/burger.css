@@ -11,15 +11,15 @@
 
 .burger-shop section {
   display: flex;
-  justify-content: space-between;
-  padding: 0px 15px 15px 15px;
+  padding: 0px 5px 0px 5px;
 }
 
 .burger-shop ul {
+  width: 100%;
   padding: 10px;
-  min-width: 46%;
   border-radius: 8px;
   background: #fbfcfd;
+  margin: 15px 7.5px 10px 7.5px;
   border: 1px solid rgb(225, 225, 225);
   box-shadow: 0px 5px 5px -1px rgba(2,15,46,0.18);
 }
