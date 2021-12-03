@@ -10,7 +10,7 @@ import NewLetter from "./NewLetter/NewLetter"
 
 //Data + Assets
 import poImg from '../../assets/post-office-lobby.png'
-import { initialPOBoxes, initialLetters } from "../modules/post-data"
+import { initialPOBoxes, initialLetters } from "../../data/post-data"
 
 const PostOffice = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
