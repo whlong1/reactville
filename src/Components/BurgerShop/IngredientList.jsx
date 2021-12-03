@@ -7,11 +7,13 @@ const IngredientList = (props) => {
 	useEffect(() => {
 		setHasBuns(props.stack.some(el => el.type === 'bun'))
 	}, [props.stack])
-	
+
 	return (
 		<ul>
 			{props.ingredients.map((ingredient, idx) => {
-				if(hasBuns && ingredient.type === 'buns') { return }
+				if(hasBuns && ingredient.type === 'bun') {
+					return <Ingredient list={true} disabled={true} key={idx} ingredient={ingredient} addToBurger={props.addToBurger} />
+				}
 				return <Ingredient list={true} key={idx} ingredient={ingredient} addToBurger={props.addToBurger} />
 			})}
 		</ul>
