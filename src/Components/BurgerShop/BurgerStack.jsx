@@ -3,7 +3,7 @@ import Ingredient from "./Ingredient"
 
 const BurgerStack = (props) => {
   return (
-    <ul>
+    <ul className="burger-stack">
       {props.ingredients.length ?
         props.ingredients.map((ingredient, idx) => (
           <Ingredient
@@ -12,7 +12,7 @@ const BurgerStack = (props) => {
             ingredient={ingredient}
             removeFromBurger={props.removeFromBurger}
           />
-        ))
+        )).reverse()
         :
         <div>
           No Ingredients
