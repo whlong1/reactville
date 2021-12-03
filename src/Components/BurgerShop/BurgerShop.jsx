@@ -8,10 +8,10 @@ const BurgerShop = () => {
   const [stack, setStack] = useState([])
 
   const ingredients = [
-    { name: 'Kaiser Bun', color: 'saddlebrown' },
-    { name: 'Sesame Bun', color: 'sandybrown' },
-    { name: 'Gluten Free Bun', color: 'peru' },
-    { name: 'Lettuce Wrap', color: 'olivedrab' },
+    { name: 'Kaiser Bun', color: 'saddlebrown', type: 'bun' },
+    { name: 'Sesame Bun', color: 'sandybrown', type: 'bun' },
+    { name: 'Gluten Free Bun', color: 'peru', type: 'bun' },
+    { name: 'Lettuce Wrap', color: 'olivedrab', type: 'bun' },
     { name: 'Beef Patty', color: '#3F250B' },
     { name: 'Soy Patty', color: '#3F250B' },
     { name: 'Black Bean Patty', color: '#3F250B' },
