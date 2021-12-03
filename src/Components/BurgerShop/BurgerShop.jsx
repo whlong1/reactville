@@ -12,14 +12,14 @@ const BurgerShop = () => {
     { name: 'Sesame Bun', color: 'sandybrown', type: 'bun' },
     { name: 'Gluten Free Bun', color: 'peru', type: 'bun' },
     { name: 'Lettuce Wrap', color: 'olivedrab', type: 'bun' },
-    { name: 'Beef Patty', color: '#3F250B' },
-    { name: 'Soy Patty', color: '#3F250B' },
-    { name: 'Black Bean Patty', color: '#3F250B' },
-    { name: 'Chicken Patty', color: 'burlywood' },
-    { name: 'Lettuce', color: 'lawngreen' },
-    { name: 'Tomato', color: 'tomato' },
-    { name: 'Bacon', color: 'maroon' },
-    { name: 'Onion', color: 'lightyellow' }
+    { name: 'Beef Patty', color: '#3F250B', type: 'patty' },
+    { name: 'Soy Patty', color: '#3F250B', type: 'patty' },
+    { name: 'Black Bean Patty', color: '#3F250B', type: 'patty' },
+    { name: 'Chicken Patty', color: 'burlywood', type: 'patty' },
+    { name: 'Lettuce', color: 'lawngreen', type: 'ing' },
+    { name: 'Tomato', color: 'tomato', type: 'ing' },
+    { name: 'Bacon', color: 'maroon', type: 'ing' },
+    { name: 'Onion', color: 'lightyellow', type: 'ing' }
   ]
 
   const addToBurger = (ingredient) => {
@@ -37,7 +37,7 @@ const BurgerShop = () => {
         <button onClick={() => setStack([])}>Clear Order</button>
       </nav>
       <section>
-        <IngredientList ingredients={ingredients} addToBurger={addToBurger} />
+        <IngredientList ingredients={ingredients} stack={stack} addToBurger={addToBurger} />
         <BurgerStack ingredients={stack} removeFromBurger={removeFromBurger} />
       </section>
     </div>
