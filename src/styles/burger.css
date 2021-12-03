@@ -1,6 +1,8 @@
 .burger-shop {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #F5F8FC;
 }
 
 .burger-shop nav h1{
@@ -10,8 +12,57 @@
 .burger-shop section {
   display: flex;
   justify-content: space-between;
+  padding: 0px 15px 15px 15px;
+}
+
+.burger-shop ul {
+  padding: 10px;
+  min-width: 46%;
+  border-radius: 8px;
+  background: #fbfcfd;
+  border: 1px solid rgb(225, 225, 225);
+  box-shadow: 0px 5px 5px -1px rgba(2,15,46,0.18);
+}
+
+ul div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #cfcfcf;
+  font-weight: bold;
+  align-items: center;
+  letter-spacing: .5px;
+  justify-content: center;
 }
 
 li {
+  height: 20px;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  color: white;
   list-style: none;
+  font-weight: 600;
+  border-radius: 8px;
+  align-items: center;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 2px #000000;
+  border: 1px solid rgb(225, 225, 225);
+}
+
+li button {
+  border: none;
+  font-size: 13px;
+  font-weight: 800;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 2px 6px 2px 6px;
+}
+
+.burger-shop nav button {
+  margin-left: 10px;
+  border-radius: 100px;
+  -webkit-appearance: none; 
+  padding: 6px 18px 6px 18px;
+  border: 1px solid #dbdbdb;
 }

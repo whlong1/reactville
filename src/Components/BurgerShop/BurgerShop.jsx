@@ -34,12 +34,12 @@ const BurgerShop = () => {
     <div className="burger-shop">
       <nav>
         <h1>Burger Shop</h1>
+        <button onClick={() => setStack([])}>Clear Order</button>
       </nav>
       <section>
         <IngredientList ingredients={ingredients} addToBurger={addToBurger} />
         <BurgerStack ingredients={stack} removeFromBurger={removeFromBurger} />
       </section>
-      <button onClick={() => setStack([])}>Clear Order</button>
     </div>
   )
 }
