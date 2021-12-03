@@ -19,7 +19,9 @@ const BurgerShop = () => {
     { name: 'Lettuce', color: 'lawngreen' },
     { name: 'Tomato', color: 'tomato' },
     { name: 'Bacon', color: 'maroon' },
-    { name: 'Onion', color: 'lightyellow' }
+    { name: 'Onion', color: 'lightyellow' },
+    { name: 'Cheddar Cheese', color: '#FDE18B' },
+    { name: 'Swiss Cheese', color: '#F1E1A8' },
   ]
 
   const addToBurger = (ingredient) => {

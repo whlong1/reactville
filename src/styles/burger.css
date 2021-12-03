@@ -66,3 +66,9 @@ li button {
   padding: 6px 18px 6px 18px;
   border: 1px solid #dbdbdb;
 }
+
+.burger-stack {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
