@@ -4,6 +4,23 @@
   background: #f5f8fc;
 }
 
+.super-market::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("../assets/Bacon.png") url("../assets/Chicken.png")
+    url("../assets/Eggs.png") url("../assets/Fish.png") url("../assets/Ham.png")
+    url("../assets/Sausage.png") url("../assets/Steak.png")
+    url("../assets/Beer.png") url("../assets/Soda.png")
+    url("../assets/Wine.png") url("../assets/Bread.png")
+    url("../assets/Doughnut.png") url("../assets/CannedPeas.png")
+    url("../assets/Cereal.png") url("../assets/Chips.png")
+    url("../assets/Pasta.png") url("../assets/Cheese.png")
+    url("../assets/IceCream.png") url("../assets/Milk.png");
+}
+
 .super-market section {
   width: 100%;
   display: flex;
@@ -20,20 +37,20 @@
 
 .super-market nav > select {
   border-radius: 100px;
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   padding: 6px 28px 6px 12px;
   border: 1px solid #dbdbdb;
-  background: url('../assets/arrow2.png') 92% no-repeat;
+  background: url("../assets/arrow2.png") 92% no-repeat;
 }
 
 .super-market nav > button {
   width: 26px;
   height: 26px;
-  opacity: .65;
+  opacity: 0.65;
   border: none;
   margin-left: 15px;
   border-radius: 100px;
-  background: url('../assets/cart-ico.png') no-repeat center center / 92%;
+  background: url("../assets/cart-ico.png") no-repeat center center / 92%;
 }
 
 #market-title {
@@ -51,7 +68,7 @@
 
 .product-list {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   padding: 10px 0px 0px 15px;
 }
 
@@ -60,8 +77,8 @@
   border-radius: 5px;
   flex-direction: column;
   margin: 5px 10px 5px 0px;
-  box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.1); 
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
@@ -69,8 +86,12 @@
   background: #f6f8fa;
   border-top: 1px solid white;
   border-radius: 5px 5px 0px 0px;
-  background: rgb(248,250,251);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,251,1) 100%);
+  background: rgb(248, 250, 251);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 250, 251, 1) 100%
+  );
 }
 
 .product-card section {
@@ -80,7 +101,7 @@
   border-radius: 0px 0px 5px 5px;
 }
 
-.product-card span{
+.product-card span {
   display: flex;
   align-items: center;
   background: white;
@@ -93,13 +114,13 @@
   margin: 0;
 }
 
-.product-card button{
+.product-card button {
   margin: 0;
   padding: 5px;
   color: white;
   font-size: 12px;
   font-weight: 500;
-  background: #45C062;
+  background: #45c062;
   border: 1px solid #50ce6d;
   border-radius: 0px 0px 5px 5px;
 }
@@ -109,15 +130,15 @@
   border-radius: 5px;
   margin: 5px 0px 5px 0px;
   border: 1px solid rgb(230, 230, 230);
-  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.08); 
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.08);
 }
 
 .cart-card * {
   margin: 0;
 }
 
-.cart-card span{
+.cart-card span {
   width: 75%;
   display: flex;
   background: white;
@@ -152,13 +173,13 @@
 }
 
 #product-price {
-  opacity: .5;
+  opacity: 0.5;
   font-size: 12px;
   font-weight: 400;
 }
 
 #product-quantity {
-  opacity: .5;
+  opacity: 0.5;
   font-size: 12px;
   font-weight: 400;
 }
@@ -170,7 +191,7 @@
   font-weight: 500;
   border-radius: 5px;
   margin-bottom: 10px;
-  background: #45C062;
+  background: #45c062;
   border: 1px solid #50ce6d;
 }
 
