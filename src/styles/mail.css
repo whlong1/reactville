@@ -52,66 +52,20 @@
   flex-wrap: wrap;
   height: fit-content;
   border-left: none;
-  flex-direction: column;
+  gap: 8px;
 }
 
-.box-container {
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid rgba(0,0,0, .4);
-  border-left: none;
-  width: fit-content;
-  background-color: #fb9440;
-}
-
-.box-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(50vw - 20px);
-  height: 70px;
-  background-color: #fb9440;
-}
-
-.box-banner > h1 {
-  font-family: serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 54px;
-  width: calc(50vw - 36px);
-  background-color: #FBB040;
-  mask: 
-    radial-gradient(circle at top left, transparent 11px , black 12px), 
-    radial-gradient(circle at top right, transparent 11px , black 12px),
-    radial-gradient(circle at bottom right, transparent 11px , black 12px),
-    radial-gradient(circle at bottom left, transparent 11px , black 12px),
-    linear-gradient(black,black);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-in;
-}
 
 .po-box {
   width: 140px;
-  height: 140px;
+  height: 80px;
   display: flex;
   color: #233761;
   font-weight: 500;
   align-items: center;
   text-decoration: none;
   justify-content: center;
-  background-color: #fb9440;
-  border-left: 2px solid rgba(0,0,0, .4);
-  font-family: serif;
-  font-weight: bold;
-  /* mask: 
-    radial-gradient(circle at top left, transparent 11px , black 12px), 
-    radial-gradient(circle at top right, transparent 11px , black 12px),
-    radial-gradient(circle at bottom right, transparent 11px , black 12px),
-    radial-gradient(circle at bottom left, transparent 11px , black 12px),
-    linear-gradient(black,black); */
-  /* mask-composite: exclude;
-  -webkit-mask-composite: destination-in; */
+  background-color: rgb(206, 127, 71);
 }
 
 .post-office-form {
@@ -119,12 +73,15 @@
 }
 
 .inner-po-box {
-  width: 124px;
-  height: 124px;
+  width: 132px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #FBB040;
+}
+
+.masked-corners {
   mask: 
     radial-gradient(circle at top left, transparent 11px , black 12px), 
     radial-gradient(circle at top right, transparent 11px , black 12px),
