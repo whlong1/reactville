@@ -35,5 +35,3 @@ export const initialLetters = {
     subject: 'Losing Patience',
   }
 }
-
-
