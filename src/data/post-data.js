@@ -4,8 +4,8 @@ export const initialPOBoxes = {
     letters: [0, 1, 2]
   },
   1: {
-    boxHolders: [],
-    letters: []
+    boxHolders: ['David Stinson', 'Shahzad Khan', 'Samantha Solomon', 'Hunter Long'],
+    letters: [3]
   },
 }
 
@@ -33,5 +33,13 @@ export const initialLetters = {
     sender: 'Hunter Long',
     recipient: 'Dan Abramov',
     subject: 'Losing Patience',
+  },
+  3: {
+    content: "When are you going to come over again and hang out with your mother and I?",
+    date: "11/27/2021",
+    read: true,
+    sender: "Ben Manley",
+    recipient: "David Stinson",
+    subject: "Hello, son.",
   }
 }

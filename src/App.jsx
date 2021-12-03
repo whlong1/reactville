@@ -21,8 +21,6 @@ const App = () => {
     return true
   }
 
-  console.log('render')
-
   return (
     <main>
       <Nav cash={cash} setCash={setCash} daytime={daytime} setDaytime={setDaytime} />

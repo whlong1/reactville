@@ -245,6 +245,10 @@ table td {
   text-align: center;
 }
 
+#letter-checkbox input {
+  margin: 0;
+}
+
 #letter-content {
   padding: 10px;
   border-bottom: 1px solid #dedede;
