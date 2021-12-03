@@ -7,7 +7,7 @@ import MarketNav from './MarketNav'
 import DisplayProducts from './DisplayProducts'
 
 // Data
-import { products } from './modules/data'
+import { products } from '../modules/market-data'
 
 const SuperMarket = (props) => {
   const [cart, setCart] = useState([])

@@ -60,15 +60,15 @@
 #input-display {
   height: 30px;
   display: flex;
-  align-items: center;
-  border-radius: 5px;
-  margin-bottom: 12px;
-  padding: 5px 12px;
-  border: 1px solid white;
   font-size: 14px;
   font-weight: 500;
   color: #537353;
-  background: rgb(212, 237, 212);
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  align-items: center;
+  border: 1px solid white;
+  background: rgb(213, 230, 213);
 }
 
 .control-panel section {
