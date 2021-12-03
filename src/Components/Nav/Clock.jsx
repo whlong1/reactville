@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-
 import { getMinutes } from '../../modules/functions'
 
 const Clock = ({ daytime, setDaytime }) => {
@@ -8,7 +7,6 @@ const Clock = ({ daytime, setDaytime }) => {
 
   const time = date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })
   const currentTime = getMinutes(time)
-  // const currentTime = getMinutes('5:00 PM')
 
   useEffect(() => {
     setInterval(() => setDate(new Date()), 60000)
