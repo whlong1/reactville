@@ -6,11 +6,18 @@ const BoxList = (props) => {
 
   return (
     <section className="po-box-list">
-      {boxList.map((boxNo) => (
-        <Link className="po-box" to={`/postoffice/${boxNo}`} key={boxNo}>
-          PO BOX {boxNo}
-        </Link>
-      ))}
+      <div className="box-banner">
+        <h1>Boxes</h1>
+      </div>
+      <div className="box-container">
+        {boxList.map((boxNo) => (
+          <Link className="po-box" to={`/postoffice/${boxNo}`} key={boxNo}>
+            <div className="inner-po-box">
+              BOX {boxNo}
+            </div>
+          </Link>
+        ))}
+      </div>
     </section>
   )
 }
