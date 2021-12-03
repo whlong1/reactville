@@ -47,38 +47,49 @@
 }
 
 .po-box-list {
-  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-
+  border-left: none;
+  gap: 8px;
 }
 
+
 .po-box {
-  margin: 5px;
-  width: 120px;
-  height: 60px;
+  width: 140px;
+  height: 80px;
   display: flex;
   color: #233761;
   font-weight: 500;
-  border-radius: 5px;
   align-items: center;
   text-decoration: none;
   justify-content: center;
-  background-color: #FBB040;
-  mask: 
-  radial-gradient(circle at top left, transparent 12px, black 0), 
-  radial-gradient(circle at top right, transparent 12px, black 0),
-  radial-gradient(circle at bottom right, transparent 12px, black 0),
-  radial-gradient(circle at bottom left, transparent 12px, black 0px),
-  linear-gradient(black,black);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-in;
-  box-shadow: 0px 5px 5px -1px rgba(2,15,46,0.18);
+  background-color: rgb(206, 127, 71);
 }
 
 .post-office-form {
   width: 50%;
+}
+
+.inner-po-box {
+  width: 132px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FBB040;
+}
+
+.masked-corners {
+  mask: 
+    radial-gradient(circle at top left, transparent 11px , black 12px), 
+    radial-gradient(circle at top right, transparent 11px , black 12px),
+    radial-gradient(circle at bottom right, transparent 11px , black 12px),
+    radial-gradient(circle at bottom left, transparent 11px , black 12px),
+    linear-gradient(black,black);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-in;
 }
 
 .post-office-form section {
