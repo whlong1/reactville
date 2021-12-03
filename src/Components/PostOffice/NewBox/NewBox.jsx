@@ -39,7 +39,7 @@ const NewBox = (props) => {
   const removeBoxHolder = (name) => setBoxHolders(boxHolders.filter((holder) => holder !== name))
 
   if (status) return (
-    <div>
+    <div className="status-msg">
       <h3>{status}</h3>
       {status !== 'Success' && <button onClick={() => setStatus('')}>Return</button>}
     </div>
@@ -51,14 +51,14 @@ const NewBox = (props) => {
       <header>
         <h3>New PO Box</h3>
         <p>Total: ${costOfBox}</p>
-        <button disabled={!boxHolders.length} onClick={handleSubmit}>SUBMIT</button>
+        <button id="submit-box-btn" disabled={!boxHolders.length} onClick={handleSubmit}>SUBMIT</button>
       </header>
 
       <section>
         <BoxHolders boxHolders={boxHolders} removeBoxHolder={removeBoxHolder} />
         <input placeholder="First Name" type="text" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         <input placeholder="Last Name" type="text" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-        <button disabled={!firstName || !lastName} onClick={addBoxHolder}>ADD NAME</button>
+        <button id="add-boxholder" disabled={!firstName || !lastName} onClick={addBoxHolder}>ADD BOXHOLDER</button>
       </section>
 
     </section>

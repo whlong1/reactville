@@ -43,7 +43,6 @@
 
 .post-office img {
   width: 100%;
-  height: auto;
   transform: translateY(-15%); 
 }
 
@@ -51,6 +50,8 @@
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
+  height: fit-content;
+
 }
 
 .po-box {
@@ -70,8 +71,7 @@
   radial-gradient(circle at top right, transparent 12px, black 0),
   radial-gradient(circle at bottom right, transparent 12px, black 0),
   radial-gradient(circle at bottom left, transparent 12px, black 0px),
-  linear-gradient(black,black)
-  ;
+  linear-gradient(black,black);
   mask-composite: exclude;
   -webkit-mask-composite: destination-in;
   box-shadow: 0px 5px 5px -1px rgba(2,15,46,0.18);
@@ -88,8 +88,30 @@
   padding: 10px 15px 10px 15px;
 }
 
-.post-office-form h4, p {
+.post-office-form h4, p, input, textarea {
   margin: 0;
+  margin-bottom: 12px;
+}
+
+.post-office-form button {
+  margin-top: 8px;
+  background-color: #8098e1;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.post-office-form button:active {
+  background-color: #758dd5;
+}
+
+.post-office-form input, textarea {
+  padding: 6px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
 }
 
 .post-office-form header {
@@ -128,9 +150,36 @@
   margin: 0;
 }
 
+.box-holders h4 {
+  margin-bottom: 12px;
+}
+
 .box-holders div {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  margin: 12px 0px 12px 0px;
+}
+
+.box-holders div p {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  margin-right: auto;
+}
+
+.box-holders div button {
+  margin: 0;
+  font-size: 12px;
+  background: none;
+  color: #708BDB;
+  padding: 6px 12px 6px 12px;
+  border: 1px solid #93a8e8;
+}
+
+.box-holders div button:active {
+  background: #e0e8ff;
 }
 
 .box-details {
@@ -197,4 +246,36 @@ table td {
   padding: 6px 28px 6px 12px;
   border: 1px solid #dbdbdb;
   background: url('../assets/arrow2.png') 92% no-repeat;
+}
+
+#submit-box-btn {
+  margin: 0;
+  border: none;
+  color: white;
+  background: none;
+  margin-left: 12px;
+  letter-spacing: .5px;
+  padding: 6px 18px 6px 18px;
+  border: 1px solid #708BDB;
+  background-color: #8098e1;
+}
+
+#add-boxholder {
+  color: #708BDB;
+  background-color: #ebf1ff;
+  border: 1px solid #708BDB;
+}
+
+.status-msg{
+  padding: 0px 14px;
+}
+
+.status-msg button{
+  margin: 0;
+  margin-right: 12px;
+  border-radius: 6px;
+  background: none;
+  color: #708BDB;
+  padding: 6px 12px 6px 12px;
+  border: 1px solid #708BDB;
 }

@@ -31,7 +31,7 @@ const NewLetter = (props) => {
 
   if (status) {
     return (
-      <div>
+      <div className="status-msg">
         <h4>{status}</h4>
         <button onClick={() => setStatus('')}>New Letter</button>
         <button onClick={() => navigate('/postoffice')}>Return To Lobby</button>
@@ -71,7 +71,7 @@ const NewLetter = (props) => {
           value={letter.content}
           onChange={handleChange}
         />
-        <button type="submit">Send</button>
+        <button type="submit">SEND LETTER</button>
       </section>
     </form>
   )
