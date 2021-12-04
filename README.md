@@ -31,3 +31,13 @@ A completed version of Reactville can be found <a href="https://reactville.netli
     ```bash
     npm start
     ```
+
+---
+
+## Contributors
+
+[David Stinson](https://github.com/DavidStinson)
+
+[Ian Terada](https://github.com/teradaian)
+
+[Hunter Long](https://github.com/whlong1)
