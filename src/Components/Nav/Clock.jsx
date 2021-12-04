@@ -19,7 +19,7 @@ const Clock = ({ daytime, setDaytime }) => {
 
   return (
     <p className="display-items">
-      {date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}
+      {time}
     </p>
   )
 }

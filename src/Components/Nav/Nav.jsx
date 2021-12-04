@@ -6,7 +6,6 @@ import Clock from './Clock'
 import Logo from '../../assets/react-logo.png'
 
 const Nav = (props) => {
-
   return (
     <nav className="navigation-bar">
       <NavLink id="logo" to='/'><img src={Logo} alt="react-logo"/></NavLink>

@@ -32,7 +32,7 @@ const App = () => {
           element={<SuperMarket handleExchange={handleExchange} />}
         />
         <Route path="/burgers"
-          element={<BurgerShop handleExchange={handleExchange} />}
+          element={<BurgerShop />}
         />
         <Route path="/bank"
           element={<Bank handleExchange={handleExchange} />}
