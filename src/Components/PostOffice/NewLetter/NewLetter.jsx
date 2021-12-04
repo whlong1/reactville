@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
+//Components & Data
 import SelectBox from './SelectBox'
 import SelectRecipient from "./SelectRecipient"
-
 import { initialState } from "./initialState"
 
 const NewLetter = (props) => {

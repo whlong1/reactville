@@ -20,15 +20,12 @@ const Letter = (props) => {
         </td>
       </tr>
       <tr>
-      <td id="letter-content" colSpan="5">
-        {thisLetter.content}
-      </td>
+        <td id="letter-content" colSpan="5">
+          {thisLetter.content}
+        </td>
       </tr>
     </>
   )
 }
 
 export default Letter
-
-
-

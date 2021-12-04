@@ -9,7 +9,7 @@ import BoxDetails from "./BoxDetails"
 import NewLetter from "./NewLetter/NewLetter"
 
 //Data + Assets
-import poImg from '../../assets/post-office-lobby.png'
+import LobbyImg from '../../assets/post-office-lobby.png'
 import { initialPOBoxes, initialLetters } from "../../data/post-data"
 
 const PostOffice = (props) => {
@@ -49,7 +49,7 @@ const PostOffice = (props) => {
 			</nav>
 
 			<div className="postoffice-layout">
-				<section className="img-container"><img src={poImg} alt="post office illustration" /></section>
+				<section className="img-container"><img src={LobbyImg} alt="post office illustration" /></section>
 				<Routes>
 					<Route path="/"
 						element={<BoxList boxes={boxes} />}
