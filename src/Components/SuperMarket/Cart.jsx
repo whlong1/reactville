@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import CartItem from './CartItem'
 
-
 const Cart = (props) => {
   const [message, setMessage] = useState('')
 

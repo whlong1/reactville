@@ -1,7 +1,6 @@
 import React from 'react'
 import Product from './Product'
 
-
 const DisplayProducts = (props) => {
 
   const selectedProducts = props.products.map((product, idx) => {

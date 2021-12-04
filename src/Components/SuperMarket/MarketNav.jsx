@@ -7,7 +7,7 @@ const MarketNav = (props) => {
     <nav>
       <h1>Super Market</h1>
       <CategoryMenu products={props.products} setProductCategory={props.setProductCategory} />
-      <button onClick={() => props.setToggleCart(!props.toggleCart)}></button>
+      <button id="cart-button" onClick={() => props.setToggleCart(!props.toggleCart)}></button>
     </nav>
   )
 }

@@ -1,12 +1,10 @@
 import React, { useState }  from 'react'
 import '../../styles/super-market.css'
 
-// Components
+// Components & Data
 import Cart from './Cart'
 import MarketNav from './MarketNav'
 import DisplayProducts from './DisplayProducts'
-
-// Data
 import { products } from '../../data/market-data'
 
 const SuperMarket = (props) => {
@@ -32,7 +30,6 @@ const SuperMarket = (props) => {
 
   return (
     <div className="super-market">
-
       <section>
         <MarketNav
           products={products}
@@ -55,11 +52,8 @@ const SuperMarket = (props) => {
           handleExchange={props.handleExchange}
         />
       }
-
     </div>
   )
 }
 
 export default SuperMarket
-
-

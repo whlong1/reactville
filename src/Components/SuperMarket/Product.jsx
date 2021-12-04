@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Product = (props) => {
-
   return (
     <div className="product-card">
       <img src={props.product.image} alt="product icon" />
