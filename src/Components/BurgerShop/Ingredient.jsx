@@ -10,7 +10,7 @@ const Ingredient = (props) => {
 			:
 			<li style={{ background: props.ingredient.color }}>
 				{props.ingredient.name}
-				{props.list ?
+				{props.addToBurger ?
 					<button onClick={() => props.addToBurger(props.ingredient)}>+</button>
 					:
 					<button onClick={() => props.removeFromBurger(props.idx)}>X</button>
