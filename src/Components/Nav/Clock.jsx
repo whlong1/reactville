@@ -11,11 +11,11 @@ const Clock = ({ daytime, setDaytime }) => {
   useEffect(() => {
     setInterval(() => setDate(new Date()), 60000)
     if ((currentTime > 420) && (currentTime < 1020)) {
-      if (!daytime) setDaytime(true)
+      setDaytime(true)
     } else {
-      if (daytime) setDaytime(false)
+      setDaytime(false)
     }
-  }, [daytime, setDaytime, currentTime])
+  }, [setDaytime, currentTime])
 
   return (
     <p className="display-items">
