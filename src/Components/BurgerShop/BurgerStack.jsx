@@ -12,7 +12,7 @@ const BurgerStack = (props) => {
             ingredient={ingredient}
             removeFromBurger={props.removeFromBurger}
           />
-        )).reverse()
+        ))
         :
         <div>
           No Ingredients
