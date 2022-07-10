@@ -4,7 +4,6 @@ import { getMinutes } from '../../modules/functions'
 
 const Clock = ({ daytime, setDaytime }) => {
   const [date, setDate] = useState(new Date())
-
   const time = date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })
   const currentTime = getMinutes(time)
 
