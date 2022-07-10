@@ -10,12 +10,14 @@ const IngredientList = (props) => {
 
 	return (
 		<ul>
-			{props.ingredients.map((ingredient, idx) => {
-				if (hasBuns && ingredient.type === 'bun') {
-					return <Ingredient disabled={true} key={idx} ingredient={ingredient} addToBurger={props.addToBurger} />
-				}
-				return <Ingredient key={idx} ingredient={ingredient} addToBurger={props.addToBurger} />
-			})}
+			{props.ingredients.map((ingredient, idx) => (
+				<Ingredient
+					key={idx}
+					ingredient={ingredient}
+					addToBurger={props.addToBurger}
+					disabled={hasBuns && ingredient.type === 'bun'}
+				/>
+			))}
 		</ul>
 	)
 }
