@@ -11,7 +11,7 @@ const ControlPanel = (props) => {
 			<InputPad amount={amount} setAmount={setAmount} />
 			<section>
 				<Button name="DEPOSIT" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
-				<button onClick={() => setAmount('')}>CLEAR</button>
+				<button onClick={() => { setAmount(''); props.setMessage('') }}>CLEAR</button>
 				<Button name="WITHDRAW" amount={amount} setAmount={setAmount} handleBalance={props.handleBalance} />
 			</section>
 		</div>
