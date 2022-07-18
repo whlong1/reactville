@@ -1,5 +1,3 @@
-import React from "react"
-
 const SelectRecipient = (props) => {
   return (
     <select required name="recipient" onChange={props.handleChange}>

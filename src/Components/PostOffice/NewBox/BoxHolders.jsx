@@ -1,5 +1,3 @@
-import React from "react"
-
 const BoxHolders = (props) => {
   return (
     <div className="box-holders">

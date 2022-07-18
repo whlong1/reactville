@@ -1,5 +1,3 @@
-import React from "react"
-
 const SelectBox = (props) => {
   return (
     <select required name="boxNo" onChange={(e) => props.setBoxNum(e.target.value)}>

@@ -1,5 +1,3 @@
-import React from "react"
-
 const Letter = (props) => {
   const thisLetter = props.letters[props.id]
 

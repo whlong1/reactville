@@ -1,5 +1,3 @@
-import React from "react"
-
 const Ingredient = (props) => {
 	return (
 		<li style={props.disabled ? { background: 'darkgray' } : { background: props.ingredient.color }}>

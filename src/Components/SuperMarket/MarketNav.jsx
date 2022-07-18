@@ -1,5 +1,3 @@
-import React from 'react'
-
 import CategoryMenu from './CategoryMenu'
 
 const MarketNav = (props) => {

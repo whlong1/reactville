@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { Route, Routes, NavLink } from "react-router-dom"
 import '../../styles/mail.css'
 
