@@ -29,11 +29,3 @@ A deployed version of Reactville can be found <a href="https://reactville.netlif
     ```bash
     npm start
     ```
-    
-## Contributors
-
-[Hunter Long](https://github.com/whlong1)
-
-[Ian Terada](https://github.com/teradaian)
-
-[David Stinson](https://github.com/DavidStinson)
