@@ -1,6 +1,6 @@
 # Reactville
 
-A completed version of Reactville can be found <a href="https://reactville.netlify.app/">here</a>. You can use this as reference for the functionality that you are being asked to implement.
+A deployed version of Reactville can be found <a href="https://reactville.netlify.app/">here</a>.
 
 ---
 
@@ -10,10 +10,10 @@ A completed version of Reactville can be found <a href="https://reactville.netli
 2. Make a fork of the starter code and clone it to your machine:
 
     ```bash
-    gh repo fork https://github.com/SEI-Remote/reactville --clone=true
+    gh repo fork https://github.com/whlong1/reactville --clone=true
     ```
 
-3. Open the project in VS Code
+3. Open the project in VS Code:
 
     ```bash
     cd reactville
@@ -36,8 +36,8 @@ A completed version of Reactville can be found <a href="https://reactville.netli
 
 ## Contributors
 
-[David Stinson](https://github.com/DavidStinson)
+[Hunter Long](https://github.com/whlong1)
 
 [Ian Terada](https://github.com/teradaian)
 
-[Hunter Long](https://github.com/whlong1)
+[David Stinson](https://github.com/DavidStinson)
