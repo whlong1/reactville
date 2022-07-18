@@ -1,7 +1,4 @@
-import React from "react"
-
 const InputPad = ({ amount, setAmount }) => {
-
   return (
     <div className="number-pad">
       <button onClick={(e) => setAmount(amount + e.target.innerText)}>1</button>

@@ -5,7 +5,7 @@ const Account = (props) => {
 	const [balance, setBalance] = useState(0)
 	const [message, setMessage] = useState('')
 	const validDollarAmount = /^\d+(?:\.\d{0,2})?$/
-	//https://regexlib.com/REDetails.aspx?regexp_id=543
+	// https://regexlib.com/REDetails.aspx?regexp_id=543
 
 	const validateNum = (value) => !validDollarAmount.test(Math.abs(value))
 	const checkFunds = (name, amt) => name === 'WITHDRAW' && balance + amt < 0
@@ -15,6 +15,7 @@ const Account = (props) => {
 		if (checkFunds(name, amount)) throw new Error('Insufficient Funds')
 		if (!props.handleExchange(value)) throw new Error('Not enough cash!')
 	}
+
 	const handleBalance = (name, amount) => {
 		try {
 			const value = name === 'WITHDRAW' ? amount *= -1 : amount
