@@ -6,8 +6,8 @@ const Cart = (props) => {
 
   const format = (num) => (Math.round(num * 100) / 100).toFixed(2)
 
-  const total = format(props.cart.reduce((sum, item) => {
-    return item.quantity > 1 ? sum + (item.price * item.quantity) : sum + item.price
+  const total = format(props.cart.reduce((sum, product) => {
+    return product.quantity > 1 ? sum + (product.price * product.quantity) : sum + product.price
   }, 0))
 
   const handleCheckout = () => {
@@ -25,8 +25,8 @@ const Cart = (props) => {
       <h3>Cart</h3>
       <p>{message}</p>
 
-      {props.cart?.map((item, idx) => (
-        <CartItem key={idx} item={item} removeFromCart={props.removeFromCart} />
+      {props.cart?.map((product, idx) => (
+        <CartItem key={idx} product={product} removeFromCart={props.removeFromCart} />
       ))}
 
       <div className="cart-total">

@@ -1,4 +1,4 @@
-import { useState }  from 'react'
+import { useState } from 'react'
 import '../../styles/super-market.css'
 
 // Components & Data
@@ -12,19 +12,27 @@ const SuperMarket = (props) => {
   const [toggleCart, setToggleCart] = useState(true)
   const [productCategory, setProductCategory] = useState('Produce')
 
-  const addToCart = (item) => {
-    if (cart.find(prod => prod.id === item.id)) {
-      setCart(cart.map((prod) => prod.id === item.id ? { ...prod, quantity: prod.quantity + 1 } : prod))
+  const addToCart = (product) => {
+    if (cart.find(prod => prod.id === product.id)) {
+      setCart(cart.map((prod) =>
+        prod.id === product.id
+          ? { ...prod, quantity: prod.quantity + 1 }
+          : prod
+      ))
     } else {
-      setCart([{ ...item, quantity: 1 }, ...cart])
+      setCart([{ ...product, quantity: 1 }, ...cart])
     }
   }
 
-  const removeFromCart = (item) => {
-    if (item.quantity > 1) {
-      setCart(cart.map((prod) => prod.id === item.id ? { ...item, quantity: item.quantity - 1 } : prod))
+  const removeFromCart = (product) => {
+    if (product.quantity > 1) {
+      setCart(cart.map((prod) =>
+        prod.id === product.id
+          ? { ...product, quantity: product.quantity - 1 }
+          : prod
+      ))
     } else {
-      setCart(cart.filter((prod) => prod.id !== item.id))
+      setCart(cart.filter((prod) => prod.id !== product.id))
     }
   }
 
