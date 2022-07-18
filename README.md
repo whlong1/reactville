@@ -2,8 +2,6 @@
 
 A deployed version of Reactville can be found <a href="https://reactville.netlify.app/">here</a>.
 
----
-
 ## Getting Started
 
 1. Move to a directory of your choice.
@@ -31,9 +29,7 @@ A deployed version of Reactville can be found <a href="https://reactville.netlif
     ```bash
     npm start
     ```
-
----
-
+    
 ## Contributors
 
 [Hunter Long](https://github.com/whlong1)
