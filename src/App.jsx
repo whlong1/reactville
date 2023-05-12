@@ -3,12 +3,12 @@ import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 
 // Components
-import Nav from './Components/Nav/Nav'
-import Bank from './Components/Bank/Bank'
-import Landing from './Components/Landing/Landing'
-import BurgerShop from './Components/BurgerShop/BurgerShop'
-import PostOffice from './Components/PostOffice/PostOffice'
-import SuperMarket from './Components/SuperMarket/SuperMarket'
+import Nav from './components/Nav/Nav'
+import Bank from './components/Bank/Bank'
+import Landing from './components/Landing/Landing'
+import BurgerShop from './components/BurgerShop/BurgerShop'
+import PostOffice from './components/PostOffice/PostOffice'
+import SuperMarket from './components/SuperMarket/SuperMarket'
 
 const App = () => {
   const [cash, setCash] = useState(100)
