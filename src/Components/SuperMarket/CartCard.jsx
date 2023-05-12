@@ -1,4 +1,4 @@
-const CartItem = (props) => {
+const CartCard = (props) => {
 	return (
 		<div className="cart-card">
 			<img src={props.product.image} alt="product icon" />
@@ -12,4 +12,4 @@ const CartItem = (props) => {
 	)
 }
 
-export default CartItem
+export default CartCard

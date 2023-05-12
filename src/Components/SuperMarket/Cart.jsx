@@ -1,11 +1,9 @@
 import { useState } from 'react'
-import CartItem from './CartItem'
+import CartCard from './CartCard'
 
 const Cart = (props) => {
   const [message, setMessage] = useState('')
-
   const format = (num) => (Math.round(num * 100) / 100).toFixed(2)
-
   const total = format(props.cart.reduce((sum, product) => {
     return product.quantity > 1 ? sum + (product.price * product.quantity) : sum + product.price
   }, 0))
@@ -25,8 +23,8 @@ const Cart = (props) => {
       <h3>Cart</h3>
       <p>{message}</p>
 
-      {props.cart?.map((product, idx) => (
-        <CartItem key={idx} product={product} removeFromCart={props.removeFromCart} />
+      {props.cart.map((product, idx) => (
+        <CartCard key={idx} product={product} removeFromCart={props.removeFromCart} />
       ))}
 
       <div className="cart-total">
