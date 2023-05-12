@@ -57,6 +57,7 @@ nav h1 {
 .display-items {
   font-size: 12px;
   font-weight: 500;
+  appearance: none;
   margin-left: 24px;
   border-radius: 100px;
   -webkit-appearance: none;
@@ -65,6 +66,10 @@ nav h1 {
 }
 
 .display-items:hover {
+  cursor: pointer;
+}
+
+button:hover {
   cursor: pointer;
 }
 
@@ -99,11 +104,11 @@ nav h1 {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url("../assets/Apple.png") url("../assets/Avocado.png")
+  content: 
+  url("../assets/Corn.png") url("../assets/Garlic.png")
+    url("../assets/Apple.png") url("../assets/Avocado.png")
     url("../assets/Banana.png") url("../assets/Carrot.png")
-    url("../assets/Corn.png") url("../assets/Garlic.png")
     url("../assets/Lemon.png") url("../assets/Lettuce.png")
     url("../assets/Orange.png") url("../assets/Pepper.png")
     url("../assets/Tomato.png") url("../assets/post-office-lobby.png")
-    url("../assets/arrow2.png") url("../assets/cart-ico.png");
 }

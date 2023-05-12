@@ -7,6 +7,9 @@ import ProductList from './ProductList'
 import CategoryMenu from './CategoryMenu'
 import { products } from '../../data/market-data'
 
+// Assets
+import CartIcon from '../../assets/CartIcon.png'
+
 const SuperMarket = (props) => {
   const [cart, setCart] = useState([])
   const [toggleCart, setToggleCart] = useState(true)
@@ -40,7 +43,9 @@ const SuperMarket = (props) => {
         <nav>
           <h1>Super Market</h1>
           <CategoryMenu products={products} setProductCategory={setProductCategory} />
-          <button id="cart-button" onClick={() => setToggleCart((prev) => !prev)} />
+          <button id="cart-button" onClick={() => setToggleCart((prev) => !prev)}>
+            <img src={CartIcon} alt="A shopping cart" />
+          </button>
         </nav>
         <ProductList
           products={products}

@@ -10,15 +10,7 @@
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url("../assets/Bacon.png") url("../assets/Chicken.png")
-    url("../assets/Eggs.png") url("../assets/Fish.png") url("../assets/Ham.png")
-    url("../assets/Sausage.png") url("../assets/Steak.png")
-    url("../assets/Beer.png") url("../assets/Soda.png")
-    url("../assets/Wine.png") url("../assets/Bread.png")
-    url("../assets/Doughnut.png") url("../assets/CannedPeas.png")
-    url("../assets/Cereal.png") url("../assets/Chips.png")
-    url("../assets/Pasta.png") url("../assets/Cheese.png")
-    url("../assets/IceCream.png") url("../assets/Milk.png");
+  content: url("../assets/Bacon.png") url("../assets/Chicken.png") url("../assets/Eggs.png") url("../assets/Fish.png") url("../assets/Ham.png") url("../assets/Sausage.png") url("../assets/Steak.png") url("../assets/Beer.png") url("../assets/Soda.png") url("../assets/Wine.png") url("../assets/Bread.png") url("../assets/Doughnut.png") url("../assets/CannedPeas.png") url("../assets/Cereal.png") url("../assets/Chips.png") url("../assets/Pasta.png") url("../assets/Cheese.png") url("../assets/IceCream.png") url("../assets/Milk.png");
 }
 
 .super-market section {
@@ -35,7 +27,8 @@
   border-bottom: 1px solid #dbdbdb;
 }
 
-.super-market nav > select {
+.super-market nav>select {
+  appearance: none;
   border-radius: 100px;
   -webkit-appearance: none;
   padding: 6px 28px 6px 12px;
@@ -43,7 +36,7 @@
   background: url("../assets/arrow2.png") 92% no-repeat;
 }
 
-.super-market nav > button {
+/* .super-market nav > button {
   width: 26px;
   height: 26px;
   opacity: 0.65;
@@ -51,7 +44,7 @@
   margin-left: 15px;
   border-radius: 100px;
   background: url("../assets/cart-ico.png") no-repeat center center / 92%;
-}
+} */
 
 #market-title {
   margin-right: auto;
@@ -87,11 +80,10 @@
   border-top: 2px solid white;
   border-radius: 5px 5px 0px 0px;
   background: rgb(248, 250, 251);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(248, 250, 250, 1) 100%,
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(248, 250, 250, 1) 100%,
+    );
 }
 
 .product-card section {
@@ -185,7 +177,7 @@
   font-weight: 400;
 }
 
-.cart > button {
+.cart>button {
   padding: 8px;
   color: white;
   font-size: 12px;
@@ -196,7 +188,38 @@
   border: 1px solid #50ce6d;
 }
 
-.cart > button + button {
+.cart>button+button {
   background: #c04545;
   border: 1px solid #ce5050;
+}
+
+#cart-button {
+  opacity: 1;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  margin-left: 15px;
+  border-radius: 50%;
+  align-items: center;
+  background: #f5f8fc;
+  justify-content: center;
+  border: 1px solid #dbdbdb;
+}
+
+#cart-button img {
+  width: 18px;
+  height: 18px;
+  opacity: .65; 
+  margin-right: 1px;
+}
+
+#cart-button:hover {
+  background: #f3f7fb;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1); 
+}
+
+#cart-button:active {
+  transform: scale(.95);
+  background: #f6f8fb;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.18); 
 }
