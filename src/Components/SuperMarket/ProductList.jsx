@@ -1,11 +1,11 @@
-import Product from './Product'
+import ProductCard from './ProductCard'
 
-const DisplayProducts = (props) => {
+const ProductList = (props) => {
   return (
     <div className="product-list">
       {props.products.map((product, idx) => (
         product.category === props.productCategory &&
-        <Product
+        <ProductCard
           key={idx}
           product={product}
           addToCart={props.addToCart}
@@ -15,4 +15,4 @@ const DisplayProducts = (props) => {
   )
 }
 
-export default DisplayProducts
+export default ProductList

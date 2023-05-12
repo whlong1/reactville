@@ -1,4 +1,4 @@
-const Product = (props) => {
+const ProductCard = (props) => {
   return (
     <div className="product-card">
       <img src={props.product.image} alt="product icon" />
@@ -13,4 +13,4 @@ const Product = (props) => {
   )
 }
 
-export default Product
+export default ProductCard

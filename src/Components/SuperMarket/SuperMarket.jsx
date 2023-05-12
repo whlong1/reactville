@@ -4,7 +4,7 @@ import '../../styles/super-market.css'
 // Components & Data
 import Cart from './Cart'
 import MarketNav from './MarketNav'
-import DisplayProducts from './DisplayProducts'
+import ProductList from './ProductList'
 import { products } from '../../data/market-data'
 
 const SuperMarket = (props) => {
@@ -45,7 +45,7 @@ const SuperMarket = (props) => {
           setToggleCart={setToggleCart}
           setProductCategory={setProductCategory}
         />
-        <DisplayProducts
+        <ProductList
           products={products}
           addToCart={addToCart}
           productCategory={productCategory}

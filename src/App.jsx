@@ -21,26 +21,28 @@ const App = () => {
   }
 
   return (
-    <main>
+    <>
       <Nav cash={cash} setCash={setCash} daytime={daytime} setDaytime={setDaytime} />
-      <Routes>
-        <Route path="/"
-          element={<Landing daytime={daytime} />}
-        />
-        <Route path="/market"
-          element={<SuperMarket handleExchange={handleExchange} />}
-        />
-        <Route path="/burgers"
-          element={<BurgerShop />}
-        />
-        <Route path="/bank"
-          element={<Bank handleExchange={handleExchange} />}
-        />
-        <Route path="/postoffice/*"
-          element={<PostOffice handleExchange={handleExchange} />}
-        />
-      </Routes>
-    </main>
+      <main>
+        <Routes>
+          <Route path="/"
+            element={<Landing daytime={daytime} />}
+          />
+          <Route path="/market"
+            element={<SuperMarket handleExchange={handleExchange} />}
+          />
+          <Route path="/burgers"
+            element={<BurgerShop />}
+          />
+          <Route path="/bank"
+            element={<Bank handleExchange={handleExchange} />}
+          />
+          <Route path="/postoffice/*"
+            element={<PostOffice handleExchange={handleExchange} />}
+          />
+        </Routes>
+      </main>
+    </>
   )
 }
 
