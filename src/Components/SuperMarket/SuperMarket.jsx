@@ -3,8 +3,8 @@ import '../../styles/super-market.css'
 
 // Components & Data
 import Cart from './Cart'
-import MarketNav from './MarketNav'
 import ProductList from './ProductList'
+import CategoryMenu from './CategoryMenu'
 import { products } from '../../data/market-data'
 
 const SuperMarket = (props) => {
@@ -39,12 +39,11 @@ const SuperMarket = (props) => {
   return (
     <div className="super-market">
       <section>
-        <MarketNav
-          products={products}
-          toggleCart={toggleCart}
-          setToggleCart={setToggleCart}
-          setProductCategory={setProductCategory}
-        />
+        <nav>
+          <h1>Super Market</h1>
+          <CategoryMenu products={products} setProductCategory={setProductCategory} />
+          <button id="cart-button" onClick={() => setToggleCart((prev) => !prev)} />
+        </nav>
         <ProductList
           products={products}
           addToCart={addToCart}
