@@ -12,13 +12,15 @@ const SuperMarket = (props) => {
   const [toggleCart, setToggleCart] = useState(true)
   const [productCategory, setProductCategory] = useState('Produce')
 
+  const handleQuantity = (product, quantityChange) => {
+    setCart(cart.map((p) =>
+      p.id === product.id ? { ...p, quantity: p.quantity + quantityChange } : p
+    ))
+  }
+
   const addToCart = (product) => {
     if (cart.find(prod => prod.id === product.id)) {
-      setCart(cart.map((prod) =>
-        prod.id === product.id
-          ? { ...prod, quantity: prod.quantity + 1 }
-          : prod
-      ))
+      handleQuantity(product, 1)
     } else {
       setCart([{ ...product, quantity: 1 }, ...cart])
     }
@@ -26,11 +28,7 @@ const SuperMarket = (props) => {
 
   const removeFromCart = (product) => {
     if (product.quantity > 1) {
-      setCart(cart.map((prod) =>
-        prod.id === product.id
-          ? { ...product, quantity: product.quantity - 1 }
-          : prod
-      ))
+      handleQuantity(product, -1)
     } else {
       setCart(cart.filter((prod) => prod.id !== product.id))
     }
