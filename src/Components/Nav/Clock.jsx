@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getMinutes } from '../../modules/functions'
+import { getMinutes } from '../../helpers/functions'
 
 const Clock = ({ daytime, setDaytime }) => {
   const [date, setDate] = useState(new Date())
