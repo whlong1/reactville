@@ -21,7 +21,7 @@ nav {
   height: 65px;
 }
 
-.navigation-bar img {
+.navigation-bar #logo img {
   height: 40px;
   transform: translateY(8%);
 }
@@ -55,13 +55,17 @@ nav h1 {
 }
 
 .display-items {
+  box-sizing: border-box;
   font-size: 12px;
+  height: 28px;
   font-weight: 500;
   appearance: none;
   margin-left: 24px;
   border-radius: 100px;
   -webkit-appearance: none;
-  padding: 6px 14px 6px 14px;
+  padding: 0px 14px;
+  display: flex;
+  align-items: center;
   border: 1px solid #dbdbdb;
 }
 
