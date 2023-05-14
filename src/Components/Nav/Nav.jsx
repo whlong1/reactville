@@ -10,7 +10,6 @@ import Logo from '../../assets/react-logo.png'
 import { getWeatherDataFromAPI } from '../../services/weatherService'
 
 const Nav = (props) => {
-
   const getWeatherInfo = async () => {
     navigator.geolocation.getCurrentPosition(async ({ coords: { latitude, longitude } }) => {
       const data = await getWeatherDataFromAPI(latitude, longitude)
