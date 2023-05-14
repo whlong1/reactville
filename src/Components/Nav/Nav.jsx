@@ -1,7 +1,7 @@
+import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { useEffect } from 'react'
-
+// Components
 import Wallet from "./Wallet"
 import Clock from './Clock'
 import Logo from '../../assets/react-logo.png'
@@ -10,10 +10,14 @@ const Nav = (props) => {
 
 
   const getWeatherInfo = async () => {
-    const testURL = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m'
-    const res = await fetch(testURL)
-    const data = await res.json()
-    console.log(data)
+    navigator.geolocation.getCurrentPosition(async ({ coords: { latitude, longitude } }) => {
+      const BASE_URL = 'https://api.open-meteo.com/v1/gfs'
+      const coordinates = `latitude=${latitude}&longitude=${longitude}`
+      const parameters = 'current_weather=true&temperature_unit=fahrenheit&timezone=auto&windspeed_unit=mph&daily=sunrise,sunset&utc_offset_seconds'
+      const res = await fetch(`${BASE_URL}?${coordinates}&${parameters}`)
+      const data = await res.json()
+      console.log(data)
+    })
   }
 
   useEffect(() => {
