@@ -112,8 +112,12 @@ button:hover {
     url("../assets/Corn.png") url("../assets/Garlic.png") url("../assets/Apple.png") url("../assets/Avocado.png") url("../assets/Banana.png") url("../assets/Carrot.png") url("../assets/Lemon.png") url("../assets/Lettuce.png") url("../assets/Orange.png") url("../assets/Pepper.png") url("../assets/Tomato.png") url("../assets/post-office-lobby.png")
 }
 
+.display-items.weather {
+  min-width: 90px;
+}
+
 #temperature {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 #weatherIcon {

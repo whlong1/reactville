@@ -56,12 +56,17 @@ const WeatherStatus = () => {
     getWeatherInfo()
   }, [])
 
-  console.log(weather)
+  if (!weather) return <div className="display-items weather"></div>
 
-  if (!weather) return <img className="display-items" src="" alt="" />
+  const sunset = new Date(weather.daily.sunset[0])
+  const sunrise = new Date(weather.daily.sunrise[0])
+  const localSunset = sunset.toLocaleTimeString()
+  const localSunrise = sunrise.toLocaleTimeString()
+
+  console.log(localSunset, localSunrise)
 
   return (
-    <div className="display-items">
+    <div className="display-items weather">
       <p id="temperature">{weather.current_weather.temperature}°F</p>
       <img id="weatherIcon" src={iconTable[weather.current_weather.weathercode]} alt="Weather symbol" />
     </div>
