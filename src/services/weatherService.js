@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.open-meteo.com/v1/gfs'
+const BASE_URL = 'https://api.open-meteo.com/v1/forecast'
 const parameters = 'current_weather=true&temperature_unit=fahrenheit&timezone=auto&windspeed_unit=mph&daily=sunrise,sunset&utc_offset_seconds'
 
 export const getWeatherDataFromAPI = async (latitude, longitude) => {
