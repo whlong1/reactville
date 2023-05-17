@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 
@@ -10,9 +10,27 @@ import BurgerShop from './components/BurgerShop/BurgerShop'
 import PostOffice from './components/PostOffice/PostOffice'
 import SuperMarket from './components/SuperMarket/SuperMarket'
 
+// Services
+import { getWeatherDataFromAPI } from './services/weatherService'
+
 const App = () => {
   const [cash, setCash] = useState(100)
-  const [daytime, setDaytime] = useState(true)
+  const [weather, setWeather] = useState(null)
+
+  const currentTime = new Date().toLocaleTimeString()
+  const sunset = new Date(weather?.daily.sunset[0]).toLocaleTimeString()
+  const sunrise = new Date(weather?.daily.sunrise[0]).toLocaleTimeString()
+  const isDay = sunset < currentTime || sunrise > currentTime ? false : true
+
+  useEffect(() => {
+    const getWeatherInfo = async () => {
+      navigator.geolocation.getCurrentPosition(async ({ coords: { latitude, longitude } }) => {
+        const data = await getWeatherDataFromAPI(latitude, longitude)
+        setWeather(data)
+      })
+    }
+    getWeatherInfo()
+  }, [])
 
   const handleExchange = (amt) => {
     if (cash - amt < 0) return false
@@ -22,11 +40,11 @@ const App = () => {
 
   return (
     <>
-      <Nav cash={cash} setCash={setCash} daytime={daytime} setDaytime={setDaytime} />
+      <Nav cash={cash} setCash={setCash} weather={weather} />
       <main>
         <Routes>
           <Route path="/"
-            element={<Landing daytime={daytime} />}
+            element={<Landing isDay={isDay} />}
           />
           <Route path="/market"
             element={<SuperMarket handleExchange={handleExchange} />}
