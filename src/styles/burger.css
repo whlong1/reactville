@@ -60,6 +60,7 @@ li button {
 }
 
 .burger-shop nav button {
+  appearance: none;
   margin-left: 10px;
   border-radius: 100px;
   -webkit-appearance: none; 
