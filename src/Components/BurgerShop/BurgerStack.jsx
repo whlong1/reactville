@@ -2,7 +2,7 @@ import Ingredient from "./Ingredient"
 
 const BurgerStack = (props) => {
 
-  if (!props.ingredients.length) return <ul className="burger-stack">No Ingredients</ul>
+  if (!props.ingredients.length) return <ul className="burger-stack empty">No Ingredients</ul>
 
   return (
     <ul className="burger-stack">

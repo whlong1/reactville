@@ -72,3 +72,9 @@ li button {
   justify-content: flex-end;
   flex-direction: column;
 }
+
+.burger-stack.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
