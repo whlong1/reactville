@@ -13,20 +13,6 @@
   content: url("../assets/Bacon.png") url("../assets/Chicken.png") url("../assets/Eggs.png") url("../assets/Fish.png") url("../assets/Ham.png") url("../assets/Sausage.png") url("../assets/Steak.png") url("../assets/Beer.png") url("../assets/Soda.png") url("../assets/Wine.png") url("../assets/Bread.png") url("../assets/Doughnut.png") url("../assets/CannedPeas.png") url("../assets/Cereal.png") url("../assets/Chips.png") url("../assets/Pasta.png") url("../assets/Cheese.png") url("../assets/IceCream.png") url("../assets/Milk.png");
 }
 
-.super-market section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.super-market nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0px 15px 0px 15px;
-  border-bottom: 1px solid #dbdbdb;
-}
-
 .super-market nav>select {
   appearance: none;
   border-radius: 100px;
@@ -36,27 +22,8 @@
   background: url("../assets/arrow2.png") 92% no-repeat;
 }
 
-/* .super-market nav > button {
-  width: 26px;
-  height: 26px;
-  opacity: 0.65;
-  border: none;
-  margin-left: 15px;
-  border-radius: 100px;
-  background: url("../assets/cart-ico.png") no-repeat center center / 92%;
-} */
-
 #market-title {
   margin-right: auto;
-}
-
-.cart {
-  width: 25%;
-  display: flex;
-  background: #fbfcfd;
-  flex-direction: column;
-  padding: 0px 25px 0px 25px;
-  border-left: 1px solid #dbdbdb;
 }
 
 .product-list {
@@ -223,4 +190,41 @@
   transform: scale(.95);
   background: #f6f8fb;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.18); 
+}
+
+/* ANIMATION TEST */
+
+.cart {
+  display: flex;
+  background: #fbfcfd;
+  flex-direction: column;
+  padding: 0px 25px 0px 25px;
+  transform: translateX(100%);
+  border-left: 1px solid #dbdbdb;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.cart.open {
+  width: 40%;
+  display: flex;
+  transform: translateX(0);
+}
+
+.super-market section {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.super-market section.expand {
+  transform: translateX(0%);
+}
+
+.super-market nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 15px 0px 15px;
+  border-bottom: 1px solid #dbdbdb;
 }

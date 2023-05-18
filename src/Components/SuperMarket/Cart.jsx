@@ -19,7 +19,7 @@ const Cart = (props) => {
   }
 
   return (
-    <div className="cart">
+    <div className={`cart ${props.toggleCart ? 'open' : ''}`}>
       <h3>Cart</h3>
       <p>{message}</p>
 

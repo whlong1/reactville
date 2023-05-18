@@ -39,7 +39,7 @@ const SuperMarket = (props) => {
 
   return (
     <div className="super-market">
-      <section>
+      <section className={`${toggleCart ? '' : 'expand'}`}>
         <nav>
           <h1>Super Market</h1>
           <CategoryMenu products={products} setProductCategory={setProductCategory} />
@@ -53,15 +53,13 @@ const SuperMarket = (props) => {
           productCategory={productCategory}
         />
       </section>
-
-      {toggleCart &&
-        <Cart
-          cart={cart}
-          setCart={setCart}
-          removeFromCart={removeFromCart}
-          handleExchange={props.handleExchange}
-        />
-      }
+      <Cart
+        cart={cart}
+        setCart={setCart}
+        toggleCart={toggleCart}
+        removeFromCart={removeFromCart}
+        handleExchange={props.handleExchange}
+      />
     </div>
   )
 }
