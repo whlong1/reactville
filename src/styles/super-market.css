@@ -4,6 +4,10 @@
   background: #f5f8fc;
 }
 
+.super-market > section {
+  width: 100vw;
+}
+
 .super-market::after {
   position: absolute;
   width: 0;
