@@ -42,7 +42,6 @@
 }
 
 .product-card img {
-  width: 160px;
   height: 130px;
   background: #f6f8fa;
   border-top: 2px solid white;
@@ -217,13 +216,4 @@
 
 .cart.open * {
   visibility: visible
-}
-
-.super-market > section {
-  width: 100vw;
-  transition: width 0.3s ease-in-out;
-}
-
-.super-market > section.open {
-  width: 100vw;
 }
