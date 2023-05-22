@@ -12,7 +12,7 @@ import CartIcon from '../../assets/CartIcon.png'
 
 const SuperMarket = (props) => {
   const [cart, setCart] = useState([])
-  const [toggleCart, setToggleCart] = useState(true)
+  const [isCartOpen, setisCartOpen] = useState(true)
   const [productCategory, setProductCategory] = useState('Produce')
 
   const handleQuantity = (product, quantityChange) => {
@@ -39,11 +39,11 @@ const SuperMarket = (props) => {
 
   return (
     <div className="super-market">
-      <section className={`${toggleCart ? '' : 'expand'}`}>
+      <section className={`${isCartOpen ? 'open' : ''}`}>
         <nav>
           <h1>Super Market</h1>
           <CategoryMenu products={products} setProductCategory={setProductCategory} />
-          <button id="cart-button" onClick={() => setToggleCart((prev) => !prev)}>
+          <button id="cart-button" onClick={() => setisCartOpen((prev) => !prev)}>
             <img src={CartIcon} alt="A shopping cart" />
           </button>
         </nav>
@@ -56,7 +56,7 @@ const SuperMarket = (props) => {
       <Cart
         cart={cart}
         setCart={setCart}
-        toggleCart={toggleCart}
+        isCartOpen={isCartOpen}
         removeFromCart={removeFromCart}
         handleExchange={props.handleExchange}
       />
