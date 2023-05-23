@@ -18,14 +18,6 @@ const Cart = (props) => {
     setMessage('')
   }
 
-  const cartTotal = (
-    <div className="cart-total">
-      <p>Sub-Total:</p>
-      <p>2 Items</p>
-      <p>${total}</p>
-    </div>
-  )
-
   return (
     <section className={`cart-section ${props.isCartOpen ? 'open' : ''}`}>
       <h3>Cart</h3>
@@ -35,6 +27,13 @@ const Cart = (props) => {
         <CartCard key={idx} product={product} removeFromCart={props.removeFromCart} />
       ))}
 
+      <div className="cart-total">
+        <span>
+          <p id="total-cost">Total Cost:</p>
+          <p id="item-count">2 Items</p>
+        </span>
+        <p id="total">${total}</p>
+      </div>
 
       <button onClick={handleCheckout}>CHECKOUT</button>
       <button onClick={clearCart}>CLEAR CART</button>

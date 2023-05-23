@@ -126,11 +126,6 @@
   border-radius: 0px 5px 5px 0px;
 }
 
-.cart-total {
-  display: flex;
-  justify-content: space-between;
-}
-
 #product-name {
   font-size: 14px;
   font-weight: 500;
@@ -220,4 +215,31 @@
 
 .cart-section.open * {
   visibility: visible
+}
+
+.cart-total {
+  display: flex;
+  padding-top: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgb(212, 212, 212);
+}
+
+#total-cost {
+  opacity: .85;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#item-count {
+  opacity: .5;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .35px;
+}
+
+#total {
+  font-size: 18px;
+  font-weight: 500;
 }
