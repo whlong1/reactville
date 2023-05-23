@@ -19,7 +19,7 @@ const Cart = (props) => {
   }
 
   return (
-    <section className={`cart-section ${props.isCartOpen ? 'open' : ''}`}>
+    <section className={`cart-section ${props.isCartOpen ? "open" : ""}`}>
       <h3>Cart</h3>
       <p>{message}</p>
 
@@ -27,7 +27,7 @@ const Cart = (props) => {
         <CartCard key={idx} product={product} removeFromCart={props.removeFromCart} />
       ))}
 
-      <div className="cart-total">
+      <div className={`cart-total ${props.cart.length ? "" : "empty"}`}>
         <span>
           <p id="total-cost">Total Cost:</p>
           <p id="item-count">2 Items</p>

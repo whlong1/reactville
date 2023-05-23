@@ -223,6 +223,9 @@
   margin-bottom: 12px;
   align-items: center;
   justify-content: space-between;
+}
+
+.cart-total.empty {
   border-top: 1px solid rgb(212, 212, 212);
 }
 
