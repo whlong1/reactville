@@ -4,7 +4,7 @@
   background: #f5f8fc;
 }
 
-.super-market > section {
+.product-section {
   width: 100vw;
 }
 
@@ -148,7 +148,7 @@
   font-weight: 400;
 }
 
-.cart>button {
+.cart-section>button {
   padding: 8px;
   color: white;
   font-size: 12px;
@@ -159,7 +159,7 @@
   border: 1px solid #50ce6d;
 }
 
-.cart>button+button {
+.cart-section>button+button {
   background: #c04545;
   border: 1px solid #ce5050;
 }
@@ -196,7 +196,7 @@
 }
 
 /* ANIMATION */
-.cart {
+.cart-section {
   display: flex;
   background: #fbfcfd;
   flex-direction: column;
@@ -208,16 +208,16 @@
   transition: all 0.3s ease-in-out;
 }
 
-.cart.open {
+.cart-section.open {
   width: 100%;
   padding: 0px 25px 0px 25px;
 }
 
-.cart * {
+.cart-section * {
   visibility: hidden;
   transition: visibility 0.3s ease-in-out;
 }
 
-.cart.open * {
+.cart-section.open * {
   visibility: visible
 }

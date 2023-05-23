@@ -39,7 +39,7 @@ const SuperMarket = (props) => {
 
   return (
     <div className="super-market">
-      <section className={`${isCartOpen ? 'open' : ''}`}>
+      <section className="product-section">
         <nav>
           <h1>Super Market</h1>
           <CategoryMenu products={products} setProductCategory={setProductCategory} />
