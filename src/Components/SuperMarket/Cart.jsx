@@ -30,7 +30,7 @@ const Cart = (props) => {
       <div className={`cart-total ${props.cart.length ? "" : "empty"}`}>
         <span>
           <p id="total-cost">Total Cost:</p>
-          <p id="item-count">2 Items</p>
+          <p id="item-count">{props.cart.length} Items</p>
         </span>
         <p id="total">${total}</p>
       </div>
