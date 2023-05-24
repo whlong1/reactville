@@ -3,8 +3,9 @@
   height: 100%;
 }
 
-.bank section {
+.bank > section {
   display: flex;
+  padding: 14px 7px;
 }
 
 .bank nav h1 {
@@ -16,7 +17,8 @@
   padding: 12px 10px;
   border-radius: 8px;
   background: #fbfcfd;
-  margin: 15px 7.5px 10px 7.5px;
+  box-sizing: border-box;
+  margin: 0px 7px 0px 7px;
   border: 1px solid rgb(225, 225, 225);
   box-shadow: 0px 5px 5px -1px rgba(2,15,46,0.18);
 }
@@ -88,3 +90,13 @@
   box-shadow: 0px 3px 3px -1px rgba(2,15,40,0.15);
 }
 
+
+@media screen and (max-width: 500px) { 
+  .bank > section {
+    padding: 14px 14px;
+    flex-direction: column;
+  }
+  .account {
+    margin: 0 0 14px 0;
+  }
+}
