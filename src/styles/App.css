@@ -107,9 +107,6 @@ button:hover {
   justify-content: center;
   background-size: cover;
   background-position: center center;
-
-  /* overflow: hidden; */
-  /* padding-bottom: 10%; */
 }
 
 #splash-logo::after {
@@ -130,4 +127,23 @@ button:hover {
 
 #weatherIcon {
   width: 25px;
+}
+
+#hamburger {
+  width: 24px;
+  opacity: .5;
+  display: none;
+  margin-left: 24px;
+}
+
+@media screen and (max-width: 500px) {
+  .navigation-bar a {
+    display: none;
+  }
+  #logo {
+    display: block;
+  }
+  #hamburger {
+    display: block;
+  }
 }
