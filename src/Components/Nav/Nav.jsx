@@ -21,13 +21,11 @@ const Nav = ({ cash, weather }) => {
       <Wallet cash={cash} />
       <WeatherStatus weather={weather} />
 
-      {showMobileMenu &&
-        <div id="mobile-overlay">
-          <menu onClick={toggleMenu}>
-            <NavigationLinks />
-          </menu>
-        </div>
-      }
+      <div id="mobile-overlay" className={showMobileMenu ? "open" : ""}>
+        <menu onClick={toggleMenu} className={showMobileMenu ? "open" : ""}>
+          <NavigationLinks />
+        </menu>
+      </div>
 
       <img
         id="hamburger"
