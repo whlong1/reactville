@@ -9,20 +9,9 @@
   font-size: 1.17em;
 }
 
-ul div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  color: #cfcfcf;
-  font-weight: bold;
-  align-items: center;
-  letter-spacing: .5px;
-  justify-content: center;
-}
-
 li {
-  height: 20px;
-  margin: 5px;
+  height: 40px;
+  margin: 5px 0;
   padding: 10px;
   display: flex;
   color: white;
@@ -31,6 +20,7 @@ li {
   border-radius: 8px;
   align-items: center;
   letter-spacing: 1px;
+  box-sizing: border-box;
   text-shadow: 0px 0px 2px #000000;
   border: 1px solid rgb(225, 225, 225);
 }
@@ -41,6 +31,7 @@ li button {
   font-weight: 800;
   margin-left: auto;
   border-radius: 4px;
+  box-sizing: border-box;
   padding: 2px 6px 2px 6px;
 }
 
@@ -53,22 +44,15 @@ li button {
   border: 1px solid #dbdbdb;
 }
 
-.burger-stack {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-
 .burger-stack.empty {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .burger-shop section {
   display: flex;
-  padding: 0px 5px 0px 5px;
+  padding: 14px 8px 0px 8px;
 }
 
 .burger-shop section ul {
@@ -76,16 +60,26 @@ li button {
   padding: 10px;
   border-radius: 8px;
   background: #fbfcfd;
-  margin: 15px 7.5px 10px 7.5px;
+  margin: 0px 7px 0px 7px;
   border: 1px solid rgb(225, 225, 225);
   box-shadow: 0px 5px 5px -1px rgba(2, 15, 46, 0.18);
 
   display: flex;
-  height: 730px;
+  height: 720px;
   overflow: auto;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .burger-shop section ul > li:first-child {
   margin-top: auto !important;
+}
+
+@media screen and (max-width: 500px) { 
+  .burger-shop section {
+    flex-direction: column;
+  }
+  .burger-shop section ul {
+    margin: 0 0 14px 0;
+  }
 }
