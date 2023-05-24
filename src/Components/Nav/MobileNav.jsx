@@ -5,10 +5,11 @@ import NavigationLinks from './NavigationLinks'
 import Hamburger from "../../assets/Hamburger.png"
 
 const MobileNav = ({showMobileMenu, toggleMenu}) => {
+  const sharedClassNames = showMobileMenu ? "open" : ""
   return (
     <>
-      <div id="mobile-overlay" className={showMobileMenu ? "open" : ""}>
-        <menu onClick={toggleMenu} className={showMobileMenu ? "open" : ""}>
+      <div id="mobile-overlay" className={sharedClassNames}>
+        <menu onClick={toggleMenu} className={sharedClassNames}>
           <NavigationLinks />
         </menu>
       </div>

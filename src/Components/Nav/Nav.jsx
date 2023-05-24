@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
 // Components
@@ -14,9 +14,15 @@ const Nav = ({ cash, weather }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const toggleMenu = () => setShowMobileMenu((prev) => !prev)
 
+  useEffect(() => {
+    window.addEventListener('resize', () => setShowMobileMenu(false))
+  }, [])
+
   return (
     <nav className="navigation-bar">
-      <NavLink id="logo" to='/'><img src={Logo} alt="react-logo" /></NavLink>
+      <NavLink id="logo" to='/' onClick={() => setShowMobileMenu(false)}>
+        <img src={Logo} alt="react-logo" />
+      </NavLink>
       <NavigationLinks />
       <Wallet cash={cash} />
       <WeatherStatus weather={weather} />

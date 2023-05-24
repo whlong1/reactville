@@ -146,6 +146,7 @@ main {
   z-index: 1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.3s ease-in-out;
@@ -162,13 +163,13 @@ main {
   padding: 0;
   width: 300px;
   height: 100%;
-  display: flex;
-  box-shadow: none;
+  box-shadow: none; 
   position: absolute;
   flex-direction: column;
   background-color: white;
   border-left: 1px solid rgb(212, 212, 212);
-  margin-right: -300px;
+
+  margin-right: -301px;
   transition: margin 0.3s ease-in-out;
 }
 
@@ -184,10 +185,17 @@ main {
   border-bottom: 1px solid rgb(212, 212, 212);
 }
 
+#mobile-overlay, #mobile-overlay menu {
+  display: none;
+}
 
 @media screen and (max-width: 500px) {
   .navigation-bar>a {
     display: none;
+  }
+
+  #mobile-overlay, #mobile-overlay menu {
+    display: flex;
   }
 
   #logo {
