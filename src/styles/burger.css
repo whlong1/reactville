@@ -5,7 +5,7 @@
   background-color: #F5F8FC;
 }
 
-.burger-shop nav h1{
+.burger-shop nav h1 {
   font-size: 1.17em;
 }
 
@@ -48,7 +48,7 @@ li button {
   appearance: none;
   margin-left: 10px;
   border-radius: 100px;
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   padding: 6px 18px 6px 18px;
   border: 1px solid #dbdbdb;
 }
@@ -59,7 +59,7 @@ li button {
   flex-direction: column;
 }
 
-.burger-stack.empty{
+.burger-stack.empty {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,6 @@ li button {
 .burger-shop section {
   display: flex;
   padding: 0px 5px 0px 5px;
-  height: 1000px;
 }
 
 .burger-shop section ul {
@@ -80,4 +79,13 @@ li button {
   margin: 15px 7.5px 10px 7.5px;
   border: 1px solid rgb(225, 225, 225);
   box-shadow: 0px 5px 5px -1px rgba(2, 15, 46, 0.18);
+
+  display: flex;
+  height: 730px;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.burger-shop section ul > li:first-child {
+  margin-top: auto !important;
 }

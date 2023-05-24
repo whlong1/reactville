@@ -5,7 +5,7 @@ const BurgerStack = (props) => {
   if (!props.ingredients.length) return <ul className="burger-stack empty">No Ingredients</ul>
 
   return (
-    <ul className="burger-stack">
+    <ul>
       {props.ingredients.map((ingredient, idx) => (
         <Ingredient
           key={idx}
