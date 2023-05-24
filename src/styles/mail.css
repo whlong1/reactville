@@ -34,6 +34,7 @@
 }
 
 .img-container { 
+  margin: 0;
   width: 50%;
   display: flex;
   align-items: center;
@@ -54,7 +55,6 @@
   border-left: none;
   gap: 8px;
 }
-
 
 .po-box {
   width: 140px;
@@ -255,8 +255,9 @@ table td {
 }
 
 .post-office select {
-  border-radius: 100px;
+  appearance: none;
   margin-left: 10px;
+  border-radius: 100px;
   -webkit-appearance: none; 
   padding: 6px 28px 6px 12px;
   border: 1px solid #dbdbdb;
@@ -287,10 +288,29 @@ table td {
 
 .status-msg button{
   margin: 0;
-  margin-right: 12px;
-  border-radius: 6px;
   background: none;
   color: #708BDB;
+  margin-right: 12px;
+  border-radius: 6px;
   padding: 6px 12px 6px 12px;
   border: 1px solid #708BDB;
 }
+
+@media screen and (max-width: 500px) {
+  .img-container {
+    display: none;
+  }
+  .box-details {
+    width: 100%;
+  }
+  .postoffice-layout {
+    flex-direction: column;
+  }
+  .post-office-form {
+    width: 100%;
+  }
+  #new-box, #new-letter{
+    display: none;
+  }
+ }
+

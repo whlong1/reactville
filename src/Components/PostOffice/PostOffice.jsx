@@ -44,8 +44,8 @@ const PostOffice = (props) => {
 			<nav>
 				<h1>Post Office</h1>
 				<NavLink to="/postoffice">Lobby</NavLink>
-				<NavLink to="/postoffice/letters/new">New Letter</NavLink>
-				<NavLink to="/postoffice/boxes/new">New PO Box</NavLink>
+				<NavLink id="new-letter" to="/postoffice/letters/new">New Letter</NavLink>
+				<NavLink id="new-box" to="/postoffice/boxes/new">New PO Box</NavLink>
 			</nav>
 
 			<div className="postoffice-layout">
