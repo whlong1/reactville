@@ -1,6 +1,6 @@
 .super-market {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   background: #f5f8fc;
 }
 
@@ -40,7 +40,6 @@
 }
 
 .product-card img {
-  min-height: 130px;
   background: #f6f8fa;
   border-top: 2px solid white;
   border-radius: 5px 5px 0px 0px;
@@ -245,6 +244,10 @@
   .cart-section {
     display: none;
   }
+}
+
+.product-section, .cart-section {
+  margin: 0;
 }
 
 .product-list {

@@ -1,12 +1,19 @@
 html,
-body,
-#root,
-main {
+body {
   margin: 0;
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+main {
+  overflow: auto;
+  height: calc(100% - 65px);
 }
 
 nav {
@@ -100,6 +107,9 @@ button:hover {
   justify-content: center;
   background-size: cover;
   background-position: center center;
+
+  /* overflow: hidden; */
+  /* padding-bottom: 10%; */
 }
 
 #splash-logo::after {
@@ -108,8 +118,6 @@ button:hover {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content:
-    url("../assets/Corn.png") url("../assets/Garlic.png") url("../assets/Apple.png") url("../assets/Avocado.png") url("../assets/Banana.png") url("../assets/Carrot.png") url("../assets/Lemon.png") url("../assets/Lettuce.png") url("../assets/Orange.png") url("../assets/Pepper.png") url("../assets/Tomato.png") url("../assets/post-office-lobby.png")
 }
 
 .display-items.weather {
