@@ -12,7 +12,7 @@ import Logo from "../../assets/react-logo.png"
 
 const Nav = ({ cash, weather }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const toggleMenu = () => {setShowMobileMenu((prev) => !prev); console.log('click')}
+  const toggleMenu = () => setShowMobileMenu((prev) => !prev)
 
   useEffect(() => {
     window.addEventListener('resize', () => setShowMobileMenu(false))

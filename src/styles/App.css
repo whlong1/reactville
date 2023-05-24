@@ -87,16 +87,15 @@ button:hover {
 #splash-logo {
   margin: 0;
   color: white;
-  font-weight: 900;
-  font-size: 100px;
-  font-style: normal;
-  transform: translateY(-40%);
+  font-size: 4rem;
+  font-size: 110px;
+  transform: translateY(-16%);
   font-family: blenny, sans-serif;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.85);
 }
 
 #splash-logo:hover {
-  cursor: pointer;
+  cursor: default
 }
 
 .landing {
@@ -206,5 +205,10 @@ main {
 
   #hamburger {
     display: block;
+  }
+  
+  #splash-logo {
+    font-size: 4.2em;
+    transform: translateY(-30%);
   }
 }
