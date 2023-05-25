@@ -43,11 +43,10 @@ const SuperMarket = (props) => {
         <nav>
           <h1>Super Market</h1>
           <CategoryMenu products={products} setProductCategory={setProductCategory} />
-
           <button id="cart-button" onClick={() => setIsCartOpen((prev) => !prev)}>
+            {!!cart.length && <div id="count-icon">{cart.length}</div>}
             <img src={CartIcon} alt="A shopping cart" />
           </button>
-
         </nav>
         <ProductList
           products={products}

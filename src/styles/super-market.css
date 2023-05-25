@@ -2,6 +2,7 @@
   display: flex;
   min-height: 100vh;
   background: #f5f8fc;
+  overflow-x: hidden;
 }
 
 .product-section {
@@ -163,6 +164,7 @@
   background: #f5f8fc;
   justify-content: center;
   border: 1px solid #dbdbdb;
+  position: relative;
 }
 
 #cart-button img {
@@ -248,6 +250,23 @@
   display: grid;
   padding: 10px 0 0 10px;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+#count-icon {
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  font-size: 9px;
+  color: white;
+  margin-top: -20px;
+  margin-right: -20px;
+  border-radius: 50%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: rgb(74, 190, 236);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.18);
 }
 
 @media screen and (max-width: 500px) {

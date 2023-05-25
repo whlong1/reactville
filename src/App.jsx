@@ -17,10 +17,10 @@ const App = () => {
   const [cash, setCash] = useState(100)
   const [weather, setWeather] = useState(null)
 
-  const currentTime = new Date().toLocaleTimeString()
-  const sunset = new Date(weather?.daily.sunset[0]).toLocaleTimeString()
-  const sunrise = new Date(weather?.daily.sunrise[0]).toLocaleTimeString()
-  const isDay = sunset < currentTime || sunrise > currentTime ? false : true
+  const currentTime = new Date().getTime()
+  const sunset = new Date(weather?.daily.sunset[0]).getTime()
+  const sunrise = new Date(weather?.daily.sunrise[0]).getTime()
+  const isDay = currentTime > sunrise && currentTime < sunset
 
   useEffect(() => {
     const getWeatherInfo = async () => {
@@ -31,6 +31,11 @@ const App = () => {
     }
     getWeatherInfo()
   }, [])
+
+  console.log('sunset', new Date(sunset).toLocaleTimeString())
+  console.log('sunrise', new Date(sunrise).toLocaleTimeString())
+  console.log('current time', new Date(currentTime).toLocaleTimeString())
+  console.log('isDay', isDay)
 
   const handleExchange = (amt) => {
     if (cash - amt < 0) return false
