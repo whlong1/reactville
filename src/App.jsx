@@ -32,11 +32,6 @@ const App = () => {
     getWeatherInfo()
   }, [])
 
-  console.log('sunset', new Date(sunset).toLocaleTimeString())
-  console.log('sunrise', new Date(sunrise).toLocaleTimeString())
-  console.log('current time', new Date(currentTime).toLocaleTimeString())
-  console.log('isDay', isDay)
-
   const handleExchange = (amt) => {
     if (cash - amt < 0) return false
     setCash((cash - amt).toFixed(2))
