@@ -7,7 +7,9 @@ const CartCard = (props) => {
 				<p id="product-price">${props.product.price}</p>
 				<p id="product-quantity">Quantity: {props.product.quantity}</p>
 			</span>
-			<button onClick={() => props.removeFromCart(props.product)}>X</button>
+			<button className="light-red-btn" onClick={() => props.removeFromCart(props.product)}>
+				X
+			</button>
 		</div>
 	)
 }

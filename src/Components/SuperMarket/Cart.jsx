@@ -35,8 +35,8 @@ const Cart = (props) => {
         <p id="total">${total}</p>
       </div>
 
-      <button onClick={handleCheckout}>CHECKOUT</button>
-      <button onClick={clearCart}>CLEAR CART</button>
+      <button className="green-btn" onClick={handleCheckout}>CHECKOUT</button>
+      <button className="red-btn" onClick={clearCart}>CLEAR CART</button>
     </section>
   )
 }
