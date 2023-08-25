@@ -4,15 +4,15 @@ import '../../styles/mail.css'
 
 //Components
 import BoxList from "./BoxList"
-import NewBox from "./NewBox/NewBox"
 import BoxDetails from "./BoxDetails"
-import NewLetter from "./NewLetter/NewLetter"
+import NewBox from "./NewBoxComponents/NewBox"
+import NewLetter from "./NewLetterComponents/NewLetter"
 
 //Data + Assets
 import LobbyImg from '../../assets/post-office-lobby.png'
 import { initialPOBoxes, initialLetters } from "../../data/post-data"
 
-const PostOffice = (props) => {
+const PostOfficePage = (props) => {
 	const [boxes, setBoxes] = useState(initialPOBoxes)
 	const [letters, setLetters] = useState(initialLetters)
 
@@ -69,4 +69,4 @@ const PostOffice = (props) => {
 	)
 }
 
-export default PostOffice
+export default PostOfficePage

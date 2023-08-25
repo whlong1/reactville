@@ -2,7 +2,7 @@ import '../../styles/bank.css'
 
 import Account from "./Account"
 
-const Bank = (props) => {
+const BankPage = (props) => {
 	return (
 		<div className="bank">
 			<nav><h1>Bank</h1></nav>
@@ -14,4 +14,4 @@ const Bank = (props) => {
 	)
 }
 
-export default Bank
+export default BankPage

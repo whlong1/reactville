@@ -6,7 +6,7 @@ import BurgerStack from './BurgerStack'
 
 import { ingredients } from '../../data/burger-data'
 
-const BurgerShop = () => {
+const BurgerShopPage = () => {
   const [stack, setStack] = useState([])
 
   const addToBurger = (ingredient) => {
@@ -31,4 +31,4 @@ const BurgerShop = () => {
   )
 }
 
-export default BurgerShop
+export default BurgerShopPage

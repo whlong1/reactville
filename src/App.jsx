@@ -3,12 +3,12 @@ import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 
 // Components
-import Bank from './components/Bank/Bank'
-import Landing from './components/Landing/Landing'
 import Navigation from './components/Nav/Navigation'
-import BurgerShop from './components/BurgerShop/BurgerShop'
-import PostOffice from './components/PostOffice/PostOffice'
-import SuperMarket from './components/SuperMarket/SuperMarket'
+import BankPage from './components/Bank/BankPage'
+import LandingPage from './components/Landing/LandingPage'
+import BurgerShopPage from './components/BurgerShop/BurgerShopPage'
+import PostOfficePage from './components/PostOffice/PostOfficePage'
+import SuperMarketPage from './components/SuperMarket/SuperMarketPage'
 
 // Services
 import { getWeatherDataFromAPI } from './services/weatherService'
@@ -44,19 +44,19 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/"
-            element={<Landing isDay={isDay} />}
+            element={<LandingPage isDay={isDay} />}
           />
           <Route path="/market"
-            element={<SuperMarket handleExchange={handleExchange} />}
+            element={<SuperMarketPage handleExchange={handleExchange} />}
           />
           <Route path="/burgers"
-            element={<BurgerShop />}
+            element={<BurgerShopPage />}
           />
           <Route path="/bank"
-            element={<Bank handleExchange={handleExchange} />}
+            element={<BankPage handleExchange={handleExchange} />}
           />
           <Route path="/postoffice/*"
-            element={<PostOffice handleExchange={handleExchange} />}
+            element={<PostOfficePage handleExchange={handleExchange} />}
           />
         </Routes>
       </main>

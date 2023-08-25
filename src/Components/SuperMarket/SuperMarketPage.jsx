@@ -10,7 +10,7 @@ import { products } from '../../data/market-data'
 // Assets
 import CartIcon from '../../assets/CartIcon.png'
 
-const SuperMarket = (props) => {
+const SuperMarketPage = (props) => {
   const [cart, setCart] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(true)
   const [productCategory, setProductCategory] = useState('Produce')
@@ -65,4 +65,4 @@ const SuperMarket = (props) => {
   )
 }
 
-export default SuperMarket
+export default SuperMarketPage
