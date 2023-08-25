@@ -10,7 +10,7 @@ import NavigationLinks from './NavigationLinks'
 // Assets
 import Logo from "../../assets/react-logo.png"
 
-const Nav = ({ cash, weather }) => {
+const Navigation = ({ cash, weather }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const toggleMenu = () => setShowMobileMenu((prev) => !prev)
 
@@ -31,4 +31,4 @@ const Nav = ({ cash, weather }) => {
   )
 }
 
-export default Nav
+export default Navigation

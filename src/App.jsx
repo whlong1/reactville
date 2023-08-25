@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 
 // Components
-import Nav from './components/Nav/Nav'
 import Bank from './components/Bank/Bank'
 import Landing from './components/Landing/Landing'
+import Navigation from './components/Nav/Navigation'
 import BurgerShop from './components/BurgerShop/BurgerShop'
 import PostOffice from './components/PostOffice/PostOffice'
 import SuperMarket from './components/SuperMarket/SuperMarket'
@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <>
-      <Nav cash={cash} setCash={setCash} weather={weather} />
+      <Navigation cash={cash} setCash={setCash} weather={weather} />
       <main>
         <Routes>
           <Route path="/"
