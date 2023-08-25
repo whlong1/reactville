@@ -4,7 +4,7 @@
 
 Reactville is a collection of user interfaces built with React. Each interface mirrors a business in the fictional town of Reactville, featuring establishments like a bank, market, post office, and more.
 
-A deployed version of Reactville can be found [here](https://reactville.netlify.app/).
+A deployed version of Reactville can be found [here](https://reactville-app.netlify.app/).
 
 ## Getting Started
 
