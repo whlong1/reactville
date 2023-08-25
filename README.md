@@ -1,11 +1,15 @@
+<img src="src/assets/screenshots/landing.png"/>
+
 # Reactville
 
-A deployed version of Reactville can be found <a href="https://reactville.netlify.app/">here</a>.
+Reactville is a collection of user interfaces built with React. Each interface mirrors a business in the fictional town of Reactville, featuring establishments like a bank, market, post office, and more.
+
+A deployed version of Reactville can be found [here](https://reactville.netlify.app/).
 
 ## Getting Started
 
 1. Move to a directory of your choice.
-2. Make a fork of the starter code and clone it to your machine:
+2. Fork and clone the repository to your machine:
 
     ```bash
     gh repo fork https://github.com/whlong1/reactville --clone=true
